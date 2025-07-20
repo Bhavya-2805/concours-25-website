@@ -2,10 +2,11 @@ import { Trophy, Mic, ArrowRight, Star, Users, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
-    <div className="min-h-screen py-16 bg-gradient-hero">
+    <div className="min-h-screen py-16 bg-gradient-hero subtle-bg">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -60,9 +61,11 @@ export default function Register() {
                 </div>
               </div>
 
-              <Button className="w-full btn-sports group">
-                Register for Sports
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+              <Button className="w-full btn-sports group" asChild>
+                <Link to="/sports-events">
+                  Register for Sports
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </Link>
               </Button>
             </CardContent>
           </Card>
@@ -105,28 +108,16 @@ export default function Register() {
                 </div>
               </div>
 
-              <Button className="w-full btn-accent group">
-                Register for Comedy
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+              <Button className="w-full btn-accent group" asChild>
+                <Link to="/comedy-dj-night">
+                  Register for Comedy
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </Link>
               </Button>
             </CardContent>
           </Card>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
-            Questions about registration? Need more information?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Download Rulebook
-            </Button>
-            <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
-              Contact Support
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ export default function Concours24() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background subtle-bg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
@@ -81,7 +81,7 @@ export default function Concours24() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background subtle-bg">
         <div className="max-w-4xl mx-auto px-4">
           <Card className="epic-card">
             <CardContent className="p-8 text-center">

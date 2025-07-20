@@ -28,7 +28,7 @@ export default function Sponsors() {
       </section>
 
       {/* Sponsor Tiers */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background subtle-bg">
         <div className="max-w-7xl mx-auto px-4 space-y-16">
           {/* Title Sponsor */}
           <div>

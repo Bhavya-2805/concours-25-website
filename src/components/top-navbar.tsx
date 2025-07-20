@@ -24,7 +24,7 @@ export function TopNavbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Brand Section */}
+          {/* Brand Section - Left aligned */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center trophy-glow">
@@ -42,8 +42,8 @@ export function TopNavbar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          {/* Desktop Navigation - Moved towards left instead of centered */}
+          <div className="hidden lg:flex items-center space-x-1 ml-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.title}

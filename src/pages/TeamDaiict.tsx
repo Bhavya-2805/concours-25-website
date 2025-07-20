@@ -1,22 +1,27 @@
-import { Shield, Trophy, Users, Target } from "lucide-react";
+import { Shield, Trophy, Users, Target, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const teams = [
-  { name: "Volleyball", category: "Men & Women", icon: "🏐" },
-  { name: "Cricket", category: "Men's", icon: "🏏" },
-  { name: "Basketball", category: "Men & Women", icon: "🏀" },
-  { name: "Football", category: "Men & Women", icon: "⚽" },
-  { name: "Badminton", category: "Men & Women", icon: "🏸" },
-  { name: "Table Tennis", category: "Men & Women", icon: "🏓" },
-  { name: "Tennis", category: "Mixed", icon: "🎾" },
-  { name: "Athletics", category: "Track & Field", icon: "🏃" },
+  { name: "Volleyball (Men)", icon: "🏐" },
+  { name: "Volleyball (Women)", icon: "🏐" },
+  { name: "Cricket", icon: "🏏" },
+  { name: "Basketball (Men)", icon: "🏀" },
+  { name: "Basketball (Women)", icon: "🏀" },
+  { name: "Football (Men)", icon: "⚽" },
+  { name: "Football (Women)", icon: "⚽" },
+  { name: "Badminton (Men)", icon: "🏸" },
+  { name: "Badminton (Women)", icon: "🏸" },
+  { name: "Table Tennis (Men)", icon: "🏓" },
+  { name: "Table Tennis (Women)", icon: "🏓" },
+  { name: "Tennis", icon: "🎾" },
+  { name: "Athletics", icon: "🏃" },
 ];
 
 export default function TeamDaiict() {
   return (
-    <div className="min-h-screen py-16 bg-gradient-hero">
+    <div className="min-h-screen py-16 bg-gradient-hero subtle-bg">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -49,16 +54,12 @@ export default function TeamDaiict() {
           {teams.map((team, index) => (
             <Card key={index} className="epic-card group">
               <CardHeader className="text-center">
-                <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {team.icon}
-                </div>
-                <CardTitle className="varsity-font text-xl text-foreground">{team.name}</CardTitle>
+                <CardTitle className="varsity-font text-xl text-foreground mb-4">{team.name}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground text-sm mb-4">{team.category}</p>
-                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Team Details
-                </Button>
+                <div className="w-full h-48 bg-gradient-sports rounded-lg flex items-center justify-center trophy-glow">
+                  <div className="text-6xl">{team.icon}</div>
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -94,6 +95,29 @@ export default function TeamDaiict() {
                 </div>
                 <div className="concours-font text-3xl text-primary">15+</div>
                 <div className="text-muted-foreground">Sports Categories</div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Team Showcase Video Section */}
+        <Card className="epic-card mt-16">
+          <CardHeader>
+            <CardTitle className="varsity-font text-3xl text-foreground text-center">
+              Team Showcase
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="aspect-video bg-gradient-hero rounded-lg flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-sports opacity-20"></div>
+              <div className="relative z-10 flex items-center space-x-4">
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                  <Play className="w-10 h-10 text-white ml-1" />
+                </div>
+                <div className="text-white">
+                  <div className="text-2xl font-bold">Team Showcase Video</div>
+                  <div className="text-white/70">Watch our athletes in action</div>
+                </div>
               </div>
             </div>
           </CardContent>

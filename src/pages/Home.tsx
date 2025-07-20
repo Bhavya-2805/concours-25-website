@@ -2,6 +2,7 @@ import { Trophy, ArrowRight, Play, Users, Target, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Footer } from "@/components/Footer";
 import heroImage from "@/assets/hero-stadium.jpg";
 
 export default function Home() {
@@ -41,14 +42,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-background/80"></div>
         
         <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
-          {/* Trophy Icon */}
+          {/* Trophy Icon - Reduced animation intensity */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <div className="w-32 h-32 bg-gradient-sports rounded-full flex items-center justify-center trophy-glow floating-element">
                 <Trophy className="w-16 h-16 text-white" />
               </div>
-              <div className="absolute inset-0 bg-gradient-sports rounded-full animate-ping opacity-20"></div>
-              <div className="absolute -inset-4 bg-gradient-accent rounded-full animate-pulse opacity-10"></div>
+              <div className="absolute inset-0 bg-gradient-sports rounded-full animate-ping opacity-10"></div>
             </div>
           </div>
 
@@ -68,8 +68,8 @@ export default function Home() {
             Experience the thrill, embrace the competition, and create memories that last forever.
           </p>
           
-          {/* CTA Button */}
-          <Button className="btn-sports text-xl px-12 py-6 pulse-glow">
+          {/* CTA Button - Reduced pulse intensity */}
+          <Button className="btn-sports text-xl px-12 py-6">
             REGISTER NOW
             <ArrowRight className="ml-3 w-6 h-6" />
           </Button>
@@ -98,9 +98,6 @@ export default function Home() {
                 CONCOURS'25 brings together the finest athletes from across the nation to compete 
                 in the spirit of true sportsmanship.
               </p>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Learn More About Us
-              </Button>
             </div>
 
             {/* Image Grid */}
@@ -197,6 +194,9 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

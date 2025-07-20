@@ -14,7 +14,7 @@ const funEvents = [
 
 export default function FunEvents() {
   return (
-    <div className="min-h-screen py-16 bg-gradient-hero">
+    <div className="min-h-screen py-16 bg-gradient-hero subtle-bg">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -44,10 +44,6 @@ export default function FunEvents() {
                   CONCOURS'25 isn't just about sports. It's a complete festival experience with 
                   entertainment, music, food, and activities that bring everyone together.
                 </p>
-                <Button className="btn-accent">
-                  Explore All Events
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
               </div>
               <div className="bg-gradient-accent flex items-center justify-center p-8">
                 <div className="text-center text-white">
@@ -70,10 +66,7 @@ export default function FunEvents() {
                 <CardTitle className="varsity-font text-2xl text-foreground">{event.name}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground mb-6">{event.description}</p>
-                <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
-                  Learn More
-                </Button>
+                <p className="text-muted-foreground">{event.description}</p>
               </CardContent>
             </Card>
           ))}

@@ -2,25 +2,28 @@ import { Trophy, Target, Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 const sports = [
-  { name: "Basketball", slug: "basketball", icon: "🏀", category: "Men & Women" },
-  { name: "Volleyball", slug: "volleyball", icon: "🏐", category: "Men & Women" },
+  { name: "Basketball (Men)", slug: "basketball-men", icon: "🏀", category: "Men's" },
+  { name: "Basketball (Women)", slug: "basketball-women", icon: "🏀", category: "Women's" },
+  { name: "Volleyball (Men)", slug: "volleyball-men", icon: "🏐", category: "Men's" },
+  { name: "Volleyball (Women)", slug: "volleyball-women", icon: "🏐", category: "Women's" },
   { name: "Cricket", slug: "cricket", icon: "🏏", category: "Men's" },
-  { name: "Badminton", slug: "badminton", icon: "🏸", category: "Men & Women" },
-  { name: "Football", slug: "football", icon: "⚽", category: "Men & Women" },
-  { name: "Table Tennis", slug: "table-tennis", icon: "🏓", category: "Men & Women" },
+  { name: "Badminton (Men)", slug: "badminton-men", icon: "🏸", category: "Men's" },
+  { name: "Badminton (Women)", slug: "badminton-women", icon: "🏸", category: "Women's" },
+  { name: "Football (Men)", slug: "football-men", icon: "⚽", category: "Men's" },
+  { name: "Football (Women)", slug: "football-women", icon: "⚽", category: "Women's" },
+  { name: "Table Tennis (Men)", slug: "table-tennis-men", icon: "🏓", category: "Men's" },
+  { name: "Table Tennis (Women)", slug: "table-tennis-women", icon: "🏓", category: "Women's" },
   { name: "Tennis", slug: "tennis", icon: "🎾", category: "Mixed" },
   { name: "Carrom", slug: "carrom", icon: "🎯", category: "Mixed" },
   { name: "Chess", slug: "chess", icon: "♟️", category: "Mixed" },
-  { name: "Marathon", slug: "marathon", icon: "🏃", category: "Open" },
-  { name: "Swimming", slug: "swimming", icon: "🏊", category: "Men & Women" },
-  { name: "Athletics", slug: "athletics", icon: "🏃", category: "Track & Field" },
 ];
 
 export default function SportsEvents() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen subtle-bg">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-hero stadium-hero">
         <div className="max-w-6xl mx-auto text-center px-4">
@@ -47,32 +50,36 @@ export default function SportsEvents() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {sports.map((sport, index) => (
               <Card key={sport.slug} className="epic-card overflow-hidden group cursor-pointer">
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-6 h-full flex flex-col">
                   {/* Sport Icon */}
-                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300 text-center">
                     {sport.icon}
                   </div>
                   
                   {/* Sport Name */}
-                  <h3 className="varsity-font text-2xl text-foreground mb-2">{sport.name}</h3>
+                  <h3 className="varsity-font text-2xl text-foreground mb-2 text-center">{sport.name}</h3>
                   
                   {/* Category */}
-                  <p className="text-muted-foreground mb-4">{sport.category}</p>
+                  <p className="text-muted-foreground mb-4 text-center">{sport.category}</p>
                   
                   {/* Register Badge */}
-                  <Badge className="bg-primary/20 text-primary border-primary/30 mb-4 px-3 py-1">
-                    REGISTER NOW
-                  </Badge>
+                  <div className="text-center mb-4">
+                    <Badge className="bg-primary/20 text-primary border-primary/30 px-3 py-1">
+                      REGISTER NOW
+                    </Badge>
+                  </div>
                   
                   {/* Description placeholder */}
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground text-center mb-6 flex-grow">
                     Join the ultimate {sport.name.toLowerCase()} competition and showcase your skills.
                   </p>
                   
-                  {/* Action Button */}
-                  <Button className="w-full mt-4 bg-gradient-button text-primary-foreground hover:scale-105 transition-transform duration-200">
-                    View Details
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                  {/* Action Button - Aligned at bottom */}
+                  <Button className="w-full bg-gradient-button text-primary-foreground hover:scale-105 transition-transform duration-200" asChild>
+                    <Link to={`/sports-events/${sport.slug}`}>
+                      View Details
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

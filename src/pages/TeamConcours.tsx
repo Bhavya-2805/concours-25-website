@@ -19,7 +19,7 @@ const teamMembers = [
 
 export default function TeamConcours() {
   return (
-    <div className="min-h-screen py-16 bg-gradient-hero">
+    <div className="min-h-screen py-16 bg-gradient-hero subtle-bg">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
