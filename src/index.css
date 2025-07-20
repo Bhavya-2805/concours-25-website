@@ -1,40 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Comic+Neue:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Sports-themed design system with modern gradients and animations */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Colors - Dark sports theme */
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sports Brand Colors */
+    --primary: 217 91% 60%;  /* Electric Blue */
+    --primary-foreground: 222 47% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 25 95% 53%;  /* Orange/Gold */
+    --secondary-foreground: 222 47% 6%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 100% 70%;  /* Purple accent */
+    --accent-foreground: 222 47% 6%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 217 91% 60%;
+
+    /* Sports Gradients */
+    --gradient-sports: linear-gradient(135deg, hsl(217 91% 60%), hsl(280 100% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 6%), hsl(217 32% 17%));
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 8%), hsl(217 32% 17%));
+    --gradient-button: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 43%));
+
+    /* Shadows and Effects */
+    --shadow-sports: 0 25px 50px -12px hsl(217 91% 60% / 0.25);
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+    --shadow-card: 0 10px 30px -5px hsl(222 47% 6% / 0.8);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -100,6 +117,183 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer utilities {
+  /* Sports Typography */
+  .concours-font {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  .varsity-font {
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Gradient Backgrounds */
+  .bg-gradient-sports {
+    background: var(--gradient-sports);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .bg-gradient-button {
+    background: var(--gradient-button);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  /* Sports Effects */
+  .shadow-sports {
+    box-shadow: var(--shadow-sports);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Sports Card Styles */
+  .epic-card {
+    @apply bg-gradient-card border border-border/20 rounded-xl shadow-card transition-all duration-300;
+  }
+  
+  .epic-card:hover {
+    @apply scale-105 shadow-sports;
+  }
+
+  /* Hero Stadium Style */
+  .stadium-hero {
+    background: 
+      radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%),
+      linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stadium-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Floating Animations */
+  .floating-element {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  /* Pulse Glow */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.3); }
+  }
+
+  /* Particle Effects */
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(59, 130, 246, 0.6);
+    border-radius: 50%;
+    animation: particle-float 20s linear infinite;
+  }
+  
+  @keyframes particle-float {
+    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
+  }
+
+  /* Sports Button Styles */
+  .btn-sports {
+    @apply bg-gradient-button text-primary-foreground px-8 py-4 rounded-lg font-semibold uppercase tracking-wider;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-glow;
+    @apply border border-primary/20;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-accent text-secondary-foreground px-6 py-3 rounded-lg font-semibold;
+    @apply transition-all duration-300 hover:scale-105;
+    @apply border border-secondary/20;
+  }
+
+  /* Trophy and Medal Effects */
+  .trophy-glow {
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.6));
+  }
+  
+  .medal-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .medal-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s ease-in-out infinite;
+  }
+  
+  @keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  }
+
+  /* Grid Patterns */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
   }
 }
