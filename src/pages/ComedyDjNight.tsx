@@ -67,6 +67,15 @@ export default function ComedyDjNight() {
               <Button className="w-full btn-accent text-lg py-3">
                 Buy Pass Now
               </Button>
+              <Button
+                className="w-full btn-accent mt-2"
+                onClick={() => {
+                  window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_COMEDY', '_blank');
+                  console.log('ComedyDjNight registration button clicked');
+                }}
+              >
+                Register for Comedy Night
+              </Button>
             </CardContent>
           </Card>
 

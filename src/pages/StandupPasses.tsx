@@ -83,7 +83,16 @@ export default function StandupPasses() {
                     </Button>
                     <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
                       Get Notified
-                    </Button>
+                  </Button>
+                  <Button
+                    className="w-full btn-accent mt-2"
+                    onClick={() => {
+                      window.open('https://PLACEHOLDER_GOOGLE_FORM_URL', '_blank');
+                      console.log('StandupPasses registration button clicked');
+                    }}
+                  >
+                    Register for Comedy Night
+                  </Button>
                   </div>
 
                   {/* Info Box */}

@@ -41,9 +41,28 @@ export default function SportDetail() {
                   <Button className="btn-sports flex-1">
                     Register Now
                   </Button>
+                  <Button
+                    className="btn-sports flex-1 mt-2"
+                    onClick={() => {
+                      window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_REGISTER', '_blank');
+                      console.log('SportDetail registration button clicked');
+                    }}
+                  >
+                    Register for Tournament
+                  </Button>
                   <Button variant="outline" className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
                     <Download className="w-4 h-4 mr-2" />
                     Download Rulebook
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground mt-2"
+                    onClick={() => {
+                      window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_RULEBOOK', '_blank');
+                      console.log('SportDetail rule book download button clicked');
+                    }}
+                  >
+                    Download Tournament Rules
                   </Button>
                 </div>
                 

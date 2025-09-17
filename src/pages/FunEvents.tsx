@@ -67,6 +67,15 @@ export default function FunEvents() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground">{event.description}</p>
+                <Button
+                  className="w-full btn-accent mt-2"
+                  onClick={() => {
+                    window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_FUN_EVENT', '_blank');
+                    console.log(`FunEvents registration button clicked for ${event.name}`);
+                  }}
+                >
+                  Register for {event.name}
+                </Button>
               </CardContent>
             </Card>
           ))}

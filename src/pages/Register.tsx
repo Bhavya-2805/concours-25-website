@@ -62,7 +62,13 @@ export default function Register() {
               </div>
 
               <Button className="w-full btn-sports group" asChild>
-                <Link to="/sports-events">
+                <Link
+                  to="#"
+                  onClick={() => {
+                    window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_REGISTER', '_blank');
+                    console.log('Register page registration button clicked');
+                  }}
+                >
                   Register for Sports
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>

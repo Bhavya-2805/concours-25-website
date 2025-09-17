@@ -120,6 +120,16 @@ export default function Sponsors() {
                     Explore Partnership
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
+                  <Button
+                    className="btn-accent mt-2"
+                    onClick={() => {
+                      window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_SPONSOR', '_blank');
+                      console.log('Sponsors partnership button clicked');
+                    }}
+                  >
+                    Register as Sponsor
+                  </Button>
+                  </Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>

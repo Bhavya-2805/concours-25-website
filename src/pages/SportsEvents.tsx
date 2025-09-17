@@ -104,8 +104,28 @@ export default function SportsEvents() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="btn-sports">
-              Register Now
-              <Users className="ml-2 w-5 h-5" />
+                Register Now
+                <Users className="ml-2 w-5 h-5" />
+              </Button>
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-2"
+                onClick={() => {
+                  window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_RULEBOOK', '_blank');
+                  console.log('SportsEvents rule book download button clicked');
+                }}
+              >
+                Download Rules
+              </Button>
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground mt-2"
+                onClick={() => {
+                  window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_REGISTER', '_blank');
+                  console.log('SportsEvents registration button clicked');
+                }}
+              >
+                Register for Sports
             </Button>
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               Download Rules
