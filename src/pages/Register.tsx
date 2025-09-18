@@ -2,9 +2,10 @@ import { Trophy, Mic, ArrowRight, Star, Users, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen py-16 bg-gradient-hero subtle-bg">
       <div className="max-w-6xl mx-auto px-4">
@@ -64,8 +65,9 @@ export default function Register() {
               <Button className="w-full btn-sports group" asChild>
                 <Link
                   to="#"
-                  onClick={() => {
-                    window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_REGISTER', '_blank');
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/sports-events');
                     console.log('Register page registration button clicked');
                   }}
                 >

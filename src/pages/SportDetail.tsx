@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Trophy, Calendar, MapPin, DollarSign, Phone, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,11 @@ import { Badge } from "@/components/ui/badge";
 
 export default function SportDetail() {
   const { sport } = useParams<{ sport: string }>();
+  
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   // Convert slug to display name
   const sportName = sport?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || "Sport";
@@ -38,32 +44,23 @@ export default function SportDetail() {
               </CardHeader>
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                  <Button className="btn-sports flex-1">
+                  <Button className="btn-sports flex-1"
+                   onClick={() => {
+                    window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_REGISTER', '_blank');
+                    console.log('SportDetail registration button clicked');
+                  }}>
                     Register Now
                   </Button>
-                  <Button
-                    className="btn-sports flex-1 mt-2"
-                    onClick={() => {
-                      window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_REGISTER', '_blank');
-                      console.log('SportDetail registration button clicked');
-                    }}
-                  >
-                    Register for Tournament
-                  </Button>
-                  <Button variant="outline" className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download Rulebook
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground mt-2"
+                
+                  <Button variant="outline" className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
                     onClick={() => {
                       window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_RULEBOOK', '_blank');
                       console.log('SportDetail rule book download button clicked');
-                    }}
-                  >
-                    Download Tournament Rules
+                    }}>
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Rulebook
                   </Button>
+              
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
