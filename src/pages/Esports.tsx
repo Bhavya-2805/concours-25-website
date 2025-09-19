@@ -14,9 +14,9 @@ const esportsGames = [
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSepxP4Unf9P4ab1ZqDfMmLi4c9u_wg1EWT3hzvPlMkyIoufBw/viewform", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "Battle Royale action where only the last team standing wins. Survive, loot, and eliminate your way to victory.",
-    prizePool: "₹50,000",
+    prizePool: "To be announced",
     teamSize: "4v4",
-    date: "March 15-16, 2024"
+    date: "Nov 6th-9th, 2025"
   },
   { 
     name: "Free Fire Max (CS)", 
@@ -26,9 +26,9 @@ const esportsGames = [
     registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScps0evDnbOTW4VyYItimwViwCNaq9RFdm_xxBM_XYNDl7p8Q/viewform?usp=send_form", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "Intense 4v4 tactical combat in Clash Squad mode. Strategy and teamwork are key to dominating each round.",
-    prizePool: "₹40,000",
+    prizePool: "To be announced",
     teamSize: "4v4",
-    date: "March 17-18, 2024"
+    date: "Nov 6th-9th, 2025"
   },
   { 
     name: "BGMI", 
@@ -38,9 +38,9 @@ const esportsGames = [
     registerLink: "https://forms.gle/L8FaxUqSdA13g8fj8", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "India's favorite Battle Royale. Experience intense combat on the battleground with your squad.",
-    prizePool: "₹60,000",
+    prizePool: "To be announced",
     teamSize: "4v4",
-    date: "March 19-20, 2024"
+    date: "Nov 6th-9th, 2025"
   },
   { 
     name: "CODM", 
@@ -50,9 +50,9 @@ const esportsGames = [
     registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSc1GZD-UnhMaMU0DwbEZsyNRjIrBsI5sVCF8zktemuEL5PbRA/viewform?usp=send_form", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "Call of Duty Mobile brings fast-paced FPS action. Dominate the battlefield with your squad.",
-    prizePool: "₹45,000",
+    prizePool: "To be announced",
     teamSize: "5v5",
-    date: "March 21-22, 2024"
+    date: "Nov 6th-9th, 2025"
   },
   { 
     name: "Valorant", 
@@ -62,9 +62,9 @@ const esportsGames = [
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScEdNzx8SMqIiEQUF196RCCzI1aVwSViSXVr9c7OFj7H4AXbQ/viewform", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "Tactical 5v5 shooter where strategy meets precision. Form your team and dominate the battlefield.",
-    prizePool: "₹50,000",
+    prizePool: "To be announced",
     teamSize: "5v5",
-    date: "March 23-24, 2024"
+    date: "Nov 6th-9th, 2025"
   },
   { 
     name: "Clash Royale", 
@@ -74,9 +74,9 @@ const esportsGames = [
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScREa1iZxWpdyfSHqs2WWeNQObvuVk4AVzmJV_NVyor6U-RIA/viewform", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "Real-time multiplayer strategy game. Build your deck and destroy opponent's towers to win.",
-    prizePool: "₹30,000",
+    prizePool: "To be announced",
     teamSize: "1v1",
-    date: "March 25-26, 2024"
+    date: "Nov 6th-9th, 2025"
   },
   { 
     name: "EA FC Mobile", 
@@ -86,9 +86,9 @@ const esportsGames = [
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdgS3kSJQsfaLorUKIh3AFY2i2xxXICoNO7GuqGMqkXMEW5vA/viewform", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "The ultimate football experience on mobile. Build your dream team and compete for glory.",
-    prizePool: "₹35,000",
+    prizePool: "To be announced",
     teamSize: "1v1",
-    date: "March 27-28, 2024"
+    date: "Nov 6th-9th, 2025"
   },
   { 
     name: "WCC Rivals", 
@@ -98,9 +98,9 @@ const esportsGames = [
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSe_9j6mBjTi0NDEi984iBYeSU5O2hEcauQqSKzKGNOpG5_JYA/viewform", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "World Cricket Championship Rivals. Experience the thrill of cricket on your mobile device.",
-    prizePool: "₹25,000",
+    prizePool: "To be announced",
     teamSize: "1v1",
-    date: "March 29-30, 2024"
+    date: "Nov 6th-9th, 2025"
   },
   { 
     name: "Mini Militia", 
@@ -110,9 +110,9 @@ const esportsGames = [
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScT2NzqXTINqchSQYxQnCAOaZD07t5tacODspQa8PizIcRO2w/viewform", 
     rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
     description: "Classic 2D multiplayer combat. Engage in intense battles with up to 6 players in various maps.",
-    prizePool: "₹20,000",
-    teamSize: "6v6",
-    date: "March 31-April 1, 2024"
+    prizePool: "To be announced",
+    teamSize: "4v4",
+    date: "Nov 6th-9th, 2025"
   },
 ];
 
@@ -129,11 +129,9 @@ export default function Esports() {
       <section className="py-24 bg-gradient-hero stadium-hero">
         <div className="max-w-6xl mx-auto text-center px-4">
           <div className="flex justify-center mb-6">
-            <div className="w-24 h-24 bg-gradient-esports rounded-full flex items-center justify-center trophy-glow">
-              <Trophy className="w-12 h-12 text-white" />
-            </div>
+            <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-28 h-28" />
           </div>
-          <h1 className="varsity-font text-5xl lg:text-6xl text-foreground mb-6">
+          <h1 className="concours-font text-5xl lg:text-6xl text-foreground mb-6">
             E-Sports Championship
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -151,7 +149,7 @@ export default function Esports() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="varsity-font text-4xl text-foreground mb-4">
+            <h2 className="timesnewroman-font text-4xl text-foreground mb-4">
               Choose Your Battle
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -233,25 +231,16 @@ export default function Esports() {
             Register now and secure your spot in gaming history.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              className="btn-esports"
-              onClick={() => {
-                window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_REGISTER', '_blank');
-                console.log('Esports CTA registration button clicked');
-              }}
-            >
-              Register Now
-              <Users className="ml-2 w-5 h-5" />
-            </Button>
+            
             <Button
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               onClick={() => {
-                window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_RULEBOOK', '_blank');
+                window.open('https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view?usp=sharing', '_blank');
                 console.log('Esports CTA rule book download button clicked');
               }}
             >
-              Download Rules
+              View RuleBook
             </Button>
           </div>
         </div>

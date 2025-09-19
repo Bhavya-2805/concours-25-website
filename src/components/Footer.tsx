@@ -35,16 +35,33 @@ export function Footer() {
           <div>
             <h3 className="varsity-font text-xl text-primary mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
+              <a 
+                href="https://www.instagram.com/sportsatdaiict?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200"
+              >
                 <Instagram className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
+              <a 
+                href="http://www.youtube.com/@sportsda-iict1510" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200"
+              >
                 <Youtube className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
+              <a href="mailto:concoursdaiict@gmail.com" className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
                 <Mail className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
+              <a 
+                href="#" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200"
+              >
                 <Globe className="w-5 h-5 text-white" />
               </a>
             </div>

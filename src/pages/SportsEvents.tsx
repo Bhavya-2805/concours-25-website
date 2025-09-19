@@ -6,18 +6,21 @@ import { Link, useNavigate } from "react-router-dom";
 const sports = [
   { name: "Basketball (Men)", slug: "basketball-men", icon: "🏀", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSd7237Cuy01ZgYEd4ywVgR8PmYVss3Dn5ywqaj-cXQOOa1maQ/viewform?usp=header" },
   { name: "Basketball (Women)", slug: "basketball-women", icon: "🏀", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSc1ebXYhf_e5rlYkxjT1LfiU2XCXKh-MeKhYFFGQBTF06xaGg/viewform?usp=header" },
-  { name: "Volleyball (Men)", slug: "volleyball-men", icon: "🏐", category: "Men's", registerLink: "https://docs.google.com/forms/d/1H1kGjGR8gfe0ezV4m0segJo9SxGQ2PFSYeS0Dzenu9k/edit?usp=drivesdk" },
-  { name: "Volleyball (Women)", slug: "volleyball-women", icon: "🏐", category: "Women's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSd7unun1AmmObw_vYIMbtvEAILNW1wJHXAlDjaYPfiFekN8eg/viewform?usp=sharing&ouid=101228523565298084421" },
+  { name: "Volleyball (Men)", slug: "volleyball-men", icon: "🏐", category: "Men's", registerLink: "https://forms.gle/4PQzMZ34HYjnn6sP6" },
+  { name: "Volleyball (Women)", slug: "volleyball-women", icon: "🏐", category: "Women's", registerLink: "https://forms.gle/nHxQFqk8SyqPaKeW6" },
   { name: "Cricket", slug: "cricket", icon: "🏏", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdXyFy_OsjEHiVHQUDSX2gFOCo_YDq0dNcGJX5Tbzm1V_WeCA/viewform?usp=dialog" },
   { name: "Badminton (Men)", slug: "badminton-men", icon: "🏸", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScdMNpfnZ3KV3OdODTRxJfUg128QPl-Wilt-oy49JHbcCw2nw/viewform?usp=header" },
   { name: "Badminton (Women)", slug: "badminton-women", icon: "🏸", category: "Women's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSf3KGvqQ1kzcyFTGb_NEAYt4CwhVDRWK325rmVN6FoBAV-Oag/viewform?usp=dialog" },
+  { name: "Badminton (Mixed Doubles)", slug: "badminton-mixed", icon: "🏸", category: "Mixed", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScGnwzUQsSf-NY5cBhHjlCXLfOqIVx0dI9JhxzkZ4rwsvlCHQ/viewform?usp=header" },
   { name: "Football (Men)", slug: "football-men", icon: "⚽", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMX15T6tpVbcSsupKpao983AnUv1y0p_-HCOJRcHZ4YlRKZQ/viewform?usp=dialog" },
   { name: "Football (Women)", slug: "football-women", icon: "⚽", category: "Women's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeSJVc1NdP2Ok4BkvaeAbBMsaogg0qS6Hki13ERsRqN1NwMkw/viewform?usp=dialog" },
   { name: "Table Tennis (Men)", slug: "table-tennis-men", icon: "🏓", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVgb2FHhNcysgnv6cPQwXOQzTeF_hYHD1141Rc6Dya_qIJgw/viewform?usp=sharing&ouid=101228523565298084421" },
   { name: "Table Tennis (Women)", slug: "table-tennis-women", icon: "🏓", category: "Women's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfP5I28i7h-7LoFYl1DMAtsadaeRIQ1pBOLkN3fYWl76PP3jw/viewform?usp=sharing&ouid=101228523565298084421" },
-  { name: "Tennis", slug: "tennis", icon: "🎾", category: "Mixed", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSexNGDoYBFoJhZDu93b9d_LsT26IWJ9CWV79bVRv2NinWraDA/viewform?usp=sharing&ouid=101228523565298084421" },
-  { name: "Carrom", slug: "carrom", icon: "🎯", category: "Mixed", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdsI1LNxIEJKKV3wUh-KrjE7T9nQUTEIYclOiWdLQZ897bUYQ/viewform?usp=dialog" },
+  { name: "Tennis (Men)", slug: "tennis-men", icon: "🎾", category: "Men's", registerLink: "https://forms.gle/5LtqB78P7XUe1eL16" },
+  { name: "Tennis (Women)", slug: "tennis-women", icon: "🎾", category: "Women's", registerLink: "https://forms.gle/E914aiUbmjpxp1B49" },
+  { name: "Carrom", slug: "carrom", icon: "🥏", category: "Mixed", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdsI1LNxIEJKKV3wUh-KrjE7T9nQUTEIYclOiWdLQZ897bUYQ/viewform?usp=dialog" },
   { name: "Chess", slug: "chess", icon: "♟️", category: "Mixed", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSc2RhF0ndssy0gStfyf-a9XEAkoqs_EywDE8zQ_nA0BR4FFbQ/viewform?usp=sharing&ouid=101228523565298084421" },
+  { name: "Athletics", slug: "athletics", icon: "🏃", category: "Mixed", registerLink: "" },
 ];
 
 const esportsGames = [
@@ -49,9 +52,7 @@ export default function SportsEvents() {
             Choose your battlefield. From court sports to field events, find your sport and register for glory.
           </p>
           <div className="flex justify-center">
-            <div className="w-16 h-16 bg-gradient-sports rounded-full flex items-center justify-center trophy-glow floating-element">
-              <Trophy className="w-8 h-8 text-white" />
-            </div>
+            <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-28 h-28" />
           </div>
         </div>
       </section>
@@ -155,16 +156,7 @@ export default function SportsEvents() {
             Don't miss your chance to be part of the most exciting sports festival of the year.
           </p>
           <div className="flex flex-row gap-4 justify-center items-center">
-            <Button 
-              className="btn-sports"
-              onClick={() => {
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLSd7237Cuy01ZgYEd4ywVgR8PmYVss3Dn5ywqaj-cXQOOa1maQ/viewform', '_blank');
-                console.log('SportsEvents registration button clicked');
-              }}
-            >
-              Register Now
-              <Users className="ml-2 w-5 h-5" />
-            </Button>
+            
             <Button
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
@@ -173,7 +165,7 @@ export default function SportsEvents() {
                 console.log('SportsEvents rule book download button clicked');
               }}
             >
-              Download Rulebook
+              View Rulebook
             </Button>
           </div>
 
