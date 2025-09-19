@@ -46,7 +46,7 @@ export default function SportDetail() {
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <Button className="btn-sports flex-1"
                    onClick={() => {
-                    window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_REGISTER', '_blank');
+                    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd7237Cuy01ZgYEd4ywVgR8PmYVss3Dn5ywqaj-cXQOOa1maQ/viewform', '_blank');
                     console.log('SportDetail registration button clicked');
                   }}>
                     Register Now
@@ -54,7 +54,7 @@ export default function SportDetail() {
                 
                   <Button variant="outline" className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
                     onClick={() => {
-                      window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_RULEBOOK', '_blank');
+                      window.open('https://docs.google.com/document/d/1DraFN-Wemm0jsHYun-Fv320C97HQHN5P/edit', '_blank');
                       console.log('SportDetail rule book download button clicked');
                     }}>
                     <Download className="w-4 h-4 mr-2" />

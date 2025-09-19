@@ -16,16 +16,100 @@ export default function EsportDetail() {
   // E-sports games data
   const esportsGames = [
     { 
+      name: "Free Fire Max (BR)", 
+      slug: "freefire-br", 
+      icon: "🔥", 
+      category: "Battle Royale", 
+      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSepxP4Unf9P4ab1ZqDfMmLi4c9u_wg1EWT3hzvPlMkyIoufBw/viewform", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
+      description: "Battle Royale action where only the last team standing wins. Survive, loot, and eliminate your way to victory.",
+      prizePool: "₹50,000",
+      teamSize: "4v4",
+      date: "March 15-16, 2024",
+      format: "Battle Royale",
+      platform: "Mobile",
+      rules: [
+        "Standard BR rules apply",
+        "50 players per match",
+        "Best of 3 matches per round",
+        "No cheating or exploitation allowed",
+        "Teams must arrive 30 minutes before scheduled time"
+      ]
+    },
+    { 
+      name: "Free Fire Max (CS)", 
+      slug: "freefire-cs", 
+      icon: "🎯", 
+      category: "Clash Squad", 
+      registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScps0evDnbOTW4VyYItimwViwCNaq9RFdm_xxBM_XYNDl7p8Q/viewform?usp=send_form", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
+      description: "Intense 4v4 tactical combat in Clash Squad mode. Strategy and teamwork are key to dominating each round.",
+      prizePool: "₹40,000",
+      teamSize: "4v4",
+      date: "March 17-18, 2024",
+      format: "Clash Squad",
+      platform: "Mobile",
+      rules: [
+        "Best of 7 rounds per match",
+        "Economy system applies",
+        "Standard weapon loadouts",
+        "No third-party software allowed",
+        "Teams must arrive 15 minutes before scheduled time"
+      ]
+    },
+    { 
+      name: "BGMI", 
+      slug: "bgmi", 
+      icon: "🎖️", 
+      category: "Battle Royale", 
+      registerLink: "https://forms.gle/L8FaxUqSdA13g8fj8", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
+      description: "India's favorite Battle Royale. Experience intense combat on the battleground with your squad.",
+      prizePool: "₹60,000",
+      teamSize: "4v4",
+      date: "March 19-20, 2024",
+      format: "Battle Royale",
+      platform: "Mobile",
+      rules: [
+        "TPP mode for all matches",
+        "100 players per match",
+        "Best of 3 matches per round",
+        "Standard tournament rules apply",
+        "No cheating or exploitation allowed"
+      ]
+    },
+    { 
+      name: "CODM", 
+      slug: "codm", 
+      icon: "🎮", 
+      category: "FPS", 
+      registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSc1GZD-UnhMaMU0DwbEZsyNRjIrBsI5sVCF8zktemuEL5PbRA/viewform?usp=send_form", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
+      description: "Call of Duty Mobile brings fast-paced FPS action. Dominate the battlefield with your squad.",
+      prizePool: "₹45,000",
+      teamSize: "5v5",
+      date: "March 21-22, 2024",
+      format: "Multiplayer",
+      platform: "Mobile",
+      rules: [
+        "Best of 5 maps per match",
+        "Search & Destroy mode for finals",
+        "Standard weapon restrictions",
+        "No third-party software allowed",
+        "Teams must arrive 20 minutes before scheduled time"
+      ]
+    },
+    { 
       name: "Valorant", 
       slug: "valorant", 
       icon: "🔫", 
       category: "FPS", 
-      registerLink: "https://PLACEHOLDER_GOOGLE_FORM_URL_VALORANT", 
-      rulebookLink: "https://PLACEHOLDER_RULEBOOK_URL_VALORANT",
+      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScEdNzx8SMqIiEQUF196RCCzI1aVwSViSXVr9c7OFj7H4AXbQ/viewform", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
       description: "Tactical 5v5 shooter where strategy meets precision. Form your team and dominate the battlefield.",
       prizePool: "₹50,000",
       teamSize: "5v5",
-      date: "March 15-16, 2024",
+      date: "March 23-24, 2024",
       format: "Double Elimination",
       platform: "PC",
       rules: [
@@ -37,150 +121,87 @@ export default function EsportDetail() {
       ]
     },
     { 
-      name: "CS:GO 2", 
-      slug: "csgo2", 
-      icon: "🎯", 
-      category: "FPS", 
-      registerLink: "https://PLACEHOLDER_GOOGLE_FORM_URL_CSGO2", 
-      rulebookLink: "https://PLACEHOLDER_RULEBOOK_URL_CSGO2",
-      description: "The classic tactical shooter reimagined. Experience intense counter-terrorist action.",
-      prizePool: "₹40,000",
-      teamSize: "5v5",
-      date: "March 17-18, 2024",
-      format: "Swiss System + Playoffs",
-      platform: "PC",
-      rules: [
-        "MR12 format for all matches",
-        "Team selection: knife round",
-        "Overtime: MR6 with 4k starting money",
-        "Standard tournament map pool",
-        "No third-party software allowed"
-      ]
-    },
-    { 
-      name: "League of Legends", 
-      slug: "lol", 
-      icon: "⚔️", 
-      category: "MOBA", 
-      registerLink: "https://PLACEHOLDER_GOOGLE_FORM_URL_LOL", 
-      rulebookLink: "https://PLACEHOLDER_RULEBOOK_URL_LOL",
-      description: "Epic 5v5 MOBA battles. Choose your champion and lead your team to victory on the Rift.",
-      prizePool: "₹60,000",
-      teamSize: "5v5",
-      date: "March 19-20, 2024",
-      format: "Group Stage + Single Elimination",
-      platform: "PC",
-      rules: [
-        "Tournament Draft mode",
-        "Latest patch version",
-        "Best of 3 for all matches",
-        "Finals Best of 5",
-        "Bans: 3 per team in draft phase"
-      ]
-    },
-    { 
-      name: "Dota 2", 
-      slug: "dota2", 
-      icon: "🛡️", 
-      category: "MOBA", 
-      registerLink: "https://PLACEHOLDER_GOOGLE_FORM_URL_DOTA2", 
-      rulebookLink: "https://PLACEHOLDER_RULEBOOK_URL_DOTA2",
-      description: "The ultimate MOBA experience. Master complex heroes and outplay your opponents.",
-      prizePool: "₹70,000",
-      teamSize: "5v5",
-      date: "March 21-22, 2024",
-      format: "Double Elimination",
-      platform: "PC",
-      rules: [
-        "Captains Mode",
-        "Latest game patch",
-        "Best of 3 for all matches",
-        "Grand Final Best of 5",
-        "Standard tournament rules apply"
-      ]
-    },
-    { 
-      name: "FIFA 24", 
-      slug: "fifa24", 
-      icon: "⚽", 
-      category: "Sports", 
-      registerLink: "https://PLACEHOLDER_GOOGLE_FORM_URL_FIFA24", 
-      rulebookLink: "https://PLACEHOLDER_RULEBOOK_URL_FIFA24",
-      description: "Showcase your football skills in the latest FIFA edition. Score goals and claim glory.",
+      name: "Clash Royale", 
+      slug: "clash-royale", 
+      icon: "👑", 
+      category: "Strategy", 
+      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScREa1iZxWpdyfSHqs2WWeNQObvuVk4AVzmJV_NVyor6U-RIA/viewform", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
+      description: "Real-time multiplayer strategy game. Build your deck and destroy opponent's towers to win.",
       prizePool: "₹30,000",
       teamSize: "1v1",
-      date: "March 23, 2024",
+      date: "March 25-26, 2024",
+      format: "Single Elimination",
+      platform: "Mobile",
+      rules: [
+        "Best of 3 games per match",
+        "Tournament deck rules apply",
+        "No third-party software allowed",
+        "Standard card restrictions",
+        "Players must arrive 15 minutes before scheduled time"
+      ]
+    },
+    { 
+      name: "EA FC Mobile", 
+      slug: "ea-fc-mobile", 
+      icon: "⚽", 
+      category: "Sports", 
+      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdgS3kSJQsfaLorUKIh3AFY2i2xxXICoNO7GuqGMqkXMEW5vA/viewform", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
+      description: "The ultimate football experience on mobile. Build your dream team and compete for glory.",
+      prizePool: "₹35,000",
+      teamSize: "1v1",
+      date: "March 27-28, 2024",
       format: "Group Stage + Knockout",
-      platform: "PC/Console",
+      platform: "Mobile",
       rules: [
         "6 minute halves",
-        "Ultimate Team squads",
+        "Ultimate Team squads only",
         "No custom tactics allowed",
         "Injuries on, offsides on",
         "Standard tournament settings"
       ]
     },
     { 
-      name: "NBA 2K24", 
-      slug: "nba2k24", 
-      icon: "🏀", 
+      name: "WCC Rivals", 
+      slug: "wcc-rivals", 
+      icon: "🏏", 
       category: "Sports", 
-      registerLink: "https://PLACEHOLDER_GOOGLE_FORM_URL_NBA2K24", 
-      rulebookLink: "https://PLACEHOLDER_RULEBOOK_URL_NBA2K24",
-      description: "Dominate the court in NBA 2K24. Dunk, shoot, and defend your way to championship.",
+      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSe_9j6mBjTi0NDEi984iBYeSU5O2hEcauQqSKzKGNOpG5_JYA/viewform", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
+      description: "World Cricket Championship Rivals. Experience the thrill of cricket on your mobile device.",
       prizePool: "₹25,000",
       teamSize: "1v1",
-      date: "March 24, 2024",
+      date: "March 29-30, 2024",
       format: "Single Elimination",
-      platform: "PC/Console",
+      platform: "Mobile",
       rules: [
-        "5 minute quarters",
-        "All-Star difficulty",
-        "Current NBA teams only",
-        "No custom rosters",
-        "Standard tournament rules"
+        "5 overs per match",
+        "T20 format",
+        "Standard tournament rules",
+        "No custom teams allowed",
+        "Players must arrive 15 minutes before scheduled time"
       ]
     },
     { 
-      name: "Chess.com", 
-      slug: "chess-com", 
-      icon: "♟️", 
-      category: "Strategy", 
-      registerLink: "https://PLACEHOLDER_GOOGLE_FORM_URL_CHESSCOM", 
-      rulebookLink: "https://PLACEHOLDER_RULEBOOK_URL_CHESSCOM",
-      description: "Battle of minds in the royal game. Outthink your opponent in this ultimate strategy contest.",
+      name: "Mini Militia", 
+      slug: "mini-militia", 
+      icon: "🪖", 
+      category: "Action", 
+      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScT2NzqXTINqchSQYxQnCAOaZD07t5tacODspQa8PizIcRO2w/viewform", 
+      rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
+      description: "Classic 2D multiplayer combat. Engage in intense battles with up to 6 players in various maps.",
       prizePool: "₹20,000",
-      teamSize: "1v1",
-      date: "March 25, 2024",
-      format: "Swiss System",
-      platform: "PC",
+      teamSize: "6v6",
+      date: "March 31-April 1, 2024",
+      format: "Free For All",
+      platform: "Mobile",
       rules: [
-        "Rapid time control: 15+10",
-        "Standard chess rules apply",
-        "No engine assistance allowed",
-        "7 rounds total",
-        "Tiebreaks: Buchholz system"
-      ]
-    },
-    { 
-      name: "Rocket League", 
-      slug: "rocket-league", 
-      icon: "🚗", 
-      category: "Sports", 
-      registerLink: "https://PLACEHOLDER_GOOGLE_FORM_URL_ROCKETLEAGUE", 
-      rulebookLink: "https://PLACEHOLDER_RULEBOOK_URL_ROCKETLEAGUE",
-      description: "High-octane soccer with rocket-powered cars. Score amazing goals and make incredible saves.",
-      prizePool: "₹35,000",
-      teamSize: "3v3",
-      date: "March 26, 2024",
-      format: "Group Stage + Double Elimination",
-      platform: "PC/Console",
-      rules: [
-        "5 minute matches",
-        "Best of 5 series",
-        "Standard arena rotation",
-        "No custom maps allowed",
-        "Overtime: unlimited time, next goal wins"
+        "10 minute matches",
+        "Deathmatch mode",
+        "Standard weapon loadouts",
+        "No cheating or exploitation allowed",
+        "Players must arrive 10 minutes before scheduled time"
       ]
     }
   ];
@@ -362,7 +383,7 @@ export default function EsportDetail() {
             {/* Contact Information Card */}
             <Card className="epic-card">
               <CardHeader>
-                <CardTitle className="varsity-font text-xl text-foreground">
+                <CardTitle className="varsity-font text-2xl text-foreground">
                   Contact Information
                 </CardTitle>
               </CardHeader>
@@ -378,16 +399,8 @@ export default function EsportDetail() {
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
-                    <div className="font-semibold">Email</div>
-                    <div className="text-sm text-muted-foreground">esports@concours24.com</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <div>
-                    <div className="font-semibold">Venue</div>
-                    <div className="text-sm text-muted-foreground">Gaming Arena, DA-IICT</div>
+                    <div className="font-semibold">Email Support</div>
+                    <div className="text-sm text-muted-foreground">esports@concours25.com</div>
                   </div>
                 </div>
               </CardContent>

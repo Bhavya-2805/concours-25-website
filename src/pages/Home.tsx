@@ -4,8 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Footer } from "@/components/Footer";
 import heroImage from "@/assets/hero-stadium.jpg";
-
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   const stats = [
     { label: "Sports Events", value: "15+", icon: Target },
     { label: "Expected Athletes", value: "2000+", icon: Users },
@@ -69,8 +70,12 @@ export default function Home() {
           </p>
           
           {/* CTA Button - Reduced pulse intensity */}
-          <Button className="btn-sports text-xl px-12 py-6">
+          <Button 
+            className="btn-sports text-xl px-12 py-6"
+            onClick={() => navigate('/sports-events')}
+          >
             REGISTER NOW
+
             <ArrowRight className="ml-3 w-6 h-6" />
           </Button>
         </div>
