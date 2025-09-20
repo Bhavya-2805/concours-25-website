@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Trophy, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import logoImage from "@/assets/images/IMG_0054.PNG";
 
 const navigationItems = [
   { title: "Home", url: "/" },
@@ -27,7 +28,7 @@ export function TopNavbar() {
           {/* Brand Section - Left aligned */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="">
-              <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-10 h-10" />
+              <img src={logoImage} alt="Logo" className="w-10 h-10" />
             </div>
             <div className="hidden sm:block">
               <div className="concours-font text-xl text-foreground group-hover:text-primary transition-colors">
