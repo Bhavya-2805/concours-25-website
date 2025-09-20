@@ -4,13 +4,48 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Footer } from "@/components/Footer";
 import heroImage from "@/assets/hero-stadium.jpg";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
+// Import grid images (you can add your image files to src/assets/images/)
+import gridImage1 from "@/assets/images/Img-19.jpg";
+import gridImage2 from "@/assets/images/DR--16.jpg";
+import gridImage3 from "@/assets/images/WhatsApp Image 2025-09-19 at 20.35.31_5fbeae11.jpg";
+import gridImage4 from "@/assets/images/AG--6.jpg";
 export default function Home() {
+  const navigate = useNavigate();
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  
   const stats = [
-    { label: "Sports Events", value: "15+", icon: Target },
+    { label: "Sports Events", value: "10+", icon: Target },
     { label: "Expected Athletes", value: "2000+", icon: Users },
     { label: "Participating Colleges", value: "50+", icon: Calendar },
   ];
+
+  // Grid image click handlers
+  const handleGridImageClick = (imageType: string) => {
+    switch (imageType) {
+      case 'sports-events':
+        navigate('/sports-events');
+        break;
+      case 'athletes':
+        navigate('/athletes');
+        break;
+      case 'trophy-awards':
+        navigate('/trophy-awards');
+        break;
+      case 'schedule':
+        navigate('/schedule');
+        break;
+      default:
+        console.log(`Clicked on ${imageType}`);
+    }
+  };
+
+  // Video click handler
+  const handleVideoClick = () => {
+    setIsVideoPlaying(true);
+  };
 
   return (
     <div className="min-h-screen">
@@ -44,12 +79,7 @@ export default function Home() {
         <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
           {/* Trophy Icon - Reduced animation intensity */}
           <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <div className="w-32 h-32 bg-gradient-sports rounded-full flex items-center justify-center trophy-glow floating-element">
-                <Trophy className="w-16 h-16 text-white" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-sports rounded-full animate-ping opacity-10"></div>
-            </div>
+            <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-52 h-52" />
           </div>
 
           {/* Main Heading */}
@@ -58,7 +88,7 @@ export default function Home() {
           </h1>
           
           {/* Tagline */}
-          <h2 className="varsity-font text-2xl md:text-4xl lg:text-5xl text-primary mb-8 tracking-wide">
+          <h2 className="concours-font text-2xl md:text-4xl lg:text-5xl text-primary mb-8 tracking-wide">
             WHERE GLORY LASTS FOREVER
           </h2>
           
@@ -69,8 +99,12 @@ export default function Home() {
           </p>
           
           {/* CTA Button - Reduced pulse intensity */}
-          <Button className="btn-sports text-xl px-12 py-6">
+          <Button 
+            className="btn-sports text-xl px-12 py-6"
+            onClick={() => navigate('/sports-events')}
+          >
             REGISTER NOW
+
             <ArrowRight className="ml-3 w-6 h-6" />
           </Button>
         </div>
@@ -85,7 +119,7 @@ export default function Home() {
               <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 px-4 py-2">
                 About CONCOURS'25
               </Badge>
-              <h2 className="varsity-font text-4xl lg:text-6xl text-foreground mb-6">
+              <h2 className="concours-font text-3xl lg:text-6xl text-foreground mb-6">
                 The Ultimate Sports Festival
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -103,33 +137,70 @@ export default function Home() {
             {/* Image Grid */}
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <Card className="epic-card overflow-hidden">
+                <Card className="epic-card overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleGridImageClick('sports-events')}>
                   <CardContent className="p-0">
-                    <div className="h-48 bg-gradient-sports flex items-center justify-center">
-                      <Target className="w-12 h-12 text-white" />
+                    <div className="h-48 relative overflow-hidden">
+                      <img 
+                        src={gridImage1} 
+                        alt="Sports Event 1" 
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="">
+                        <Target className="" />
+                        <p className="font-semibold"></p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="epic-card overflow-hidden">
+                <Card className="epic-card overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleGridImageClick('athletes')}>
                   <CardContent className="p-0">
-                    <div className="h-32 bg-gradient-accent flex items-center justify-center">
-                      <Users className="w-8 h-8 text-white" />
+                    <div className="h-40 relative overflow-hidden">
+                      <img 
+                        src={gridImage2} 
+                        alt="Athletes" 
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute ">
+                        <Users className="w-6 h-6 mb-1" />
+                        <p className="font-semibold text-sm"></p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
               <div className="space-y-4 pt-8">
-                <Card className="epic-card overflow-hidden">
+                <Card className="epic-card overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleGridImageClick('trophy-awards')}>
                   <CardContent className="p-0">
-                    <div className="h-32 bg-gradient-accent flex items-center justify-center">
-                      <Trophy className="w-8 h-8 text-white" />
+                    <div className="h-40 relative overflow-hidden">
+                      <img 
+                        src={gridImage3} 
+                        alt="Trophy & Awards" 
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute  text-white">
+                        <Trophy className="w-6 h-6 mb-1" />
+                        <p className="font-semibold text-sm"></p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="epic-card overflow-hidden">
+                <Card className="epic-card overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleGridImageClick('schedule')}>
                   <CardContent className="p-0">
-                    <div className="h-48 bg-gradient-sports flex items-center justify-center">
-                      <Calendar className="w-12 h-12 text-white" />
+                    <div className="h-48 relative overflow-hidden">
+                      <img 
+                        src={gridImage4} 
+                        alt="Schedule & Events" 
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        style={{ objectPosition: 'center 30%' }}    
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute  text-white">
+                        <Calendar className="w-8 h-8 mb-2" />
+                        <p className="font-semibold"></p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -168,27 +239,57 @@ export default function Home() {
           <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30 px-4 py-2">
             Relive The Moments
           </Badge>
-          <h2 className="varsity-font text-4xl lg:text-6xl text-foreground mb-8">
+          <h2 className="timesnewroman-font text-4xl lg:text-6xl text-foreground mb-8">
             THE AFTERMOVIE - CONCOURS'24
           </h2>
           <p className="text-xl text-muted-foreground mb-12">
             Experience the energy, passion, and unforgettable moments from last year's incredible festival.
           </p>
           
-          {/* Video Placeholder */}
-          <Card className="epic-card max-w-3xl mx-auto overflow-hidden group cursor-pointer">
+          {/* YouTube Video with Thumbnail Preview */}
+          <Card className="epic-card max-w-4xl mx-auto overflow-hidden cursor-pointer" onClick={handleVideoClick}>
             <CardContent className="p-0 relative">
-              <div className="aspect-video bg-gradient-hero flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-sports opacity-20"></div>
-                <div className="relative z-10 flex items-center space-x-4">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="aspect-video relative overflow-hidden">
+                {/* YouTube Thumbnail Background - Hidden when video is playing */}
+                <div className={`absolute inset-0 ${isVideoPlaying ? 'hidden' : 'block'}`}>
+                  <img 
+                    src="https://img.youtube.com/vi/dEejqaG3w7g/hqdefault.jpg" 
+                    alt="CONCOURS 2024 Aftermovie Thumbnail"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to maxresdefault if hqdefault fails
+                      e.currentTarget.src = "https://img.youtube.com/vi/dEejqaG3w7g/maxresdefault.jpg";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/30 hover:bg-black/10 transition-colors duration-300"></div>
+                </div>
+                
+                {/* Play Button Overlay - Hidden when video is playing */}
+                <div className={`absolute inset-0 flex items-center justify-center ${isVideoPlaying ? 'hidden' : 'flex'}`}>
+                  <div className="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-2xl">
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
-                  <div className="text-white">
-                    <div className="text-2xl font-bold">Watch Aftermovie</div>
-                    <div className="text-white/70">CONCOURS'24 Highlights</div>
+                </div>
+                
+                {/* Video Title Overlay - Hidden when video is playing */}
+                <div className={`absolute bottom-4 left-4 right-4 ${isVideoPlaying ? 'hidden' : 'block'}`}>
+                  <div className="bg-black/70 backdrop-blur-sm rounded-lg p-3">
+                    <div className="text-white text-lg font-bold">CONCOURS 2024 Aftermovie</div>
+                    <div className="text-white/80 text-sm">Click to watch the highlights from last year's incredible festival</div>
                   </div>
                 </div>
+              </div>
+              
+              {/* YouTube iframe - Hidden initially, shows on click */}
+              <div className={`absolute inset-0 ${isVideoPlaying ? 'block' : 'hidden'} z-10`}>
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/dEejqaG3w7g?autoplay=1&rel=0&modestbranding=1&hd=1&vq=hd1080&fs=1&cc_load_policy=0&iv_load_policy=3&showinfo=0&controls=1&disablekb=0&enablejsapi=1"
+                  title="CONCOURS 2024 Aftermovie"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </CardContent>
           </Card>

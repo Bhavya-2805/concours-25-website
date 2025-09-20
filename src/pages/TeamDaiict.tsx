@@ -1,5 +1,6 @@
 import { Shield, Trophy, Users, Target, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -20,6 +21,11 @@ const teams = [
 ];
 
 export default function TeamDaiict() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen py-16 bg-gradient-hero subtle-bg">
       <div className="max-w-6xl mx-auto px-4">
@@ -39,10 +45,8 @@ export default function TeamDaiict() {
         {/* Jersey Section */}
         <Card className="epic-card mb-16 overflow-hidden">
           <CardContent className="p-8 text-center">
-            <h2 className="varsity-font text-3xl text-foreground mb-6">Official Team Jersey</h2>
-            <div className="w-64 h-64 bg-gradient-sports rounded-lg mx-auto flex items-center justify-center trophy-glow">
-              <Shield className="w-32 h-32 text-white" />
-            </div>
+            <h2 className="timesnewroman-font text-3xl text-foreground mb-6">Official Team Jersey</h2>
+            <p className="concours-font text-3xl">Coming Soon</p>
             <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
               Wearing the colors of excellence, our teams represent the spirit and determination of DA-IICT in every competition.
             </p>
@@ -69,7 +73,7 @@ export default function TeamDaiict() {
         <Card className="epic-card">
           <CardContent className="p-8">
             <div className="text-center mb-8">
-              <h2 className="varsity-font text-3xl text-foreground mb-4">Our Legacy</h2>
+              <h2 className="timesnewroman-font text-3xl text-foreground mb-4">Our Legacy</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Years of dedication, training, and excellence have built the legacy of Team DA-IICT.
               </p>
@@ -103,7 +107,7 @@ export default function TeamDaiict() {
         {/* Team Showcase Video Section */}
         <Card className="epic-card mt-16">
           <CardHeader>
-            <CardTitle className="varsity-font text-3xl text-foreground text-center">
+            <CardTitle className="timesnewroman-font text-3xl text-foreground text-center">
               Team Showcase
             </CardTitle>
           </CardHeader>

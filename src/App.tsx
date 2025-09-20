@@ -15,6 +15,8 @@ import TeamConcours from "./pages/TeamConcours";
 import StandupPasses from "./pages/StandupPasses";
 import ComedyDjNight from "./pages/ComedyDjNight";
 import SportDetail from "./pages/SportDetail";
+import Esports from "./pages/Esports";
+import EsportDetail from "./pages/EsportDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +33,8 @@ const App = () => (
             <Route path="/register" element={<Register />} />
             <Route path="/sports-events" element={<SportsEvents />} />
             <Route path="/sports-events/:sport" element={<SportDetail />} />
+            <Route path="/esports" element={<Esports />} />
+            <Route path="/esports/:game" element={<EsportDetail />} />
             <Route path="/fun-events" element={<FunEvents />} />
             <Route path="/team-daiict" element={<TeamDaiict />} />
             <Route path="/sponsors" element={<Sponsors />} />

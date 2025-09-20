@@ -33,7 +33,7 @@ export default function ComedyDjNight() {
             <CardContent className="space-y-6">
               <div className="bg-secondary/10 rounded-lg p-6 border border-secondary/20">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-secondary mb-2">₹299</div>
+                  <div className="text-4xl font-bold text-secondary mb-2">To be announced soon</div>
                   <div className="text-muted-foreground">Per Person</div>
                 </div>
               </div>
@@ -64,8 +64,15 @@ export default function ComedyDjNight() {
                 </div>
               </div>
 
-              <Button className="w-full btn-accent text-lg py-3">
-                Buy Pass Now
+              
+              <Button
+                className="w-full btn-accent mt-2"
+                onClick={() => {
+                  /*window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_COMEDY', '_blank');*/
+                  console.log('ComedyDjNight registration button clicked');
+                }}
+              >
+                Buy Passes Now
               </Button>
             </CardContent>
           </Card>
@@ -107,18 +114,12 @@ export default function ComedyDjNight() {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
                   <div>
-                    <div className="font-semibold">Refreshments</div>
-                    <div className="text-sm text-muted-foreground">Complimentary snacks and beverages</div>
+                    <div className="font-semibold">Energetic Sports Matches</div>
+                    <div className="text-sm text-muted-foreground">Complimentary access to sports matches for 4 days of Fest</div>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
-                  <div>
-                    <div className="font-semibold">Entry to All Areas</div>
-                    <div className="text-sm text-muted-foreground">Access to VIP seating and photo booth</div>
-                  </div>
-                </div>
+                
               </div>
             </CardContent>
           </Card>
@@ -136,7 +137,7 @@ export default function ComedyDjNight() {
               <div>
                 <h3 className="text-xl font-semibold mb-4">An Unforgettable Evening</h3>
                 <p className="text-muted-foreground mb-4">
-                  CONCOURS'24's comedy night was a massive hit with over 500 students in attendance. 
+                  CONCOURS'24's comedy night was a massive hit with over 1500 students in attendance. 
                   The evening featured amazing stand-up performances, incredible DJ sets, and 
                   non-stop entertainment that had everyone talking for weeks.
                 </p>
@@ -148,18 +149,21 @@ export default function ComedyDjNight() {
               </div>
               
               <div className="grid grid-cols-2 gap-4">
-                <div className="h-32 bg-gradient-accent rounded-lg flex items-center justify-center">
-                  <Mic className="w-12 h-12 text-white" />
+                <div className="h-52 bg-gradient-accent rounded-lg flex items-center justify-center">
+                  <img
+                    src="src/assets/images/Img__18.jpg"
+                    alt="Comedy Night"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
-                <div className="h-32 bg-gradient-sports rounded-lg flex items-center justify-center">
-                  <Music className="w-12 h-12 text-white" />
+                <div className="h-52 bg-gradient-sports rounded-lg flex items-center justify-center">
+                <img
+                    src="src/assets/images/DR--1.jpg"
+                    alt="Comedy Night"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
-                <div className="h-32 bg-gradient-sports rounded-lg flex items-center justify-center">
-                  <Users className="w-12 h-12 text-white" />
-                </div>
-                <div className="h-32 bg-gradient-accent rounded-lg flex items-center justify-center">
-                  <Star className="w-12 h-12 text-white" />
-                </div>
+                
               </div>
             </div>
           </CardContent>
@@ -188,7 +192,7 @@ export default function ComedyDjNight() {
                   <Mail className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-semibold mb-2">Email Us</h3>
-                <p className="text-muted-foreground">concours@daiict.ac.in</p>
+                <p className="text-muted-foreground">concoursdaiict@gmail.com</p>
                 <p className="text-sm text-muted-foreground">Official CONCOURS Email</p>
               </div>
             </div>

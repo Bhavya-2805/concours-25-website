@@ -1,23 +1,52 @@
 import { Users, Phone, Mail, Heart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useEffect } from "react";
 
 const teamMembers = [
   { name: "Ishan Thakkar", role: "Convener", phone: "76220 82220" },
-  { name: "Priya Patel", role: "Deputy Convener", phone: "98765 43210" },
-  { name: "Arjun Kumar", role: "Sports Coordinator", phone: "87654 32109" },
-  { name: "Sneha Sharma", role: "Event Manager", phone: "76543 21098" },
-  { name: "Rohit Gupta", role: "Marketing Head", phone: "65432 10987" },
-  { name: "Kavya Reddy", role: "Technical Lead", phone: "54321 09876" },
-  { name: "Vikram Singh", role: "Finance Manager", phone: "43210 98765" },
-  { name: "Ananya Joshi", role: "Logistics Head", phone: "32109 87654" },
-  { name: "Aditya Mehta", role: "Media Coordinator", phone: "21098 76543" },
-  { name: "Riya Shah", role: "Volunteer Coordinator", phone: "10987 65432" },
-  { name: "Karan Agarwal", role: "Hospitality Manager", phone: "09876 54321" },
-  { name: "Nisha Kapoor", role: "Security Head", phone: "98765 43210" },
+  { name: "Ved Mungra", role: "Deputy Convener", phone: "94294 57368" },
+  { name: "Bhavya Boda", role: "Core Member", phone: "93163 27271" },
+  { name: "Aarya Javia", role: "Mentor", phone: "94263 58505" },
+  { name: "Alin Kansagra", role: "Mentor", phone: "93288 55413" },
+  { name: "Siddharth Vala", role: "Core Member", phone: "92282 06818" },
+  { name: "Neeti Gunsai", role: "Core Member", phone: "63557 70669" },
+  { name: "Rishita Jodhavat", role: "Core Member", phone: "98283 90304" },
+  { name: "Kush Patel", role: "Core Member", phone: "87801 32145" },
+  { name: "Rutva Mehta", role: "Core Member", phone: "97232 04898" },
+  { name: "Khelan Bhatt", role: "Core Member", phone: "81606 42207" },
+  { name: "Jash Shah", role: "Core Member", phone: "90330 22192" },
+  { name: "Rajesh Verma", role: "Core Member", phone: "87654 32109" },
+  { name: "Pooja Desai", role: "Core Member", phone: "76543 21098" },
+  { name: "Amit Kumar", role: "Core Member", phone: "65432 10987" },
+  { name: "Shruti Iyer", role: "Core Member", phone: "54321 09876" },
+  { name: "Deepak Sharma", role: "Core Member", phone: "43210 98765" },
+  { name: "Meera Nair", role: "Core Member", phone: "32109 87654" },
+  { name: "Suresh Patel", role: "Core Member", phone: "21098 76543" },
+  { name: "Kavita Singh", role: "Core Member", phone: "10987 65432" },
+  { name: "Ravi Kumar", role: "Core Member", phone: "09876 54321" },
+  { name: "Sunita Reddy", role: "Core Member", phone: "98765 43210" },
+  { name: "Manoj Agarwal", role: "Core Member", phone: "87654 32109" },
+  { name: "Preeti Joshi", role: "Core Member", phone: "76543 21098" },
+  { name: "Vikash Gupta", role: "Core Member", phone: "65432 10987" },
+  { name: "Neha Shah", role: "Core Member", phone: "54321 09876" },
+  { name: "Rakesh Mehta", role: "Core Member", phone: "43210 98765" },
+  { name: "Suman Kapoor", role: "Core Member", phone: "32109 87654" },
+  { name: "Ajay Verma", role: "Core Member", phone: "21098 76543" },
+  { name: "Rekha Desai", role: "Core Member", phone: "10987 65432" },
+  { name: "Sandeep Kumar", role: "Core Member", phone: "09876 54321" },
+  { name: "Jyoti Iyer", role: "Core Member", phone: "98765 43210" },
+  { name: "Pradeep Sharma", role: "Core Member", phone: "87654 32109" },
+  { name: "Lakshmi Nair", role: "Core Member", phone: "76543 21098" },
+  { name: "Ganesh Patel", role: "Core Member", phone: "65432 10987" },
 ];
 
 export default function TeamConcours() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen py-16 bg-gradient-hero subtle-bg">
       <div className="max-w-6xl mx-auto px-4">
@@ -35,7 +64,7 @@ export default function TeamConcours() {
         </div>
 
         {/* Group Photo Placeholder */}
-        <Card className="epic-card mb-16 overflow-hidden">
+        {/*<Card className="epic-card mb-16 overflow-hidden">
           <CardContent className="p-0">
             <div className="aspect-video bg-gradient-sports flex items-center justify-center relative">
               <div className="absolute inset-0 bg-gradient-accent opacity-20"></div>
@@ -46,7 +75,7 @@ export default function TeamConcours() {
               </div>
             </div>
           </CardContent>
-        </Card>
+        </Card>*/}
 
         {/* Team Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -66,7 +95,7 @@ export default function TeamConcours() {
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Mail className="w-4 h-4" />
-                  <span>concours@daiict.ac.in</span>
+                  <span>concoursdaiict@gmail.com</span>
                 </div>
               </CardContent>
             </Card>

@@ -37,7 +37,7 @@ export default function FunEvents() {
                 <Badge className="mb-4 bg-secondary/20 text-secondary border-secondary/30">
                   Special Event
                 </Badge>
-                <h2 className="varsity-font text-4xl text-foreground mb-4">
+                <h2 className="timesnewroman-font text-4xl text-foreground mb-4">
                   The Ultimate Festival Experience
                 </h2>
                 <p className="text-muted-foreground mb-6 text-lg">
@@ -45,11 +45,8 @@ export default function FunEvents() {
                   entertainment, music, food, and activities that bring everyone together.
                 </p>
               </div>
-              <div className="bg-gradient-accent flex items-center justify-center p-8">
-                <div className="text-center text-white">
-                  <Music className="w-24 h-24 mx-auto mb-4" />
-                  <div className="varsity-font text-2xl">Live Entertainment</div>
-                </div>
+              <div className="">
+                <img src="/src/assets/images/DR--1.jpg" alt="Logo" className="w-100 h-55" />
               </div>
             </div>
           </CardContent>
@@ -67,6 +64,7 @@ export default function FunEvents() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground">{event.description}</p>
+                
               </CardContent>
             </Card>
           ))}

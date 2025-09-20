@@ -1,12 +1,44 @@
+import { useEffect } from "react";
 import { Trophy, Users, Target, Calendar, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+// Import gallery images
+import gridImage1 from "@/assets/images/Img-19.jpg";
+import gridImage2 from "@/assets/images/DR--16.jpg";
+import gridImage3 from "@/assets/images/WhatsApp Image 2025-09-19 at 20.35.31_5fbeae11.jpg";
+import gridImage4 from "@/assets/images/AG--6.jpg";
+import gridImage5 from "@/assets/images/DR--1.jpg";
+import gridImage6 from "@/assets/images/DR--20.jpg";
+import gridImage7 from "@/assets/images/DR-1660.jpg";
+import gridImage8 from "@/assets/images/IMG__1.jpg";
+import gridImage9 from "@/assets/images/IMG__18.jpg";
+import gridImage10 from "@/assets/images/IMG__3.jpg";
+import gridImage11 from "@/assets/images/IMG__5 (1).jpg";
+import gridImage12 from "@/assets/images/IMG__55.jpg";
+import gridImage13 from "@/assets/images/IMG_1498.jpg";
+import gridImage14 from "@/assets/images/Img-25.jpg";
+import gridImage15 from "@/assets/images/JP-16.jpg";
+import gridImage16 from "@/assets/images/JP-6.jpg";
+
 export default function Concours24() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Gallery images array
+  const galleryImages = [
+    gridImage1, gridImage2, gridImage3, gridImage4,
+    gridImage5, gridImage6, gridImage7, gridImage8,
+    gridImage9, gridImage10, gridImage11, gridImage12,
+    gridImage13, gridImage14, gridImage15, gridImage16
+  ];
+
   const stats = [
     { label: "Total Athletes", value: "1800+", icon: Users },
-    { label: "Sports Events", value: "15", icon: Target },
-    { label: "Participating Colleges", value: "45", icon: Calendar },
+    { label: "Sports Events", value: "10+", icon: Target },
+    { label: "Participating Colleges", value: "50+", icon: Calendar },
     { label: "Memories Created", value: "∞", icon: Trophy },
   ];
 
@@ -25,9 +57,7 @@ export default function Concours24() {
             Relive the incredible moments, amazing performances, and unforgettable memories from CONCOURS'24.
           </p>
           <div className="flex justify-center">
-            <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center trophy-glow floating-element">
-              <Trophy className="w-8 h-8 text-white" />
-            </div>
+            <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-28 h-28" />
           </div>
         </div>
       </section>
@@ -60,18 +90,16 @@ export default function Concours24() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <Card key={i} className="epic-card overflow-hidden group cursor-pointer">
+            {galleryImages.map((image, i) => (
+              <Card key={i} className="epic-card overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="aspect-square bg-gradient-sports flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-accent opacity-20"></div>
-                    <div className="relative z-10 text-center text-white">
-                      <Trophy className="w-8 h-8 mx-auto mb-2" />
-                      <div className="text-sm">Memory {i + 1}</div>
-                    </div>
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="text-white text-sm">View Full</div>
-                    </div>
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src={image} 
+                      alt={`Memory ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/10"></div>
                   </div>
                 </CardContent>
               </Card>
@@ -80,24 +108,7 @@ export default function Concours24() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="py-16 bg-background subtle-bg">
-        <div className="max-w-4xl mx-auto px-4">
-          <Card className="epic-card">
-            <CardContent className="p-8 text-center">
-              <Quote className="w-12 h-12 text-primary mx-auto mb-6" />
-              <blockquote className="text-2xl text-foreground mb-6 italic">
-                "CONCOURS'24 was an incredible experience that brought together amazing talent, 
-                fierce competition, and unforgettable memories. It truly showcased the spirit of sportsmanship."
-              </blockquote>
-              <div className="text-muted-foreground">
-                <div className="font-semibold">Arjun Sharma</div>
-                <div className="text-sm">Basketball Champion, CONCOURS'24</div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      
     </div>
   );
 }

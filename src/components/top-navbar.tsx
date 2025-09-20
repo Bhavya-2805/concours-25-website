@@ -8,10 +8,10 @@ const navigationItems = [
   { title: "Register", url: "/register" },
   { title: "Sports Events", url: "/sports-events" },
   { title: "Fun Events", url: "/fun-events" },
-  { title: "Team DA-IICT", url: "/team-daiict" },
-  { title: "Sponsors", url: "/sponsors" },
+  { title: "Team DA-IICT", url:"" /*"/team-daiict"*/ },
+  { title: "Sponsors", url:"" /*"/sponsors"*/ },
   { title: "CONCOURS'24", url: "/concours-24" },
-  { title: "Team Concours", url: "/team-concours" },
+  { title: "Team Concours", url:"" /*"/team-concours"*/ },
 ];
 
 export function TopNavbar() {
@@ -26,11 +26,8 @@ export function TopNavbar() {
         <div className="flex items-center justify-between h-16">
           {/* Brand Section - Left aligned */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-sports rounded-full flex items-center justify-center trophy-glow">
-                <Trophy className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-sports rounded-full animate-ping opacity-20"></div>
+            <div className="">
+              <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-10 h-10" />
             </div>
             <div className="hidden sm:block">
               <div className="concours-font text-xl text-foreground group-hover:text-primary transition-colors">

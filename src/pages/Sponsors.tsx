@@ -114,29 +114,40 @@ export default function Sponsors() {
               <p className="text-muted-foreground mb-8 text-lg">
                 Join hands with CONCOURS'25 and reach thousands of young, dynamic audiences while supporting sports excellence.
               </p>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button className="btn-accent">
-                    Explore Partnership
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>Partnership Inquiry</DialogTitle>
-                  </DialogHeader>
-                  <div className="space-y-4">
-                    <p className="text-muted-foreground">
-                      Interested in sponsoring CONCOURS'25? Contact our team for partnership opportunities.
-                    </p>
-                    <div className="space-y-2">
-                      <p><strong>Contact:</strong> Ishan Thakkar (Convener)</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="btn-accent">
+                      Explore Partnership
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Partnership Inquiry</DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground">
+                        Interested in sponsoring CONCOURS'25? Contact our team for partnership opportunities.
+                      </p>
+                      <div className="space-y-2">
+                        <p><strong>Contact:</strong> Ishan Thakkar (Convener)</p>
                       <p><strong>Phone:</strong> +91 76220 82220</p>
                       <p><strong>Email:</strong> concours@daiict.ac.in</p>
                     </div>
                   </div>
                 </DialogContent>
               </Dialog>
+              <Button
+                className="btn-accent"
+                onClick={() => {
+                  window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_SPONSOR', '_blank');
+                  console.log('Sponsors partnership button clicked');
+                }}
+              >
+                Register as Sponsor
+              </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
