@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Trophy, Users, Target, Calendar, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import logoImage from "@/assets/images/IMG_0054.PNG";
 
 // Import gallery images
 import gridImage1 from "@/assets/images/Img-19.jpg";
@@ -57,7 +58,7 @@ export default function Concours24() {
             Relive the incredible moments, amazing performances, and unforgettable memories from CONCOURS'24.
           </p>
           <div className="flex justify-center">
-            <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-28 h-28" />
+            <img src={logoImage} alt="Logo" className="w-28 h-28" />
           </div>
         </div>
       </section>

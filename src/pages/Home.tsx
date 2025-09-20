@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Footer } from "@/components/Footer";
 import heroImage from "@/assets/hero-stadium.jpg";
+import logoImage from "@/assets/images/IMG_0054.PNG";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -79,7 +80,7 @@ export default function Home() {
         <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
           {/* Trophy Icon - Reduced animation intensity */}
           <div className="mb-8 flex justify-center">
-            <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-52 h-52" />
+            <img src={logoImage} alt="Logo" className="w-52 h-52" />
           </div>
 
           {/* Main Heading */}
