@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Users, Trophy, Calendar } from 'lucide-react';
+import logoImage from '@/assets/images/IMG_0054.PNG';
 
 const esportsGames = [
   { 
@@ -129,7 +130,7 @@ export default function Esports() {
       <section className="py-24 bg-gradient-hero stadium-hero">
         <div className="max-w-6xl mx-auto text-center px-4">
           <div className="flex justify-center mb-6">
-            <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-28 h-28" />
+            <img src={logoImage} alt="Logo" className="w-28 h-28" />
           </div>
           <h1 className="concours-font text-5xl lg:text-6xl text-foreground mb-6">
             E-Sports Championship

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link, useNavigate } from "react-router-dom";
+import logoImage from "@/assets/images/IMG_0054.PNG";
 const sports = [
   { name: "Basketball (Men)", slug: "basketball-men", icon: "🏀", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSd7237Cuy01ZgYEd4ywVgR8PmYVss3Dn5ywqaj-cXQOOa1maQ/viewform?usp=header" },
   { name: "Basketball (Women)", slug: "basketball-women", icon: "🏀", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSc1ebXYhf_e5rlYkxjT1LfiU2XCXKh-MeKhYFFGQBTF06xaGg/viewform?usp=header" },
@@ -52,7 +53,7 @@ export default function SportsEvents() {
             Choose your battlefield. From court sports to field events, find your sport and register for glory.
           </p>
           <div className="flex justify-center">
-            <img src="/src/assets/images/IMG_0054.PNG" alt="Logo" className="w-28 h-28" />
+            <img src={logoImage} alt="Logo" className="w-28 h-28" />
           </div>
         </div>
       </section>
