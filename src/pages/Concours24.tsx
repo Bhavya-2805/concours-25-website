@@ -1,8 +1,10 @@
 import { useEffect } from "react";
-import { Trophy, Users, Target, Calendar, Quote } from "lucide-react";
+import { Trophy, Users, Target, Calendar, Quote, Medal, Building2, GraduationCap, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { soccerPitch } from "@lucide/lab";
 import logoImage from "@/assets/images/IMG_0054.PNG";
+import { LazyImage } from "@/components/LazyImage";
 
 // Import gallery images
 import gridImage1 from "@/assets/images/Img-19.jpg";
@@ -37,10 +39,10 @@ export default function Concours24() {
   ];
 
   const stats = [
-    { label: "Total Athletes", value: "1800+", icon: Users },
-    { label: "Sports Events", value: "10+", icon: Target },
-    { label: "Participating Colleges", value: "50+", icon: Calendar },
-    { label: "Memories Created", value: "∞", icon: Trophy },
+    { label: "Total Athletes", value: "1800+", icon: Medal },
+    { label: "Sports Events", value: "10+", icon: "soccerPitch" },
+    { label: "Participating Colleges", value: "50+", icon: GraduationCap },
+    { label: "Memories Created", value: "∞", icon: Heart },
   ];
 
   return (
@@ -70,8 +72,8 @@ export default function Concours24() {
             {stats.map((stat, index) => (
               <Card key={index} className="epic-card text-center">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-sports rounded-full flex items-center justify-center mx-auto trophy-glow mb-4">
-                    <stat.icon className="w-8 h-8 text-white" />
+                  <div className="icon-container mx-auto mb-4">
+                    <stat.icon className="icon-large icon-primary" />
                   </div>
                   <div className="concours-font text-4xl text-primary mb-2">{stat.value}</div>
                   <div className="text-muted-foreground">{stat.label}</div>
@@ -95,10 +97,11 @@ export default function Concours24() {
               <Card key={i} className="epic-card overflow-hidden">
                 <CardContent className="p-0">
                   <div className="aspect-square relative overflow-hidden">
-                    <img 
+                    <LazyImage 
                       src={image} 
                       alt={`Memory ${i + 1}`}
                       className="w-full h-full object-cover"
+                      placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
                   </div>

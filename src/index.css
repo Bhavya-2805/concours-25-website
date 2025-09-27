@@ -270,6 +270,47 @@
     @apply border border-secondary/20;
   }
 
+  /* Modern Icon Styles */
+  .icon-primary {
+    @apply text-primary;
+  }
+  
+  .icon-secondary {
+    @apply text-secondary;
+  }
+  
+  .icon-accent {
+    @apply text-accent;
+  }
+  
+  .icon-muted {
+    @apply text-muted-foreground;
+  }
+  
+  .icon-large {
+    @apply w-12 h-12;
+  }
+  
+  .icon-medium {
+    @apply w-8 h-8;
+  }
+  
+  .icon-small {
+    @apply w-6 h-6;
+  }
+  
+  .icon-container {
+    @apply flex items-center justify-center;
+  }
+  
+  .icon-container-bg {
+    @apply bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-4 border border-primary/20;
+  }
+  
+  .icon-container-accent {
+    @apply bg-gradient-to-br from-secondary/10 to-accent/10 rounded-xl p-4 border border-secondary/20;
+  }
+
   /* Trophy and Medal Effects */
   .trophy-glow {
     filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.6));

@@ -8,11 +8,11 @@ const navigationItems = [
   { title: "Home", url: "/" },
   { title: "Register", url: "/register" },
   { title: "Sports Events", url: "/sports-events" },
-  { title: "Fun Events", url: "/fun-events" },
-  { title: "Team DA-IICT", url:"" /*"/team-daiict"*/ },
-  { title: "Sponsors", url:"" /*"/sponsors"*/ },
+  /*{ title: "Fun Events", url: "/fun-events" },*/
+  /*{ title: "Team DA-IICT", url:"" "/team-daiict" },*/
+  { title: "Sponsors", url:""/*"/sponsors"*/ },
   { title: "CONCOURS'24", url: "/concours-24" },
-  { title: "Team Concours", url:"" /*"/team-concours"*/ },
+  { title: "Team Concours", url:"/team-concours" },
 ];
 
 export function TopNavbar() {

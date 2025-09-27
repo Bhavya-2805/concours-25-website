@@ -1,7 +1,8 @@
-import { Trophy, Target, Users, ArrowRight } from "lucide-react";
+import { Trophy, Target, Users, ArrowRight, Building2, Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { soccerPitch } from "@lucide/lab";
 import { Link, useNavigate } from "react-router-dom";
 import logoImage from "@/assets/images/IMG_0054.PNG";
 const sports = [
@@ -92,11 +93,15 @@ export default function SportsEvents() {
                   <Button 
                     className="w-full bg-gradient-button text-primary-foreground hover:scale-105 transition-transform duration-200"
                     onClick={() => {
-                      window.open(sport.registerLink, '_blank');
-                      console.log(`${sport.name} registration button clicked`);
+                      if (sport.slug === 'athletics') {
+                        navigate('/athletics');
+                      } else {
+                        navigate(`/sports/${sport.slug}`);
+                      }
+                      console.log(`${sport.name} detail page navigation clicked`);
                     }}
                   >
-                    Register Now
+                    View Details
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </CardContent>
@@ -146,8 +151,8 @@ export default function SportsEvents() {
       <section className="py-16 bg-gradient-hero">
         <div className="max-w-4xl mx-auto text-center px-4">
           <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-sports rounded-full flex items-center justify-center trophy-glow">
-              <Target className="w-10 h-10 text-white" />
+            <div className="icon-container">
+              <Icon iconNode={soccerPitch} className="icon-large icon-secondary" />
             </div>
           </div>
           <h2 className="varsity-font text-4xl lg:text-5xl text-foreground mb-6">

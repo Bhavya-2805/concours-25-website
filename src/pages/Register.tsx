@@ -1,8 +1,9 @@
-import { Trophy, Mic, ArrowRight, Star, Users, Clock } from "lucide-react";
+import { Trophy, Mic, ArrowRight, Star, Users, Clock, Building2, Ticket, Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link, useNavigate } from "react-router-dom";
+import { soccerPitch } from "@lucide/lab";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -27,8 +28,8 @@ export default function Register() {
           {/* Sports Registration */}
           <Card className="epic-card overflow-hidden group">
             <CardHeader className="text-center pb-6">
-              <div className="w-20 h-20 bg-gradient-sports rounded-full flex items-center justify-center mx-auto trophy-glow mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Trophy className="w-10 h-10 text-white" />
+              <div className="icon-container mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Icon iconNode={soccerPitch} className="icon-large icon-primary" />
               </div>
               <CardTitle className="arail-font text-3xl text-foreground">Sports Registration</CardTitle>
             </CardHeader>
@@ -53,11 +54,11 @@ export default function Register() {
 
               <div className="flex items-center justify-between text-sm text-muted-foreground">
                 <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4" />
+                  <Users className="icon-small" />
                   <span>1500+ Athletes Expected</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4" />
+                  <Clock className="icon-small" />
                   <span>Multi-day Event</span>
                 </div>
               </div>
@@ -81,8 +82,8 @@ export default function Register() {
           {/* Stand-Up Comedy Registration */}
           <Card className="epic-card overflow-hidden group">
             <CardHeader className="text-center pb-6">
-              <div className="w-20 h-20 bg-gradient-accent rounded-full flex items-center justify-center mx-auto trophy-glow mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Mic className="w-10 h-10 text-white" />
+              <div className="icon-container mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Ticket className="icon-large icon-secondary" />
               </div>
               <CardTitle className="arial-font text-3xl text-foreground">CONCOURS'25 Pass</CardTitle>
             </CardHeader>
@@ -106,11 +107,11 @@ export default function Register() {
 
               <div className="flex items-center justify-between text-sm text-muted-foreground">
                 <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4" />
+                  <Users className="icon-small" />
                   <span>Limited Slots</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4" />
+                  <Clock className="icon-small" />
                   <span>Evening Show</span>
                 </div>
               </div>

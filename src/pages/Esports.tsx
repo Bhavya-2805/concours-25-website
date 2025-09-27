@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Users, Trophy, Calendar } from 'lucide-react';
+import { ArrowRight, Users, Trophy, Calendar, Gamepad2 } from 'lucide-react';
 import logoImage from '@/assets/images/IMG_0054.PNG';
 
 const esportsGames = [
@@ -177,15 +177,15 @@ export default function Esports() {
                   {/* Game Info */}
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center justify-center text-sm text-muted-foreground">
-                      <Trophy className="w-4 h-4 mr-2 text-yellow-500" />
+                      <Trophy className="icon-small mr-2 text-yellow-500" />
                       Prize Pool: {game.prizePool}
                     </div>
                     <div className="flex items-center justify-center text-sm text-muted-foreground">
-                      <Users className="w-4 h-4 mr-2 text-blue-500" />
+                      <Users className="icon-small mr-2 text-blue-500" />
                       {game.teamSize}
                     </div>
                     <div className="flex items-center justify-center text-sm text-muted-foreground">
-                      <Calendar className="w-4 h-4 mr-2 text-green-500" />
+                      <Calendar className="icon-small mr-2 text-green-500" />
                       {game.date}
                     </div>
                   </div>
@@ -220,8 +220,8 @@ export default function Esports() {
       <section className="py-16 bg-gradient-hero">
         <div className="max-w-4xl mx-auto text-center px-4">
           <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-esports rounded-full flex items-center justify-center trophy-glow">
-              <Trophy className="w-10 h-10 text-white" />
+            <div className="icon-container">
+              <Gamepad2 className="icon-large icon-accent" />
             </div>
           </div>
           <h2 className="varsity-font text-4xl lg:text-5xl text-foreground mb-6">
