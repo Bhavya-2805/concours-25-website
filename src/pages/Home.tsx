@@ -1,4 +1,4 @@
-import { Trophy, ArrowRight, Play, Users, Target, Calendar } from "lucide-react";
+import { Trophy, ArrowRight, Play, Users, Target, Calendar, Building2, GraduationCap, Medal, Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +7,9 @@ import heroImage from "@/assets/hero-stadium.jpg";
 import logoImage from "@/assets/images/IMG_0054.PNG";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { soccerPitch } from "@lucide/lab";
+import { LazyImage } from "@/components/LazyImage";
+
 
 // Import grid images (you can add your image files to src/assets/images/)
 import gridImage1 from "@/assets/images/Img-19.jpg";
@@ -18,9 +21,9 @@ export default function Home() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   
   const stats = [
-    { label: "Sports Events", value: "10+", icon: Target },
+    { label: "Sports Events", value: "10+", icon: "soccerPitch" },
     { label: "Expected Athletes", value: "2000+", icon: Users },
-    { label: "Participating Colleges", value: "50+", icon: Calendar },
+    { label: "Participating Colleges", value: "50+", icon: GraduationCap },
   ];
 
   // Grid image click handlers
@@ -46,6 +49,11 @@ export default function Home() {
   // Video click handler
   const handleVideoClick = () => {
     setIsVideoPlaying(true);
+    // Update the iframe src to include autoplay when user clicks
+    const iframe = document.querySelector('iframe[title="CONCOURS 2024 Aftermovie"]') as HTMLIFrameElement;
+    if (iframe) {
+      iframe.src = "https://www.youtube.com/embed/dEejqaG3w7g?autoplay=1&rel=0&modestbranding=1&hd=1&vq=hd1080&fs=1&cc_load_policy=0&iv_load_policy=3&showinfo=0&controls=1&disablekb=0&enablejsapi=1";
+    }
   };
 
   return (
@@ -102,7 +110,7 @@ export default function Home() {
           {/* CTA Button - Reduced pulse intensity */}
           <Button 
             className="btn-sports text-xl px-12 py-6"
-            onClick={() => navigate('/sports-events')}
+            onClick={() => navigate('/register')}
           >
             REGISTER NOW
 
@@ -141,10 +149,11 @@ export default function Home() {
                 <Card className="epic-card overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleGridImageClick('sports-events')}>
                   <CardContent className="p-0">
                     <div className="h-48 relative overflow-hidden">
-                      <img 
+                      <LazyImage 
                         src={gridImage1} 
                         alt="Sports Event 1" 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="">
@@ -157,10 +166,11 @@ export default function Home() {
                 <Card className="epic-card overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleGridImageClick('athletes')}>
                   <CardContent className="p-0">
                     <div className="h-40 relative overflow-hidden">
-                      <img 
+                      <LazyImage 
                         src={gridImage2} 
                         alt="Athletes" 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute ">
@@ -175,10 +185,11 @@ export default function Home() {
                 <Card className="epic-card overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleGridImageClick('trophy-awards')}>
                   <CardContent className="p-0">
                     <div className="h-40 relative overflow-hidden">
-                      <img 
+                      <LazyImage 
                         src={gridImage3} 
                         alt="Trophy & Awards" 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute  text-white">
@@ -191,11 +202,12 @@ export default function Home() {
                 <Card className="epic-card overflow-hidden group cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => handleGridImageClick('schedule')}>
                   <CardContent className="p-0">
                     <div className="h-48 relative overflow-hidden">
-                      <img 
+                      <LazyImage 
                         src={gridImage4} 
                         alt="Schedule & Events" 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        style={{ objectPosition: 'center 30%' }}    
+                        style={{ objectPosition: 'center 30%' }}
+                        placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute  text-white">
@@ -214,8 +226,12 @@ export default function Home() {
             {stats.map((stat, index) => (
               <Card key={index} className="epic-card text-center p-8">
                 <CardContent className="space-y-4">
-                  <div className="w-16 h-16 bg-gradient-sports rounded-full flex items-center justify-center mx-auto trophy-glow">
-                    <stat.icon className="w-8 h-8 text-white" />
+                  <div className="icon-container mx-auto mb-4">
+                    {stat.icon === "soccerPitch" ? (
+                      <Icon iconNode={soccerPitch} className="icon-large icon-primary" />
+                    ) : (
+                      <stat.icon className="icon-large icon-primary" />
+                    )}
                   </div>
                   <div className="concours-font text-4xl text-primary">{stat.value}</div>
                   <div className="text-muted-foreground font-medium">{stat.label}</div>
@@ -285,7 +301,7 @@ export default function Home() {
               <div className={`absolute inset-0 ${isVideoPlaying ? 'block' : 'hidden'} z-10`}>
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/dEejqaG3w7g?autoplay=1&rel=0&modestbranding=1&hd=1&vq=hd1080&fs=1&cc_load_policy=0&iv_load_policy=3&showinfo=0&controls=1&disablekb=0&enablejsapi=1"
+                  src="https://www.youtube.com/embed/dEejqaG3w7g?rel=0&modestbranding=1&hd=1&vq=hd1080&fs=1&cc_load_policy=0&iv_load_policy=3&showinfo=0&controls=1&disablekb=0&enablejsapi=1"
                   title="CONCOURS 2024 Aftermovie"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

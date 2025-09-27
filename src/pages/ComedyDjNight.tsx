@@ -1,4 +1,4 @@
-import { Mic, Music, Star, CreditCard, Calendar, Clock, Users, Phone, Mail } from "lucide-react";
+import { Mic, Music, Star, CreditCard, Calendar, Clock, Users, Phone, Mail, Ticket, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +26,7 @@ export default function ComedyDjNight() {
           <Card className="epic-card">
             <CardHeader>
               <CardTitle className="varsity-font text-3xl text-foreground flex items-center">
-                <CreditCard className="w-8 h-8 mr-3 text-secondary" />
+                <Ticket className="icon-medium mr-3 icon-secondary" />
                 Event Pass
               </CardTitle>
             </CardHeader>
@@ -40,7 +40,7 @@ export default function ComedyDjNight() {
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-secondary" />
+                  <Clock className="icon-small text-secondary" />
                   <div>
                     <div className="font-semibold">Event Duration</div>
                     <div className="text-sm text-muted-foreground">6:00 PM - 11:00 PM</div>
@@ -48,7 +48,7 @@ export default function ComedyDjNight() {
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Calendar className="w-5 h-5 text-secondary" />
+                  <Calendar className="icon-small text-secondary" />
                   <div>
                     <div className="font-semibold">Date</div>
                     <div className="text-sm text-muted-foreground">To be announced soon</div>
@@ -56,7 +56,7 @@ export default function ComedyDjNight() {
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Users className="w-5 h-5 text-secondary" />
+                  <Users className="icon-small text-secondary" />
                   <div>
                     <div className="font-semibold">Limited Seats</div>
                     <div className="text-sm text-muted-foreground">Book now to secure your spot</div>
@@ -179,8 +179,8 @@ export default function ComedyDjNight() {
           <CardContent>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-white" />
+                <div className="icon-container mx-auto mb-4">
+                  <Phone className="icon-large icon-secondary" />
                 </div>
                 <h3 className="font-semibold mb-2">Call Us</h3>
                 <p className="text-muted-foreground">+91 76220 82220</p>
@@ -188,8 +188,8 @@ export default function ComedyDjNight() {
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-sports rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
+                <div className="icon-container mx-auto mb-4">
+                  <MessageCircle className="icon-large icon-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">Email Us</h3>
                 <p className="text-muted-foreground">concoursdaiict@gmail.com</p>
