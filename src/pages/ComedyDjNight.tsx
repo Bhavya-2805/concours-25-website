@@ -2,6 +2,11 @@ import { Mic, Music, Star, CreditCard, Calendar, Clock, Users, Phone, Mail, Tick
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { LazyImage } from "@/components/LazyImage";
+
+// Import images properly
+import comedyImage1 from "@/assets/images/Img__18.jpg";
+import comedyImage2 from "@/assets/images/DR--1.jpg";
 
 export default function ComedyDjNight() {
   return (
@@ -149,21 +154,22 @@ export default function ComedyDjNight() {
               </div>
               
               <div className="grid grid-cols-2 gap-4">
-                <div className="h-52 bg-gradient-accent rounded-lg flex items-center justify-center">
-                  <img
-                    src="src/assets/images/Img__18.jpg"
+                <div className="h-52 bg-gradient-accent rounded-lg flex items-center justify-center overflow-hidden">
+                  <LazyImage
+                    src={comedyImage1}
                     alt="Comedy Night"
                     className="w-full h-full object-cover rounded-lg"
+                    placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                   />
                 </div>
-                <div className="h-52 bg-gradient-sports rounded-lg flex items-center justify-center">
-                <img
-                    src="src/assets/images/DR--1.jpg"
+                <div className="h-52 bg-gradient-sports rounded-lg flex items-center justify-center overflow-hidden">
+                  <LazyImage
+                    src={comedyImage2}
                     alt="Comedy Night"
                     className="w-full h-full object-cover rounded-lg"
+                    placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                   />
                 </div>
-                
               </div>
             </div>
           </CardContent>
