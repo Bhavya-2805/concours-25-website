@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { LazyImage } from "@/components/LazyImage";
 
 // Import images properly
-import comedyImage1 from "@/assets/images/Img__18.jpg";
+import comedyImage1 from "@/assets/images/IMG__18.jpg";
 import comedyImage2 from "@/assets/images/DR--1.jpg";
 
 export default function ComedyDjNight() {
