@@ -206,7 +206,7 @@ export default function SportDetail() {
       description: "Men's tennis tournament featuring powerful serves, strategic rallies, and athletic displays. The tournament consists of 3 games per matches: 2 singles  and 1 doubles , testing both individual skills and team coordination.",
       format: "Knockout Tournament",
       venue: "TBA",
-      teamSize: "1v1",
+      teamSize: "3-4",
       date: "Nov 6th-9th, 2025",
       duration: "2 Days",
       contact: "Rutva Mehta: +91 9723204898 \n Rishika Shah: +91 9409433069"
@@ -221,7 +221,7 @@ export default function SportDetail() {
       description: "Women's tennis tournament showcasing skill, grace, and competitive spirit. The tournament consists of 3 games per matches: 2 singles  and 1 doubles , highlighting both individual technique and team strategy.",
       format: "Knockout Tournament",
       venue: "TBA",
-      teamSize: "1v1",
+      teamSize: "3-4",
       date: "Nov 6th-9th, 2025",
       duration: "2 Days",
       contact: "Rutva Mehta: +91 9723204898 \n Rishika Shah: +91 9409433069"
