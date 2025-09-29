@@ -25,7 +25,7 @@ const teamMembers = [
   { name: "Aarya Shah", role: "Core Member", phone: "94265 89465", image: "/src/assets/images/team/Aarya1.jpg" },
   { name: "Mayank Bagul", role: "Core Member", phone: "87586 77444", image: "/src/assets/images/team/Mayank.jpg" },
   { name: "Deep Pandya", role: "Core Member", phone: "95374 24333", image: "/src/assets/images/team/Deep.jpg" },
-  { name: "Devam Tanna", role: "Core Member", phone: "87581 91256", image: "/src/assets/images/team/kavita-singh.jpg" },
+  { name: "Devam Tanna", role: "Core Member", phone: "87581 91256", image: "/src/assets/images/team/devam.jpg" },
   { name: "Rishika Shah", role: "Core Member", phone: "94094 33069", image: "/src/assets/images/team/Rishika Shah.jpeg" },
   { name: "Jay Unadkat", role: "Core Member", phone: "79847 04174", image: "/src/assets/images/team/Jay Unadkat.jpg" },
   { name: "Kushal Thakkar", role: "Core Member", phone: "76218 41180", image: "/src/assets/images/team/Kushal.jpeg" },
@@ -40,8 +40,6 @@ const teamMembers = [
   { name: "Vatsal Somaliya", role: "Core Member", phone: "90167 64959", image: "/src/assets/images/team/Vatsal S Somaliya.jpg" },
   { name: "Yuvraj Katara", role: "Core Member", phone: "99780 32169", image: "/src/assets/images/team/jyoti-iyer.jpg" },
   { name: "Krish Vijay", role: "Core Member", phone: "96642 46301", image: "/src/assets/images/team/Krish.jpg" },
-  
-  
 ];
 
 export default function TeamConcours() {
@@ -90,8 +88,12 @@ export default function TeamConcours() {
                     src={member.image} 
                     alt={member.name}
                     className={`w-full h-full ${member.name === "Kush Patel" ? "object-top" : "object-cover"}`}
+                    priority={index < 6} // Load first 6 images with priority
                     fallbackSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='224' height='224' viewBox='0 0 224 224'%3E%3Crect width='224' height='224' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280' font-family='Arial, sans-serif' font-size='18'%3E%3C/missing%3E%3C/text%3E%3C/svg%3E"
                     placeholder={<UserCheck className="w-12 h-12 text-gray-400" />}
+                    onError={(e) => {
+                      console.warn(`Failed to load image for ${member.name}:`, e);
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-sports opacity-10 rounded-lg"></div>
                 </div>

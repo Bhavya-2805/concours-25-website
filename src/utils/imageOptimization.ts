@@ -23,6 +23,25 @@ export const preloadCriticalImages = async () => {
   }
 };
 
+// Batch preload team images for better performance
+export const preloadTeamImages = async () => {
+  const teamImages = [
+    '/src/assets/images/team/Ishan.jpg',
+    '/src/assets/images/team/Ved.jpg',
+    '/src/assets/images/team/Bhavya.jpg',
+    '/src/assets/images/team/Siddharth Vala.jpg',
+    '/src/assets/images/team/Aarya.jpg',
+    '/src/assets/images/team/Alin.jpg',
+  ];
+
+  try {
+    await Promise.all(teamImages.map(preloadImage));
+    console.log('Team images preloaded successfully');
+  } catch (error) {
+    console.warn('Some team images failed to preload:', error);
+  }
+};
+
 // Intersection Observer for lazy loading with better performance
 export const createIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void,

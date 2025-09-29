@@ -9,6 +9,7 @@ interface LazyImageProps {
   onError?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void;
   loading?: 'lazy' | 'eager';
   placeholder?: React.ReactNode;
+  priority?: boolean; // For above-the-fold images
 }
 
 export const LazyImage: React.FC<LazyImageProps> = ({
@@ -19,14 +20,21 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   fallbackSrc,
   onError,
   loading = 'lazy',
-  placeholder
+  placeholder,
+  priority = false
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(priority); // Load immediately if priority
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+    // Skip intersection observer for priority images
+    if (priority) {
+      setIsInView(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -35,8 +43,8 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px'
+        threshold: 0.01, // Reduced threshold for faster loading
+        rootMargin: '100px' // Increased margin for earlier loading
       }
     );
 
@@ -45,7 +53,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -75,11 +83,11 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         <img
           src={src}
           alt={alt}
-          className={`transition-opacity duration-300 ${
+          className={`transition-opacity duration-200 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           style={style}
-          loading={loading}
+          loading={priority ? 'eager' : loading}
           onLoad={handleLoad}
           onError={handleError}
         />

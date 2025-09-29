@@ -159,6 +159,7 @@ export default function ComedyDjNight() {
                     src={comedyImage1}
                     alt="Comedy Night"
                     className="w-full h-full object-cover rounded-lg"
+                    priority={true}
                     placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                   />
                 </div>
@@ -167,6 +168,7 @@ export default function ComedyDjNight() {
                     src={comedyImage2}
                     alt="Comedy Night"
                     className="w-full h-full object-cover rounded-lg"
+                    priority={true}
                     placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
                   />
                 </div>
