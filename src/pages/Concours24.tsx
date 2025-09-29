@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { Trophy, Users, Target, Calendar, Quote, Medal, Building2, GraduationCap, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { soccerPitch } from "@lucide/lab";
 import logoImage from "@/assets/images/IMG_0054.PNG";
 import { LazyImage } from "@/components/LazyImage";
+import { soccerPitch } from "@lucide/lab";
 
 // Import gallery images
 import gridImage1 from "@/assets/images/Img-19.jpg";
@@ -40,7 +40,7 @@ export default function Concours24() {
 
   const stats = [
     { label: "Total Athletes", value: "1800+", icon: Medal },
-    { label: "Sports Events", value: "10+", icon: "soccerPitch" },
+    { label: "Sports Events", value: "10+", icon: Trophy },
     { label: "Participating Colleges", value: "50+", icon: GraduationCap },
     { label: "Memories Created", value: "∞", icon: Heart },
   ];

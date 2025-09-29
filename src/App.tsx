@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { TopNavbarLayout } from "./components/top-navbar-layout";
-import { preloadCriticalImages } from "./utils/imageOptimization";
+import { preloadCriticalImages, preloadTeamImages } from "./utils/imageOptimization";
 import { useEffect } from "react";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
@@ -29,6 +29,11 @@ const App = () => {
   useEffect(() => {
     // Preload critical images when the app starts
     preloadCriticalImages();
+    
+    // Preload team images after a short delay to not block initial load
+    setTimeout(() => {
+      preloadTeamImages();
+    }, 2000);
   }, []);
 
   return (

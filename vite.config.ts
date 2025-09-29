@@ -20,4 +20,18 @@ export default defineConfig(({ mode }) => ({
     },
   },
   assetsInclude: ["**/*.PNG", "**/*.png"],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+      },
+    },
+  },
+  preview: {
+    port: 8080,
+    strictPort: true,
+  },
 }));

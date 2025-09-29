@@ -213,7 +213,7 @@ export default function Athletics() {
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               onClick={() => {
-                window.open('https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view?usp=sharing', '_blank');
+                window.open('https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing', '_blank');
                 console.log('Athletics CTA rule book download button clicked');
               }}
             >
