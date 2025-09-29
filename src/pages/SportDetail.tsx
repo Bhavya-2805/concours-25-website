@@ -176,7 +176,7 @@ export default function SportDetail() {
       description: "Fast-paced table tennis action in the men's tournament. Players showcase their reflexes, spin techniques, and tactical skills in intense rallies.",
       format: "Knockout Tournament",
       venue: "Student Activity Center, DAIICT",
-      teamSize: "1v1",
+      teamSize: "4-5",
       date: "Nov 6th-9th, 2025",
       duration: "4 Days",
       contact: "Neeti Gunsai: +91 6355770669 \n Jay Shah: +91 7990348872"
@@ -191,7 +191,7 @@ export default function SportDetail() {
       description: "Women's table tennis tournament featuring skilled players competing in singles matches. The tournament emphasizes technique, strategy, and sportsmanship.",
       format: "Knockout Tournament",
       venue: "Student Activity Centre, DAIICT",
-      teamSize: "1v1",
+      teamSize: "4-5",
       date: "Nov 6th-9th, 2025",
       duration: "4 Days",
       contact: "Neeti Gunsai: +91 6355770669 \n Jay Shah: +91 7990348872"
