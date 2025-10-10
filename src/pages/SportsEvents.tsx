@@ -17,7 +17,7 @@ const sports = [
   { name: "Football (Men)", slug: "football-men", icon: "⚽", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMX15T6tpVbcSsupKpao983AnUv1y0p_-HCOJRcHZ4YlRKZQ/viewform?usp=dialog" },
   { name: "Football (Women)", slug: "football-women", icon: "⚽", category: "Women's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeSJVc1NdP2Ok4BkvaeAbBMsaogg0qS6Hki13ERsRqN1NwMkw/viewform?usp=dialog" },
   { name: "Table Tennis (Men)", slug: "table-tennis-men", icon: "🏓", category: "Men's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVgb2FHhNcysgnv6cPQwXOQzTeF_hYHD1141Rc6Dya_qIJgw/viewform?usp=sharing&ouid=101228523565298084421" },
-  { name: "Table Tennis (Women)", slug: "table-tenniwes-women", icon: "🏓", category: "Women's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfP5I28i7h-7LoFYl1DMAtsadaeRIQ1pBOLkN3fYWl76PP3jw/viewform?usp=sharing&ouid=101228523565298084421" },
+  { name: "Table Tennis (Women)", slug: "table-tennis-women", icon: "🏓", category: "Women's", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfP5I28i7h-7LoFYl1DMAtsadaeRIQ1pBOLkN3fYWl76PP3jw/viewform?usp=sharing&ouid=101228523565298084421" },
   { name: "Tennis (Men)", slug: "tennis-men", icon: "🎾", category: "Men's", registerLink: "https://forms.gle/5LtqB78P7XUe1eL16" },
   { name: "Tennis (Women)", slug: "tennis-women", icon: "🎾", category: "Women's", registerLink: "https://forms.gle/E914aiUbmjpxp1B49" },
   { name: "Carrom", slug: "carrom", icon: "🥏", category: "Mixed", registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdsI1LNxIEJKKV3wUh-KrjE7T9nQUTEIYclOiWdLQZ897bUYQ/viewform?usp=dialog" },
