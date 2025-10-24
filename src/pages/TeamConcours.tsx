@@ -13,7 +13,7 @@ import AaryaImg from "@/assets/images/team/Aarya.jpg";
 import AlinImg from "@/assets/images/team/Alin.jpg";
 import NeetiImg from "@/assets/images/team/Neeti.jpg";
 import RishitaImg from "@/assets/images/team/Rishita.jpg";
-import KushImg from "@/assets/images/team/Kush.jpg";
+import KushImg from "@/assets/images/team/Kushp.jpg";
 import RutvaImg from "@/assets/images/team/Rutva.webp";
 import DevduttImg from "@/assets/images/team/Devdutt.jpg";
 import KhelanImg from "@/assets/images/team/Khelan.jpg";
