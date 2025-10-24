@@ -1,4 +1,4 @@
-import { Mic, Music, Star, CreditCard, Calendar, Clock, Users, Phone, Mail, Ticket, MessageCircle } from "lucide-react";
+import { Mic, Music, Star, CreditCard, Calendar, Clock, Users, Phone, Mail, Ticket, MessageCircle, Trophy, Gamepad2, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,13 +15,13 @@ export default function ComedyDjNight() {
         {/* Header */}
         <div className="text-center mb-16">
           <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30 px-4 py-2">
-            Comedy & DJ Night Special
+            CONCOURS Inauguration
           </Badge>
           <h1 className="concours-font text-5xl lg:text-7xl text-foreground mb-6">
-            COMEDY & DJ NIGHT
+            CONCOURS'25 Pass
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get ready for an unforgettable evening of laughter, music, and entertainment that will keep you on your feet all night long.
+            Get ready for an unforgettable evening of energetic sports matches, fun activities, music, and entertainment that will keep you active and engaged all night long.
           </p>
         </div>
 
@@ -30,15 +30,15 @@ export default function ComedyDjNight() {
           {/* Pass Information */}
           <Card className="epic-card">
             <CardHeader>
-              <CardTitle className="varsity-font text-3xl text-foreground flex items-center">
-                <Ticket className="icon-medium mr-3 icon-secondary" />
+              <CardTitle className="concours-font text-3xl text-foreground flex items-center">
+                <Trophy className="icon-medium mr-3 icon-secondary" />
                 Event Pass
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="bg-secondary/10 rounded-lg p-6 border border-secondary/20">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-secondary mb-2">To be announced soon</div>
+                  <div className="text-4xl font-bold text-secondary mb-2">₹350</div>
                   <div className="text-muted-foreground">Per Person</div>
                 </div>
               </div>
@@ -48,7 +48,7 @@ export default function ComedyDjNight() {
                   <Clock className="icon-small text-secondary" />
                   <div>
                     <div className="font-semibold">Event Duration</div>
-                    <div className="text-sm text-muted-foreground">6:00 PM - 11:00 PM</div>
+                    <div className="text-sm text-muted-foreground">6:00 PM - 9:00 PM</div>
                   </div>
                 </div>
                 
@@ -56,7 +56,7 @@ export default function ComedyDjNight() {
                   <Calendar className="icon-small text-secondary" />
                   <div>
                     <div className="font-semibold">Date</div>
-                    <div className="text-sm text-muted-foreground">To be announced soon</div>
+                    <div className="text-sm text-muted-foreground">6th November 2025</div>
                   </div>
                 </div>
                 
@@ -73,8 +73,7 @@ export default function ComedyDjNight() {
               <Button
                 className="w-full btn-accent mt-2"
                 onClick={() => {
-                  /*window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_COMEDY', '_blank');*/
-                  console.log('ComedyDjNight registration button clicked');
+                  window.open('https://forms.gle/Z5EXGVMejozAY3MX6', '_blank');
                 }}
               >
                 Buy Passes Now
@@ -85,12 +84,21 @@ export default function ComedyDjNight() {
           {/* What's Included */}
           <Card className="epic-card">
             <CardHeader>
-              <CardTitle className="varsity-font text-3xl text-foreground flex items-center">
-                <Star className="w-8 h-8 mr-3 text-secondary" />
+              <CardTitle className="concours-font text-3xl text-foreground flex items-center">
+                <Zap className="w-8 h-8 mr-3 text-secondary" />
                 What's Included
               </CardTitle>
             </CardHeader>
             <CardContent>
+
+              <div className="flex items-start space-x-3 mb-6">
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
+                  <div>
+                    <div className="font-semibold">Sports Matches Access</div>
+                    <div className="text-sm text-muted-foreground">Complimentary access to sports matches for 4 days of Fest</div>
+                  </div>
+                </div>
+
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
@@ -108,21 +116,16 @@ export default function ComedyDjNight() {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
-                  <div>
-                    <div className="font-semibold">Open Mic Session</div>
-                    <div className="text-sm text-muted-foreground">Opportunity for students to showcase talent</div>
-                  </div>
-                </div>
                 
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
                   <div>
-                    <div className="font-semibold">Energetic Sports Matches</div>
-                    <div className="text-sm text-muted-foreground">Complimentary access to sports matches for 4 days of Fest</div>
+                    <div className="font-semibold">Fun Activities & Games</div>
+                    <div className="text-sm text-muted-foreground">Pickleball, Dayro, Arcade games, and more exciting activities</div>
                   </div>
                 </div>
+                
+                
                 
                 
               </div>
@@ -133,8 +136,8 @@ export default function ComedyDjNight() {
         {/* Event Throwback */}
         <Card className="epic-card mb-16">
           <CardHeader>
-            <CardTitle className="varsity-font text-3xl text-foreground text-center">
-              Last Year's Comedy Night - CONCOURS'24
+            <CardTitle className="arial-font text-3xl text-foreground text-center">
+              Glimpses of CONCOURS'24 Inaugural
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -180,7 +183,7 @@ export default function ComedyDjNight() {
         {/* Contact Section */}
         <Card className="epic-card">
           <CardHeader>
-            <CardTitle className="varsity-font text-3xl text-foreground text-center">
+            <CardTitle className="concours-font text-3xl text-foreground text-center">
               Questions About The Event?
             </CardTitle>
           </CardHeader>
@@ -191,8 +194,8 @@ export default function ComedyDjNight() {
                   <Phone className="icon-large icon-secondary" />
                 </div>
                 <h3 className="font-semibold mb-2">Call Us</h3>
-                <p className="text-muted-foreground">+91 76220 82220</p>
-                <p className="text-sm text-muted-foreground">Ishan Thakkar (Convener)</p>
+                <p className="text-muted-foreground">+91 93163 27271</p>
+                <p className="text-sm text-muted-foreground">Bhavya Boda</p>
               </div>
               
               <div className="text-center">
