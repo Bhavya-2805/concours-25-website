@@ -32,13 +32,13 @@ export default function ComedyDjNight() {
             <CardHeader>
               <CardTitle className="concours-font text-3xl text-foreground flex items-center">
                 <Trophy className="icon-medium mr-3 icon-secondary" />
-                Early Bird Pass
+                Festive Pass
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="bg-secondary/10 rounded-lg p-6 border border-secondary/20">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-secondary mb-2">₹300</div>
+                  <div className="text-4xl font-bold text-secondary mb-2">₹350</div>
                   <div className="text-muted-foreground">Per Person</div>
                 </div>
               </div>
