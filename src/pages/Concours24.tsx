@@ -50,17 +50,17 @@ export default function Concours24() {
       {/* Hero Section */}
       <section className="py-24 bg-gradient-hero stadium-hero">
         <div className="max-w-6xl mx-auto text-center px-4">
-          <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30 px-4 py-2">
+          <Badge className="mb-6 bg-[#979694]/20 text-gray-200 border-[#979694]/40 px-4 py-1.5 backdrop-blur-sm">
             Last Year's Glory
           </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl text-foreground mb-6">
-            CONCOURS'24
+          <h1 className="concours-font text-5xl lg:text-7xl text-white mb-6 tracking-wide">
+            CONCOURS'25
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Relive the incredible moments, amazing performances, and unforgettable memories from CONCOURS'24.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Relive the incredible moments, amazing performances, and unforgettable memories from CONCOURS'25.
           </p>
           <div className="flex justify-center">
-            <img src={logoImage} alt="Logo" className="w-28 h-28" />
+            <img src={logoImage} alt="Logo" className="w-28 h-28 trophy-glow" />
           </div>
         </div>
       </section>
@@ -75,7 +75,7 @@ export default function Concours24() {
                   <div className="icon-container mx-auto mb-4">
                     <stat.icon className="icon-large icon-primary" />
                   </div>
-                  <div className="concours-font text-4xl text-primary mb-2">{stat.value}</div>
+                  <div className="concours-font text-4xl heading-gold mb-2">{stat.value}</div>
                   <div className="text-muted-foreground">{stat.label}</div>
                 </CardContent>
               </Card>
@@ -88,7 +88,7 @@ export default function Concours24() {
       <section className="py-16 bg-gradient-hero">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="varsity-font text-4xl text-foreground mb-4">Event Gallery</h2>
+            <h2 className="varsity-font text-4xl heading-gold mb-4">Event Gallery</h2>
             <p className="text-muted-foreground">Captured moments from the festival</p>
           </div>
           
@@ -101,7 +101,7 @@ export default function Concours24() {
                       src={image} 
                       alt={`Memory ${i + 1}`}
                       className="w-full h-full object-cover"
-                      placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse"></div>}
+                      placeholder={<div className="w-full h-full bg-gradient-to-br from-gray-900 to-black animate-pulse"></div>}
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
                   </div>

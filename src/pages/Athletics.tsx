@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -10,7 +10,7 @@ const athleticsCategories = [
   { 
     name: "Athletics", 
     slug: "athletics", 
-    icon: "🏋️", 
+    icon: "ðŸ‹ï¸", 
     category: "Boys and Girls", 
     registerLink: "https://forms.gle/8wRd1n446FNFjouw6", 
     rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
@@ -18,13 +18,13 @@ const athleticsCategories = [
     format: "Individual Events",
     venue: "TBD",
     teamSize: "Individual",
-    date: "Nov 6th-9th, 2025",
+    date: "29th Oct - 1st Nov, 2026",
     duration: "4 Days"
   },
   { 
     name: "Relay", 
     slug: "relay-race", 
-    icon: "🏃‍♀️", 
+    icon: "ðŸƒâ€â™€ï¸", 
     category: "Boys and Girls", 
     registerLink: "forms.gle/MSSZHb5KbFnZF8kbA", 
     rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
@@ -32,7 +32,7 @@ const athleticsCategories = [
     format: "Team Events",
     venue: "TBD",
     teamSize: "4v4",
-    date: "Nov 6th-9th, 2025",
+    date: "29th Oct - 1st Nov, 2026",
     duration: "4 Days"
   }
 ];
@@ -52,7 +52,7 @@ export default function Athletics() {
           <div className="flex justify-center mb-6">
             <img src={logoImage} alt="Logo" className="w-28 h-28" />
           </div>
-          <h1 className="concours-font text-5xl lg:text-6xl text-foreground mb-6">
+          <h1 className="concours-font text-5xl lg:text-6xl heading-gold mb-6">
             Athletics Championship
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -70,7 +70,7 @@ export default function Athletics() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="timesnewroman-font text-4xl text-foreground mb-4">
+            <h2 className="timesnewroman-font text-4xl heading-gold mb-4">
               Choose Your Event
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -101,7 +101,7 @@ export default function Athletics() {
                       {category.format}
                     </div>
                     <div className="flex items-center justify-center text-sm text-muted-foreground">
-                      <Users className="icon-small mr-2 text-blue-500" />
+                      <Users className="icon-small mr-2 text-secondary" />
                       {category.teamSize}
                     </div>
                     <div className="flex items-center justify-center text-sm text-muted-foreground">
@@ -112,18 +112,18 @@ export default function Athletics() {
                   
                   {/* Register Badge */}
                   <div className="text-center mb-4">
-                    <Badge className="bg-primary/20 text-primary border-primary/30 px-3 py-1">
+                    <Badge className="bg-[#840c15]/20 text-red-300 border-[#840c15]/40 px-3 py-1 font-semibold">
                       REGISTER NOW
                     </Badge>
                   </div>
                   
                   {/* Description */}
-                  <p className="text-sm text-muted-foreground text-center mb-6 flex-grow">
+                  <p className="text-sm text-gray-400 text-center mb-6 flex-grow">
                     {category.description}
                   </p>
                   
                   {/* Action Button - Aligned at bottom */}
-                  <Button className="w-full bg-gradient-button text-primary-foreground hover:scale-105 transition-transform duration-200" asChild>
+                  <Button className="w-full btn-sports text-sm py-2.5" asChild>
                     <Link to={`/athletics/${category.slug}`}>
                       View Details
                       <ArrowRight className="ml-2 w-4 h-4" />
@@ -144,7 +144,7 @@ export default function Athletics() {
               <Activity className="icon-large icon-secondary" />
             </div>
           </div>
-          <h2 className="varsity-font text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="varsity-font text-4xl lg:text-5xl heading-gold mb-6">
             Ready to Run?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
@@ -155,7 +155,7 @@ export default function Athletics() {
             
             <Button
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="border-[#840c15] text-red-200 bg-[#840c15]/10 hover:bg-[#840c15] hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-[0_0_15px_rgba(132,12,21,0.4)]"
               onClick={() => {
                 window.open('https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing', '_blank');
                 console.log('Athletics CTA rule book download button clicked');
@@ -169,3 +169,4 @@ export default function Athletics() {
     </div>
   );
 }
+

@@ -1,4 +1,4 @@
-import { Mic, Music, Star, CreditCard, Calendar, Clock, Users, Phone, Mail, Ticket, MessageCircle, Trophy, Gamepad2, Zap } from "lucide-react";
+﻿import { Mic, Music, Star, CreditCard, Calendar, Clock, Users, Phone, Mail, Ticket, MessageCircle, Trophy, Gamepad2, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,8 +17,8 @@ export default function ComedyDjNight() {
           <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30 px-4 py-2">
             CONCOURS Inauguration
           </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl text-foreground mb-6">
-            CONCOURS'25 Pass
+          <h1 className="concours-font text-5xl lg:text-7xl heading-gold mb-6">
+            CONCOURS'26 Pass
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Get ready for an unforgettable evening of energetic sports matches, fun activities, music, and entertainment that will keep you active and engaged all night long.
@@ -30,7 +30,7 @@ export default function ComedyDjNight() {
           {/* Pass Information */}
           <Card className="epic-card">
             <CardHeader>
-              <CardTitle className="concours-font text-3xl text-foreground flex items-center">
+              <CardTitle className="concours-font text-3xl heading-gold flex items-center">
                 <Trophy className="icon-medium mr-3 icon-secondary" />
                 Festive Pass
               </CardTitle>
@@ -56,7 +56,7 @@ export default function ComedyDjNight() {
                   <Calendar className="icon-small text-secondary" />
                   <div>
                     <div className="font-semibold">Date</div>
-                    <div className="text-sm text-muted-foreground">6th November 2025</div>
+                    <div className="text-sm text-muted-foreground">29th October 2026</div>
                   </div>
                 </div>
                 
@@ -84,7 +84,7 @@ export default function ComedyDjNight() {
           {/* What's Included */}
           <Card className="epic-card">
             <CardHeader>
-              <CardTitle className="concours-font text-3xl text-foreground flex items-center">
+              <CardTitle className="concours-font text-3xl heading-gold flex items-center">
                 <Zap className="w-8 h-8 mr-3 text-secondary" />
                 What's Included
               </CardTitle>
@@ -136,8 +136,8 @@ export default function ComedyDjNight() {
         {/* Event Throwback */}
         <Card className="epic-card mb-16">
           <CardHeader>
-            <CardTitle className="arial-font text-3xl text-foreground text-center">
-              Glimpses of CONCOURS'24 Inaugural
+            <CardTitle className="arial-font text-3xl heading-gold text-center">
+              Glimpses of CONCOURS'25 Inaugural
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -145,7 +145,7 @@ export default function ComedyDjNight() {
               <div>
                 <h3 className="text-xl font-semibold mb-4">An Unforgettable Evening</h3>
                 <p className="text-muted-foreground mb-4">
-                  CONCOURS'24's comedy night was a massive hit with over 1500 students in attendance. 
+                  CONCOURS'25's comedy night was a massive hit with over 1500 students in attendance. 
                   The evening featured amazing stand-up performances, incredible DJ sets, and 
                   non-stop entertainment that had everyone talking for weeks.
                 </p>
@@ -183,7 +183,7 @@ export default function ComedyDjNight() {
         {/* Contact Section */}
         <Card className="epic-card">
           <CardHeader>
-            <CardTitle className="concours-font text-3xl text-foreground text-center">
+            <CardTitle className="concours-font text-3xl heading-gold text-center">
               Questions About The Event?
             </CardTitle>
           </CardHeader>
@@ -213,3 +213,5 @@ export default function ComedyDjNight() {
     </div>
   );
 }
+
+

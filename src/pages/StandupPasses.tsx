@@ -9,10 +9,10 @@ export default function StandupPasses() {
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30 px-4 py-2">
+          <Badge className="mb-6 bg-[#840c15]/25 text-red-200 border-[#840c15]/50 px-4 py-1.5 backdrop-blur-sm shadow-sm">
             Comedy Night Special
           </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl text-foreground mb-6">
+          <h1 className="concours-font text-5xl lg:text-7xl text-white mb-6 tracking-wide">
             STAND-UP PASSES
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -30,7 +30,7 @@ export default function StandupPasses() {
                   <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 trophy-glow">
                     <Mic className="w-16 h-16" />
                   </div>
-                  <h2 className="varsity-font text-3xl mb-4">Comedy Night</h2>
+                  <h2 className="varsity-font text-3xl heading-gold mb-4">Comedy Night</h2>
                   <p className="text-lg opacity-90">An evening of pure entertainment</p>
                 </div>
               </div>

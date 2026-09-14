@@ -31,10 +31,10 @@ export default function TeamDaiict() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 px-4 py-2">
+          <Badge className="mb-6 bg-[#840c15]/25 text-red-200 border-[#840c15]/50 px-4 py-1.5 backdrop-blur-sm shadow-sm">
             Our Champions
           </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl text-foreground mb-6">
+          <h1 className="concours-font text-5xl lg:text-7xl text-white mb-6 tracking-wide">
             TEAM DA-IICT
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ export default function TeamDaiict() {
         {/* Jersey Section */}
         <Card className="epic-card mb-16 overflow-hidden">
           <CardContent className="p-8 text-center">
-            <h2 className="timesnewroman-font text-3xl text-foreground mb-6">Official Team Jersey</h2>
+            <h2 className="timesnewroman-font text-3xl heading-gold mb-6">Official Team Jersey</h2>
             <p className="concours-font text-3xl">Coming Soon</p>
             <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
               Wearing the colors of excellence, our teams represent the spirit and determination of DA-IICT in every competition.
@@ -73,7 +73,7 @@ export default function TeamDaiict() {
         <Card className="epic-card">
           <CardContent className="p-8">
             <div className="text-center mb-8">
-              <h2 className="timesnewroman-font text-3xl text-foreground mb-4">Our Legacy</h2>
+              <h2 className="timesnewroman-font text-3xl heading-gold mb-4">Our Legacy</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Years of dedication, training, and excellence have built the legacy of Team DA-IICT.
               </p>

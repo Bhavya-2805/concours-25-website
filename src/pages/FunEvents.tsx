@@ -1,4 +1,4 @@
-import { Music, Gamepad2, Users, Star, ArrowRight } from "lucide-react";
+﻿import { Music, Gamepad2, Users, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,10 +18,10 @@ export default function FunEvents() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-6 bg-secondary/20 text-secondary border-secondary/30 px-4 py-2">
+          <Badge className="mb-6 bg-[#840c15]/25 text-red-200 border-[#840c15]/50 px-4 py-1.5 backdrop-blur-sm shadow-sm">
             Beyond Sports
           </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl text-foreground mb-6">
+          <h1 className="concours-font text-5xl lg:text-7xl text-white mb-6 tracking-wide">
             FUN EVENTS
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -37,11 +37,11 @@ export default function FunEvents() {
                 <Badge className="mb-4 bg-secondary/20 text-secondary border-secondary/30">
                   Special Event
                 </Badge>
-                <h2 className="timesnewroman-font text-4xl text-foreground mb-4">
+                <h2 className="timesnewroman-font text-4xl heading-gold mb-4">
                   The Ultimate Festival Experience
                 </h2>
                 <p className="text-muted-foreground mb-6 text-lg">
-                  CONCOURS'25 isn't just about sports. It's a complete festival experience with 
+                  CONCOURS'26 isn't just about sports. It's a complete festival experience with 
                   entertainment, music, food, and activities that bring everyone together.
                 </p>
               </div>

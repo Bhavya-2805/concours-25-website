@@ -8,57 +8,57 @@ import { soccerPitch } from "@lucide/lab";
 export default function Register() {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen py-16 bg-gradient-hero subtle-bg">
+    <div className="min-h-screen py-24 bg-gradient-hero subtle-bg">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 px-4 py-2">
+          <Badge className="mb-6 silver-badge px-4 py-1.5 backdrop-blur-sm font-semibold tracking-wide">
             Join The Competition
           </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl text-foreground mb-6">
+          <h1 className="concours-font text-5xl lg:text-7xl heading-metallic-silver mb-6 tracking-wide">
             REGISTER NOW
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Choose your path to glory. Register for sports competitions or showcase your talent at our stand-up comedy event.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Choose your path to glory. Register for sports competitions or showcase your talent at our events.
           </p>
         </div>
 
         {/* Registration Cards */}
         <div className="grid md:grid-cols-2 gap-8">
           {/* Sports Registration */}
-          <Card className="epic-card overflow-hidden group">
+          <Card className="epic-card overflow-hidden group border-[#918d8c]/25 hover:border-[#840c15]">
             <CardHeader className="text-center pb-6">
-              <div className="icon-container mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Icon iconNode={soccerPitch} className="icon-large icon-primary" />
+              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#840c15]/30 to-[#330609]/70 border border-[#918d8c]/30 flex items-center justify-center text-red-400 group-hover:scale-110 group-hover:border-[#840c15] group-hover:shadow-[0_0_18px_rgba(132,12,21,0.5)] transition-all duration-300">
+                <Icon iconNode={soccerPitch} className="w-8 h-8" />
               </div>
-              <CardTitle className="arail-font text-3xl text-foreground">Sports Registration</CardTitle>
+              <CardTitle className="arial-font text-3xl text-white">Sports Registration</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-muted-foreground text-center text-lg">
+              <p className="text-gray-300 text-center text-base">
                 Compete in 10+ sports categories and prove your athletic prowess against the best talent from across the nation.
               </p>
               
               {/* Features */}
-              <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
+              <div className="bg-[#840c15]/10 rounded-xl p-5 border border-[#840c15]/25">
                 <div className="flex items-center space-x-3 mb-2">
-                  <Star className="w-5 h-5 text-primary" />
-                  <span className="font-semibold text-primary">Premium Sports Experience</span>
+                  <Star className="w-5 h-5 text-red-400" />
+                  <span className="font-semibold text-red-300">Premium Sports Experience</span>
                 </div>
-                <ul className="text-sm text-muted-foreground space-y-1 ml-8">
+                <ul className="text-sm text-gray-300 space-y-1 ml-8">
                   <li>• Access to all 10+ sports events</li>
                   <li>• Exposure to the best talent from across different colleges</li>
-                  <li>• Chance to win exciting prizes</li>
-                  <li>• Certificate of participation</li>
+                  <li>• Chance to win exciting prizes & championship trophies</li>
+                  <li>• Official certificate of participation</li>
                 </ul>
               </div>
 
-              <div className="flex items-center justify-between text-sm text-muted-foreground">
+              <div className="flex items-center justify-between text-sm text-[#979694]">
                 <div className="flex items-center space-x-2">
-                  <Users className="icon-small" />
-                  <span>1500+ Athletes Expected</span>
+                  <Users className="w-4 h-4 text-red-400" />
+                  <span>2000+ Athletes Expected</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="icon-small" />
+                  <Clock className="w-4 h-4 text-red-400" />
                   <span>Multi-day Event</span>
                 </div>
               </div>
@@ -69,7 +69,6 @@ export default function Register() {
                   onClick={(e) => {
                     e.preventDefault();
                     navigate('/sports-events');
-                    console.log('Register page registration button clicked');
                   }}
                 >
                   Register for Sports
@@ -79,40 +78,41 @@ export default function Register() {
             </CardContent>
           </Card>
 
-          {/* Stand-Up Comedy Registration */}
-          <Card className="epic-card overflow-hidden group">
+          {/* Event Passes Registration */}
+          <Card className="epic-card overflow-hidden group border-[#918d8c]/25 hover:border-white">
             <CardHeader className="text-center pb-6">
-              <div className="icon-container mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Ticket className="icon-large icon-secondary" />
+              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#918d8c]/30 to-[#330609]/70 border border-[#918d8c]/30 flex items-center justify-center text-gray-200 group-hover:scale-110 group-hover:border-white group-hover:shadow-[0_0_18px_rgba(151,150,148,0.5)] transition-all duration-300">
+                <Ticket className="w-8 h-8" />
               </div>
-              <CardTitle className="arial-font text-3xl text-foreground">CONCOURS'25 Pass</CardTitle>
+              <CardTitle className="arial-font text-3xl text-white">CONCOURS Pass</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-muted-foreground text-center text-lg">
-              Get the exclusive pass to Concours 2025 and experience glory, victory, and memories that will last a lifetime.               </p>
+              <p className="text-gray-300 text-center text-base">
+                Get the exclusive pass to Concours and experience glory, victory, and memories that will last a lifetime.
+              </p>
               
               {/* Features */}
-              <div className="bg-secondary/10 rounded-lg p-4 border border-secondary/20">
+              <div className="bg-[#918d8c]/10 rounded-xl p-5 border border-[#918d8c]/25">
                 <div className="flex items-center space-x-3 mb-2">
-                  <Star className="w-5 h-5 text-secondary" />
-                  <span className="font-semibold text-secondary">What Is Included</span>
+                  <Star className="w-5 h-5 text-gray-300" />
+                  <span className="font-semibold text-gray-200">What Is Included</span>
                 </div>
-                <ul className="text-sm text-muted-foreground space-y-1 ml-8">
-                  <li>• 4 day exclusive pass</li>
-                  <li>• Stand Up Comedy Night</li>
-                  <li>• Electirfying DJ Night</li>
-                  <li>• Access to all sports matches</li>
+                <ul className="text-sm text-gray-300 space-y-1 ml-8">
+                  <li>• 4 day exclusive festival pass</li>
+                  <li>• Stand Up Comedy Night entry</li>
+                  <li>• Electrifying DJ Night entry</li>
+                  <li>• Access to all thrilling sports matches</li>
                 </ul>
               </div>
 
-              <div className="flex items-center justify-between text-sm text-muted-foreground">
+              <div className="flex items-center justify-between text-sm text-[#979694]">
                 <div className="flex items-center space-x-2">
-                  <Users className="icon-small" />
+                  <Users className="w-4 h-4 text-gray-300" />
                   <span>Limited Slots</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="icon-small" />
-                  <span>Evening Show</span>
+                  <Clock className="w-4 h-4 text-gray-300" />
+                  <span>Evening Shows</span>
                 </div>
               </div>
 

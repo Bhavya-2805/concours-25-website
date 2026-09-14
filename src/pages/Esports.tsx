@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -17,7 +17,7 @@ const esportsGames = [
     description: "Battle Royale action where only the last team standing wins. Survive, loot, and eliminate your way to victory.",
     prizePool: "To be announced",
     teamSize: "4v4",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
   { 
     name: "Free Fire Max (CS)", 
@@ -29,7 +29,7 @@ const esportsGames = [
     description: "Intense 4v4 tactical combat in Clash Squad mode. Strategy and teamwork are key to dominating each round.",
     prizePool: "To be announced",
     teamSize: "4v4",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
   { 
     name: "BGMI", 
@@ -41,7 +41,7 @@ const esportsGames = [
     description: "India's favorite Battle Royale. Experience intense combat on the battleground with your squad.",
     prizePool: "To be announced",
     teamSize: "4v4",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
   { 
     name: "CODM", 
@@ -53,7 +53,7 @@ const esportsGames = [
     description: "Call of Duty Mobile brings fast-paced FPS action. Dominate the battlefield with your squad.",
     prizePool: "To be announced",
     teamSize: "5v5",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
   { 
     name: "Valorant", 
@@ -65,7 +65,7 @@ const esportsGames = [
     description: "Tactical 5v5 shooter where strategy meets precision. Form your team and dominate the battlefield.",
     prizePool: "To be announced",
     teamSize: "5v5",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
   { 
     name: "Clash Royale", 
@@ -77,7 +77,7 @@ const esportsGames = [
     description: "Real-time multiplayer strategy game. Build your deck and destroy opponent's towers to win.",
     prizePool: "To be announced",
     teamSize: "1v1",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
   { 
     name: "EA FC Mobile", 
@@ -89,7 +89,7 @@ const esportsGames = [
     description: "The ultimate football experience on mobile. Build your dream team and compete for glory.",
     prizePool: "To be announced",
     teamSize: "1v1",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
   { 
     name: "WCC Rivals", 
@@ -101,7 +101,7 @@ const esportsGames = [
     description: "World Cricket Championship Rivals. Experience the thrill of cricket on your mobile device.",
     prizePool: "To be announced",
     teamSize: "1v1",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
   { 
     name: "Mini Militia", 
@@ -113,7 +113,7 @@ const esportsGames = [
     description: "Classic 2D multiplayer combat. Engage in intense battles with up to 6 players in various maps.",
     prizePool: "To be announced",
     teamSize: "4v4",
-    date: "Nov 6th-9th, 2025"
+    date: "29th Oct - 1st Nov, 2026"
   },
 ];
 
@@ -132,7 +132,7 @@ export default function Esports() {
           <div className="flex justify-center mb-6">
             <img src={logoImage} alt="Logo" className="w-28 h-28" />
           </div>
-          <h1 className="concours-font text-5xl lg:text-6xl text-foreground mb-6">
+          <h1 className="concours-font text-5xl lg:text-6xl heading-gold mb-6">
             E-Sports Championship
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -150,7 +150,7 @@ export default function Esports() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="timesnewroman-font text-4xl text-foreground mb-4">
+            <h2 className="timesnewroman-font text-4xl heading-gold mb-4">
               Choose Your Battle
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -181,7 +181,7 @@ export default function Esports() {
                       Prize Pool: {game.prizePool}
                     </div>
                     <div className="flex items-center justify-center text-sm text-muted-foreground">
-                      <Users className="icon-small mr-2 text-blue-500" />
+                      <Users className="icon-small mr-2 text-secondary" />
                       {game.teamSize}
                     </div>
                     <div className="flex items-center justify-center text-sm text-muted-foreground">
@@ -192,18 +192,18 @@ export default function Esports() {
                   
                   {/* Register Badge */}
                   <div className="text-center mb-4">
-                    <Badge className="bg-primary/20 text-primary border-primary/30 px-3 py-1">
+                    <Badge className="bg-[#840c15]/20 text-red-300 border-[#840c15]/40 px-3 py-1 font-semibold">
                       REGISTER NOW
                     </Badge>
                   </div>
                   
                   {/* Description */}
-                  <p className="text-sm text-muted-foreground text-center mb-6 flex-grow">
+                  <p className="text-sm text-gray-400 text-center mb-6 flex-grow">
                     {game.description}
                   </p>
                   
                   {/* Action Button - Aligned at bottom */}
-                  <Button className="w-full bg-gradient-button text-primary-foreground hover:scale-105 transition-transform duration-200" asChild>
+                  <Button className="w-full btn-sports text-sm py-2.5" asChild>
                     <Link to={`/esports/${game.slug}`}>
                       View Details
                       <ArrowRight className="ml-2 w-4 h-4" />
@@ -224,7 +224,7 @@ export default function Esports() {
               <Gamepad2 className="icon-large icon-accent" />
             </div>
           </div>
-          <h2 className="varsity-font text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="varsity-font text-4xl lg:text-5xl heading-gold mb-6">
             Ready to Dominate?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
@@ -235,7 +235,7 @@ export default function Esports() {
             
             <Button
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="border-[#840c15] text-red-200 bg-[#840c15]/10 hover:bg-[#840c15] hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-[0_0_15px_rgba(132,12,21,0.4)]"
               onClick={() => {
                 window.open('https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view?usp=sharing', '_blank');
                 console.log('Esports CTA rule book download button clicked');
@@ -249,3 +249,4 @@ export default function Esports() {
     </div>
   );
 }
+

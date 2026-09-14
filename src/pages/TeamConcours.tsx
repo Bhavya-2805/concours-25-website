@@ -1,4 +1,4 @@
-import { Users, Phone, Mail, Heart, UserCheck } from "lucide-react";
+﻿import { Users, Phone, Mail, Heart, UserCheck } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useEffect } from "react";
@@ -90,14 +90,14 @@ export default function TeamConcours() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 px-4 py-2">
+          <Badge className="mb-6 bg-[#840c15]/25 text-red-200 border-[#840c15]/50 px-4 py-1.5 backdrop-blur-sm shadow-sm">
             Meet The Organizers
           </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl text-foreground mb-6">
+          <h1 className="concours-font text-5xl lg:text-7xl text-white mb-6 tracking-wide">
             TEAM CONCOURS
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The dedicated team behind CONCOURS'25, working tirelessly to make this festival unforgettable.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            The dedicated team behind CONCOURS, working tirelessly to make this festival unforgettable.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function TeamConcours() {
               <div className="absolute inset-0 bg-gradient-accent opacity-20"></div>
               <div className="relative z-10 text-center text-white">
                 <Users className="w-24 h-24 mx-auto mb-4" />
-                <h2 className="varsity-font text-3xl mb-2">Team CONCOURS'25</h2>
+                <h2 className="varsity-font text-3xl heading-gold mb-2">Team CONCOURS'26</h2>
                 <p className="text-lg opacity-90">United by passion, driven by excellence</p>
               </div>
             </div>
@@ -134,8 +134,8 @@ export default function TeamConcours() {
                   />
                   <div className="absolute inset-0 bg-gradient-sports opacity-10 rounded-lg"></div>
                 </div>
-                <CardTitle className="timesnewroman-font text-lg text-foreground">{member.name}</CardTitle>
-                <p className="text-primary font-medium text-sm">{member.role}</p>
+                <CardTitle className="timesnewroman-font text-lg text-white">{member.name}</CardTitle>
+                <p className="text-red-400 font-semibold text-sm">{member.role}</p>
               </CardHeader>
               <CardContent className="px-4 pb-4">
                 <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
@@ -153,7 +153,7 @@ export default function TeamConcours() {
             <div className="icon-container mx-auto mb-6">
               <UserCheck className="icon-large icon-secondary" />
             </div>
-            <h2 className="varsity-font text-3xl text-foreground mb-4">
+            <h2 className="varsity-font text-3xl heading-gold mb-4">
               Thank You
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

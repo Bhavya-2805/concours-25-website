@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Trophy, Calendar, MapPin, DollarSign, Phone, Mail, Download, Users, Target, Clock, Medal } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,7 @@ export default function AthleticsDetail() {
     { 
       name: "Athletics", 
       slug: "athletics", 
-      icon: "🏋️", 
+      icon: "ðŸ‹ï¸", 
       category: "Boys and Girls", 
       registerLink: "https://forms.gle/8wRd1n446FNFjouw6",
       rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
@@ -26,14 +26,14 @@ export default function AthleticsDetail() {
       format: "Individual Events",
       venue: "TBD",
       teamSize: "Individual",
-      date: "Nov 6th-9th, 2025",
+      date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
       contact: "Manthan Gajera: +91 83202 29391 \n Jenil Shah: +91 63543 98820"
     },
     { 
       name: "Relay", 
       slug: "relay-race", 
-      icon: "🏃‍♀️", 
+      icon: "ðŸƒâ€â™€ï¸", 
       category: "Boys and Girls", 
       registerLink: "https://forms.gle/MSSZHb5KbFnZF8kbA",
       rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
@@ -41,7 +41,7 @@ export default function AthleticsDetail() {
       format: "Team Events",
       venue: "TBD",
       teamSize: "4v4",
-      date: "Nov 6th-9th, 2025",
+      date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
       contact: "Manthan Gajera: +91 83202 29391 \n Jenil Shah: +91 63543 98820"
     }
@@ -52,7 +52,7 @@ export default function AthleticsDetail() {
 
   if (!currentCategory) {
     return (
-      <div className="min-h-screen subtle-bg bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 py-16 px-6">
+      <div className="min-h-screen subtle-bg bg-gradient-to-br from-[#0a0203] via-[#1a0407] to-[#330609] py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="concours-font text-4xl text-foreground mb-4">Athletics Category Not Found</h1>
           <p className="text-xl text-muted-foreground mb-8">
@@ -70,12 +70,12 @@ export default function AthleticsDetail() {
   }
 
   return (
-    <div className="min-h-screen subtle-bg bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 py-16 px-6">
+    <div className="min-h-screen subtle-bg bg-gradient-to-br from-[#0a0203] via-[#1a0407] to-[#330609] py-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="text-8xl mb-6">{currentCategory.icon}</div>
-          <h1 className="timesnewroman-font text-5xl lg:text-6xl text-foreground mb-4">
+          <h1 className="timesnewroman-font text-5xl lg:text-6xl heading-gold mb-4">
             {currentCategory.name}
           </h1>
           <p className="text-xl text-muted-foreground">
@@ -234,3 +234,4 @@ export default function AthleticsDetail() {
     </div>
   );
 }
+
