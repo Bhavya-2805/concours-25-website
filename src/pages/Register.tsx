@@ -37,7 +37,7 @@ export default function Register() {
               <p className="text-gray-300 text-center text-base">
                 Compete in 10+ sports categories and prove your athletic prowess against the best talent from across the nation.
               </p>
-              
+
               {/* Features */}
               <div className="bg-[#840c15]/10 rounded-xl p-5 border border-[#840c15]/25">
                 <div className="flex items-center space-x-3 mb-2">
@@ -90,7 +90,7 @@ export default function Register() {
               <p className="text-gray-300 text-center text-base">
                 Get the exclusive pass to Concours and experience glory, victory, and memories that will last a lifetime.
               </p>
-              
+
               {/* Features */}
               <div className="bg-[#918d8c]/10 rounded-xl p-5 border border-[#918d8c]/25">
                 <div className="flex items-center space-x-3 mb-2">
@@ -117,9 +117,9 @@ export default function Register() {
               </div>
 
               <Button className="w-full btn-accent group" asChild>
-                <Link to="/comedy-dj-night">
-                  Register Now
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                <Link to="/register">
+                  Early Bird Coming Soon
+                  {/* <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" /> */}
                 </Link>
               </Button>
             </CardContent>
