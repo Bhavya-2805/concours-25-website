@@ -12,7 +12,7 @@ const navigationItems = [
   /*{ title: "Team DA-IICT", url:"" "/team-daiict" },*/
   { title: "Sponsors", url: "" /*"/sponsors"*/ },
   { title: "CONCOURS'25", url: "/concours-24" },
-  { title: "Team Concours", url: "/team-concours" },
+  { title: "Team Concours", url: "/register" },
 ];
 
 export function TopNavbar() {

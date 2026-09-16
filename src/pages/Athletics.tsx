@@ -7,12 +7,12 @@ import { ArrowRight, Users, Trophy, Calendar, Clock, Activity } from 'lucide-rea
 import logoImage from '@/assets/images/IMG_0054.PNG';
 
 const athleticsCategories = [
-  { 
-    name: "Athletics", 
-    slug: "athletics", 
-    icon: "ðŸ‹ï¸", 
-    category: "Boys and Girls", 
-    registerLink: "https://forms.gle/8wRd1n446FNFjouw6", 
+  {
+    name: "Athletics",
+    slug: "athletics",
+    icon: "🏃‍♂️",
+    category: "Boys and Girls",
+    registerLink: "https://docs.google.com/forms/d/1fNcn6wGCWE7BW110DDqLf9eLt_lFRniFQUMFHBcpIQE/edit",
     rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
     description: "Boys and Girls field and track sports featuring 100m, 200m, 400m, 800m, shot put, discus throw, and long jump. Athletes showcase their strength, technique, and explosive power.",
     format: "Individual Events",
@@ -21,12 +21,12 @@ const athleticsCategories = [
     date: "29th Oct - 1st Nov, 2026",
     duration: "4 Days"
   },
-  { 
-    name: "Relay", 
-    slug: "relay-race", 
-    icon: "ðŸƒâ€â™€ï¸", 
-    category: "Boys and Girls", 
-    registerLink: "forms.gle/MSSZHb5KbFnZF8kbA", 
+  {
+    name: "Relay",
+    slug: "relay-race",
+    icon: "🏃‍♂️",
+    category: "Boys and Girls",
+    registerLink: "https://docs.google.com/forms/d/1ctZdCmhBvKfBk8TbF1NwS7Y-o58PXqtLoR8rIuOdPPc/edit",
     rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
     description: "Relay races featuring 4x100m events. Teams demonstrate their speed, teamwork, and precise baton passing in exciting relay competitions.",
     format: "Team Events",
@@ -38,12 +38,12 @@ const athleticsCategories = [
 ];
 
 export default function Athletics() {
-  
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   });
-  
+
   return (
     <div className="min-h-screen subtle-bg">
       {/* Hero Section */}
@@ -56,8 +56,8 @@ export default function Athletics() {
             Athletics Championship
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Compete in 6 thrilling athletics categories with track and field events. 
-            Whether you're a sprinter, distance runner, or field athlete, 
+            Compete in 6 thrilling athletics categories with track and field events.
+            Whether you're a sprinter, distance runner, or field athlete,
             we have the perfect challenge for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -74,11 +74,11 @@ export default function Athletics() {
               Choose Your Event
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Select your athletics category and prepare for the ultimate track and field experience. 
+              Select your athletics category and prepare for the ultimate track and field experience.
               Each event offers unique challenges and exciting rewards.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
             {athleticsCategories.map((category, index) => (
               <Card key={category.slug} className="epic-card overflow-hidden group cursor-pointer">
@@ -87,13 +87,13 @@ export default function Athletics() {
                   <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300 text-center">
                     {category.icon}
                   </div>
-                  
+
                   {/* Category Name */}
                   <h3 className="varsity-font text-2xl text-foreground mb-2 text-center">{category.name}</h3>
-                  
+
                   {/* Category Type */}
                   <p className="text-muted-foreground mb-4 text-center">{category.category}</p>
-                  
+
                   {/* Event Info */}
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center justify-center text-sm text-muted-foreground">
@@ -109,19 +109,19 @@ export default function Athletics() {
                       {category.date}
                     </div>
                   </div>
-                  
+
                   {/* Register Badge */}
                   <div className="text-center mb-4">
                     <Badge className="bg-[#840c15]/20 text-red-300 border-[#840c15]/40 px-3 py-1 font-semibold">
                       REGISTER NOW
                     </Badge>
                   </div>
-                  
+
                   {/* Description */}
                   <p className="text-sm text-gray-400 text-center mb-6 flex-grow">
                     {category.description}
                   </p>
-                  
+
                   {/* Action Button - Aligned at bottom */}
                   <Button className="w-full btn-sports text-sm py-2.5" asChild>
                     <Link to={`/athletics/${category.slug}`}>
@@ -152,7 +152,7 @@ export default function Athletics() {
             Register now and secure your spot in sports history.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            
+
             <Button
               variant="outline"
               className="border-[#840c15] text-red-200 bg-[#840c15]/10 hover:bg-[#840c15] hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-[0_0_15px_rgba(132,12,21,0.4)]"

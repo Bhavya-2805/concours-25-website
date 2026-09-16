@@ -7,20 +7,20 @@ import { Badge } from "@/components/ui/badge";
 
 export default function AthleticsDetail() {
   const { category } = useParams<{ category: string }>();
-  
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   });
-  
+
   // Athletics categories data
   const athleticsCategories = [
-    { 
-      name: "Athletics", 
-      slug: "athletics", 
-      icon: "ðŸ‹ï¸", 
-      category: "Boys and Girls", 
-      registerLink: "https://forms.gle/8wRd1n446FNFjouw6",
+    {
+      name: "Athletics",
+      slug: "athletics",
+      icon: "🏃‍♂️",
+      category: "Boys and Girls",
+      registerLink: "https://docs.google.com/forms/d/1fNcn6wGCWE7BW110DDqLf9eLt_lFRniFQUMFHBcpIQE/edit",
       rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
       description: "Boys and Girls field and track sports featuring 100m, 200m, 400m, 800m, shot put, discus throw, and long jump. Athletes showcase their strength, technique, and explosive power.",
       format: "Individual Events",
@@ -28,14 +28,14 @@ export default function AthleticsDetail() {
       teamSize: "Individual",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Manthan Gajera: +91 83202 29391 \n Jenil Shah: +91 63543 98820"
+      contact: "Ved Gabani: +91 93285 36537 \n Raj: +91 95125 80599"
     },
-    { 
-      name: "Relay", 
-      slug: "relay-race", 
-      icon: "ðŸƒâ€â™€ï¸", 
-      category: "Boys and Girls", 
-      registerLink: "https://forms.gle/MSSZHb5KbFnZF8kbA",
+    {
+      name: "Relay",
+      slug: "relay-race",
+      icon: "🏃‍♂️",
+      category: "Boys and Girls",
+      registerLink: "https://docs.google.com/forms/d/1ctZdCmhBvKfBk8TbF1NwS7Y-o58PXqtLoR8rIuOdPPc/edit",
       rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
       description: "Relay races featuring 4x100m events. Teams demonstrate their speed, teamwork, and precise baton passing in exciting relay competitions.",
       format: "Team Events",
@@ -43,7 +43,7 @@ export default function AthleticsDetail() {
       teamSize: "4v4",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Manthan Gajera: +91 83202 29391 \n Jenil Shah: +91 63543 98820"
+      contact: "Ved Gabani: +91 93285 36537 \n Raj: +91 95125 80599"
     }
   ];
 
@@ -58,7 +58,7 @@ export default function AthleticsDetail() {
           <p className="text-xl text-muted-foreground mb-8">
             The requested athletics category could not be found.
           </p>
-          <Button 
+          <Button
             className="btn-sports"
             onClick={() => window.history.back()}
           >
@@ -87,7 +87,7 @@ export default function AthleticsDetail() {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Left Column - spans 2/3 width */}
           <div className="lg:col-span-2 space-y-8">
-            
+
             {/* Registration Card */}
             <Card className="epic-card">
               <CardHeader className="bg-gradient-sports text-white rounded-t-xl">
@@ -99,13 +99,13 @@ export default function AthleticsDetail() {
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <Button className="btn-sports flex-1"
-                   onClick={() => {
-                    window.open(currentCategory.registerLink, '_blank');
-                    console.log(`AthleticsDetail ${currentCategory.slug} registration button clicked`);
-                  }}>
+                    onClick={() => {
+                      window.open(currentCategory.registerLink, '_blank');
+                      console.log(`AthleticsDetail ${currentCategory.slug} registration button clicked`);
+                    }}>
                     Register Now
                   </Button>
-                
+
                   <Button variant="outline" className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
                     onClick={() => {
                       window.open(currentCategory.rulebookLink, '_blank');
@@ -114,9 +114,9 @@ export default function AthleticsDetail() {
                     <Download className="w-4 h-4 mr-2" />
                     View Rulebook
                   </Button>
-              
+
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="flex items-center space-x-3 p-3 bg-primary/10 rounded-lg">
                     <Calendar className="w-5 h-5 text-primary" />
@@ -125,7 +125,7 @@ export default function AthleticsDetail() {
                       <div className="text-sm text-muted-foreground">Event Dates</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3 p-3 bg-primary/10 rounded-lg">
                     <Users className="w-5 h-5 text-primary" />
                     <div>
@@ -133,7 +133,7 @@ export default function AthleticsDetail() {
                       <div className="text-sm text-muted-foreground">Team Size</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3 p-3 bg-secondary/10 rounded-lg">
                     <Clock className="w-5 h-5 text-secondary" />
                     <div>
@@ -188,7 +188,7 @@ export default function AthleticsDetail() {
                     <div className="text-sm text-muted-foreground whitespace-pre-line">{currentCategory.contact}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
@@ -211,17 +211,17 @@ export default function AthleticsDetail() {
                   <span className="text-muted-foreground">Category:</span>
                   <Badge variant="secondary">{currentCategory.category}</Badge>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Format:</span>
                   <span className="font-medium">{currentCategory.format}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Venue:</span>
                   <span className="font-medium">{currentCategory.venue}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Registration:</span>
                   <span className="font-medium text-green-500">Open</span>

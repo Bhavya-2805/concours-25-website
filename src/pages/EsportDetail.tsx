@@ -18,9 +18,9 @@ export default function EsportDetail() {
     { 
       name: "Free Fire Max (BR)", 
       slug: "freefire-br", 
-      icon: "ðŸ”¥", 
+      icon: "🔥", 
       category: "Battle Royale", 
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSepxP4Unf9P4ab1ZqDfMmLi4c9u_wg1EWT3hzvPlMkyIoufBw/viewform", 
+      registerLink: "https://docs.google.com/forms/d/1aDzaXXQ9RX-PZf8BFrz4Jc0nmTZV4S1UkhQrFHPVc5M/edit?usp=drive_web&ouid=101228523565298084421", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
       description: "Free Fire Max offers an intense battle royale experience with high-definition graphics and immersive gameplay. Players parachute onto an island, searching for weapons and supplies as they fight to be the last one standing. With both solo and squad modes, improved effects, and smooth play, it delivers dynamic action for mobile gamers.",
       prizePool: "To be announced",
@@ -33,9 +33,9 @@ export default function EsportDetail() {
     { 
       name: "Free Fire Max (CS)", 
       slug: "freefire-cs", 
-      icon: "ðŸŽ¯", 
+      icon: "🎯", 
       category: "Clash Squad", 
-      registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLScps0evDnbOTW4VyYItimwViwCNaq9RFdm_xxBM_XYNDl7p8Q/viewform?usp=send_form", 
+      registerLink: "https://docs.google.com/forms/d/1UX7fZbXPVuCRDTeHx1Hx0V9PFDSQEZDZ7BwKwA0O08g/edit", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
       description: "Free Fire Max offers an intense Clash squad experience with high-definition graphics and immersive gameplay. Players compete in a team, select weapons and supplies as they fight to be the last one standing. With squad modes, improved effects, and smooth play, it delivers dynamic action for mobile gamers.",
       prizePool: "To be announced",
@@ -47,9 +47,9 @@ export default function EsportDetail() {
     { 
       name: "BGMI", 
       slug: "bgmi", 
-      icon: "ðŸŽ–ï¸", 
+      icon: "🎖️", 
       category: "Battle Royale", 
-      registerLink: "https://forms.gle/L8FaxUqSdA13g8fj8", 
+      registerLink: "https://docs.google.com/forms/d/1ZRGq20PAFK8gZRdaSb7KuBU1gtFKQcVjItxI2pPlqQY/edit", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
       description: "Battlegrounds Mobile India is a multiplayer battle royale game where up to 100 players compete in large-scale, last-person-standing deathmatches. Players explore extensive maps, scavenge equipment, and strategize to survive shrinking safe zones. The game features squad play and an array of weapons for combat in a dynamic, competitive environment.",
       prizePool: "To be announced",
@@ -61,7 +61,7 @@ export default function EsportDetail() {
     { 
       name: "CODM", 
       slug: "codm", 
-      icon: "ðŸŽ®", 
+      icon: "🎮", 
       category: "FPS", 
       registerLink: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSc1GZD-UnhMaMU0DwbEZsyNRjIrBsI5sVCF8zktemuEL5PbRA/viewform?usp=send_form", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
@@ -76,9 +76,9 @@ export default function EsportDetail() {
     { 
       name: "Valorant", 
       slug: "valorant", 
-      icon: "ðŸ”«", 
+      icon: "🔫", 
       category: "FPS", 
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScEdNzx8SMqIiEQUF196RCCzI1aVwSViSXVr9c7OFj7H4AXbQ/viewform", 
+      registerLink: "https://docs.google.com/forms/d/153airOjIR3QemuXlYVDcq9z4AIQxPrdTaWHeI3I8cM0/edit", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
       description: "Valorant is a competitive, 5v5 tactical first-person shooter for PC, where players, known as 'agents,' combine precise gunplay with unique character abilities. Each round emphasizes teamwork and strategy, as attackers attempt to plant a device called the 'spike' while defenders try to prevent it. Valorantâ€™s complex mechanics and balanced gameplay attract both casual and professional esports players.",
       prizePool: "To be announced",
@@ -91,9 +91,9 @@ export default function EsportDetail() {
     { 
       name: "Clash Royale", 
       slug: "clash-royale", 
-      icon: "ðŸ‘‘", 
+      icon: "👑", 
       category: "Strategy", 
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScREa1iZxWpdyfSHqs2WWeNQObvuVk4AVzmJV_NVyor6U-RIA/viewform", 
+      registerLink: "https://docs.google.com/forms/d/1qXK6X0N44FILAwH2Fl49otqfSZa-5IlclVHm-7t8dWI/edit", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
       description: "Clash Royale is a real-time multiplayer strategy game blending collectible card, tower defence, and battle arena elements. Players collect and upgrade cards featuring familiar 'Clash' characters, spells, and buildings, battling opponents to destroy towers and claim victory. Its competitive ladders, quick matches, and engaging esports tournaments have made Clash Royale a staple in mobile gaming.",
       prizePool: "To be announced",
@@ -106,9 +106,9 @@ export default function EsportDetail() {
     { 
       name: "EA FC Mobile", 
       slug: "ea-fc-mobile", 
-      icon: "âš½", 
+      icon: "⚽", 
       category: "Sports", 
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdgS3kSJQsfaLorUKIh3AFY2i2xxXICoNO7GuqGMqkXMEW5vA/viewform", 
+      registerLink: "https://docs.google.com/forms/d/1Fn_lfwmsUUcrEB8GqadhBCuMbE_Eu9FKo_TQvVWjKSw/edit", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
       description: "EA SPORTS FC 25 is the latest football simulation offering from Electronic Arts, featuring authentic clubs, leagues, and players from around the world. New gameplay modes such as 5v5 Rush, improved tactical control with FC IQ, and both menâ€™s and womenâ€™s career options bring deeper strategy and more ways to win, making it a premier esports football title.",
       prizePool: "To be announced",
@@ -121,7 +121,7 @@ export default function EsportDetail() {
     { 
       name: "WCC Rivals", 
       slug: "wcc-rivals", 
-      icon: "ðŸ", 
+      icon: "🏏", 
       category: "Sports", 
       registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSe_9j6mBjTi0NDEi984iBYeSU5O2hEcauQqSKzKGNOpG5_JYA/viewform", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
@@ -136,9 +136,9 @@ export default function EsportDetail() {
     { 
       name: "Mini Militia", 
       slug: "mini-militia", 
-      icon: "ðŸª–", 
+      icon: "🪖", 
       category: "Action", 
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScT2NzqXTINqchSQYxQnCAOaZD07t5tacODspQa8PizIcRO2w/viewform", 
+      registerLink: "https://docs.google.com/forms/d/1FtN5Vo3oJQA-kILfBAxZmoJ5XKvjjJ7SkezzDlJ282E/edit", 
       rulebookLink: "https://drive.google.com/file/d/1vnAgZ3gkTA0OZxw4arW_eD8-IoLBSMcU/view",
       description: "Mini Militia â€“ Doodle Army 2 is a 2D multiplayer shooter known for its fast, chaotic combat and doodle-style graphics. Players can engage locally or online in teams or free-for-all matches, using a wide array of weapons and jetpacks for vertical movement. Accessible yet competitive, itâ€™s perfect for quick, action-packed multiplayer battles.",
       prizePool: "To be announced",
@@ -293,8 +293,8 @@ export default function EsportDetail() {
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
                     <div className="font-semibold">Point Of Contact</div>
-                    <div className="text-sm text-muted-foreground">Shivam Ramoliya: +91 79844 06542</div>
-                    <div className="text-sm text-muted-foreground">Vatsal Somaliya: +91 90167 64959</div>
+                    <div className="text-sm text-muted-foreground">Prins Anghan: +91 63517 23595</div>
+                    <div className="text-sm text-muted-foreground">Rushit Koladiya: +91 70419 30742</div>
                   </div>
                 </div>
                 

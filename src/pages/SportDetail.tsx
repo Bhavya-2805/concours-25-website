@@ -20,7 +20,7 @@ export default function SportDetail() {
       slug: "basketball-men",
       icon: "🏀", 
       category: "Men's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSd7237Cuy01ZgYEd4ywVgR8PmYVss3Dn5ywqaj-cXQOOa1maQ/viewform?usp=header",
+      registerLink: "https://docs.google.com/forms/d/1wpCrzwYUn5ECsycP5viUUDxbxsqgwmC7jSucfFRkjKk/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Experience the fast-paced action of basketball in our men's tournament. Teams compete in intense matches showcasing athleticism, strategy, and teamwork.",
       format: "Knockout Tournament",
@@ -28,14 +28,14 @@ export default function SportDetail() {
       teamSize: "5v5",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Devdutt Dinesh: +91 7012438105 \n Kavish Patel: +91 8200054272"
+      contact: "Jatin Srinivas: 8618385403 \n Abhing: 8866453300"
     },
     {
       name: "Basketball (Women)",
       slug: "basketball-women",
       icon: "🏀", 
       category: "Women's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSc1ebXYhf_e5rlYkxjT1LfiU2XCXKh-MeKhYFFGQBTF06xaGg/viewform?usp=header",
+      registerLink: "https://docs.google.com/forms/d/1nSZmh88rYZZFG9KbUzjVgabU9MTgbTb-RFWV_lUxhvU/edit",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Join the women's basketball tournament featuring competitive matches and skilled players. The tournament emphasizes fair play, sportsmanship, and athletic excellence.",
       format: "Knockout Tournament",
@@ -43,14 +43,14 @@ export default function SportDetail() {
       teamSize: "5v5",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Devdutt Dinesh: +91 7012438105 \n Kavish Patel: +91 8200054272"
+      contact: "Jatin Srinivas: 8618385403 \n Abhing: 8866453300"
     },
     {
       name: "Volleyball (Men)",
       slug: "volleyball-men",
       icon: "🏐", 
       category: "Men's",
-      registerLink: "https://forms.gle/4PQzMZ34HYjnn6sP6",
+      registerLink: "https://docs.google.com/forms/d/1ULpKeNioK236WI4Zgvvavz2x74xYwqLM8ZLKSs8Yo1I/edit",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Spike your way to victory in the men's volleyball tournament. Teams showcase their serving, spiking, and defensive skills in exciting matches.",
       format: "Knockout Tournament",
@@ -58,7 +58,7 @@ export default function SportDetail() {
       teamSize: "6v6",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Yuvraj Katara:   9978032169  \n Khelan Bhatt:    8160642207 \n Pandya Deep:   9537424333"
+      contact: "Pushan Patel: +91 7041773609 \n Yuvraj Katara: +91 9978032169"
 
     },
     {
@@ -66,7 +66,7 @@ export default function SportDetail() {
       slug: "volleyball-women",
       icon: "🏐", 
       category: "Women's",
-      registerLink: "https://forms.gle/nHxQFqk8SyqPaKeW6",
+      registerLink: "https://docs.google.com/forms/d/1jOEHhWKgzHpzXclPKJeab9UKBctC-sE6XRjLUTNipfg/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "The women's volleyball tournament features intense rallies and strategic gameplay. Teams compete in a series of matches leading to the championship.",
       format: "Knockout Tournament",
@@ -74,14 +74,14 @@ export default function SportDetail() {
       teamSize: "6v6",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Yuvraj Katara:   9978032169  \n Khelan Bhatt:    8160642207 \n Pandya Deep:   9537424333"
+      contact: "Pushan Patel: +91 7041773609 \n Yuvraj Katara: +91 9978032169"
     },
     {
       name: "Cricket",
       slug: "cricket",
       icon: "🏏", 
       category: "Men's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdXyFy_OsjEHiVHQUDSX2gFOCo_YDq0dNcGJX5Tbzm1V_WeCA/viewform?usp=dialog",
+      registerLink: "https://docs.google.com/forms/d/11MTYd_-FgPuB2zo0Jx3j-TEvpMY3nthL2hzaXuu3b8c/edit",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "India's most beloved sport takes center stage in our cricket tournament. Teams compete in T20 format matches featuring explosive batting and strategic bowling.",
       format: "T20 Tournament",
@@ -89,14 +89,14 @@ export default function SportDetail() {
       teamSize: "11v11",
       date: "29th Oct - 1st Nov, 2026",
       duration: "7 Days",
-      contact: "Siddharth Vala: +91 9228206818 \n Kush Patel: +91 8780132145 \n Krish Vijayvergiya : +91 9664246301"
+      contact: "Pal Jalodara: +91 9638707155 \n Mrigank Chaudhari: +91 9274117599 \n Pariksheet Viradiya: +91 9925536006"
     },
     {
       name: "Badminton (Men)",
       slug: "badminton-men",
       icon: "🏸", 
       category: "Men's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScdMNpfnZ3KV3OdODTRxJfUg128QPl-Wilt-oy49JHbcCw2nw/viewform?usp=header",
+      registerLink: "https://docs.google.com/forms/d/1Vo2T_3e3utOSN3sS78yWsSeXBn86aQXkpZr1GKNK_Tg/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Fast-paced badminton action in the men's tournament. Each team game will be best of five. Each match will be the best of three games, 21 points each. All matches will be played as per the rules of the Badminton Association of India (BAI).",
       format: "Knockout Tournament",
@@ -104,14 +104,14 @@ export default function SportDetail() {
       teamSize: "4-7",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Rishita Jodhawat :98283 90304 \n Dhruv Ramani : 88497 99027 \n Gaurang Rahani : 94996 05923  "
+      contact: "Darshit Raval: +91 97994 72840 \n Bhavya Shah: +91 63515 09727 \n Yash: +91 96624 33151"
     },
     {
       name: "Badminton (Women)",
       slug: "badminton-women",
       icon: "🏸", 
       category: "Women's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSf3KGvqQ1kzcyFTGb_NEAYt4CwhVDRWK325rmVN6FoBAV-Oag/viewform?usp=dialog",
+      registerLink: "https://docs.google.com/forms/d/1YRT6Yd0M8RmPAm1iDj2vK8KzLQt-7Dap040FVe6DL6I/edit",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Women's badminton tournament featuring skilled players competing in exciting matches. Each team game will be best of three. Each match will be the best of three games, 21 points each. All matches will be played as per the rules of the Badminton Association of India (BAI).",
       format: "Knockout Tournament",
@@ -119,14 +119,14 @@ export default function SportDetail() {
       teamSize: "2-5",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Rishita Jodhawat :98283 90304 \n Dhruv Ramani : 88497 99027 \n Gaurang Rahani : 94996 05923  "
+      contact: "Darshit Raval: +91 97994 72840 \n Bhavya Shah: +91 63515 09727 \n Yash: +91 96624 33151"
     },
     {
       name: "Badminton (Mixed Doubles)",
       slug: "badminton-mixed",
       icon: "🏸", 
       category: "Mixed",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScGnwzUQsSf-NY5cBhHjlCXLfOqIVx0dI9JhxzkZ4rwsvlCHQ/viewform?usp=header",
+      registerLink: "https://docs.google.com/forms/d/1tdJ3x1q4PehnzSGVfN5LzXDszkA8-bUvzFYmjrNhDmM/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Mixed doubles badminton tournament where male and female players team up for exciting matches. Each team game will be best of three. Each match will be the best of three games, 21 points each. All matches will be played as per the rules of the Badminton Association of India (BAI).",
       format: "Knockout Tournament",
@@ -134,14 +134,14 @@ export default function SportDetail() {
       teamSize: "2-4",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Rishita Jodhawat :98283 90304 \n Dhruv Ramani : 88497 99027 \n Gaurang Rahani : 94996 05923  "
+      contact: "Darshit Raval: +91 97994 72840 \n Bhavya Shah: +91 63515 09727 \n Yash: +91 96624 33151"
     },
     {
       name: "Football (Men)",
       slug: "football-men",
       icon: "⚽", 
       category: "Men's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdMX15T6tpVbcSsupKpao983AnUv1y0p_-HCOJRcHZ4YlRKZQ/viewform?usp=dialog",
+      registerLink: "https://docs.google.com/forms/d/1RMz-iZ7m5PUGEBseYJRR7IoEIJRPkl1mSObWm0BBaLk/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "The beautiful game takes center stage in our men's football tournament. Teams compete in exciting matches featuring skillful play and tactical formations.",
       format: "Knockout Tournament",
@@ -149,14 +149,14 @@ export default function SportDetail() {
       teamSize: "11v11",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Jay Unadkat : +91 79847 04174 \n Diyen Patel   : +91 95109 55278"
+      contact: "Vasu Vaghasiya: +91 73837 58690 \n Vatsal Chhatrola: +91 92653 08898 \n Ayush Balat: +91 74350 62351"
     },
     {
       name: "Football (Women)",
       slug: "football-women",
       icon: "⚽", 
       category: "Women's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeSJVc1NdP2Ok4BkvaeAbBMsaogg0qS6Hki13ERsRqN1NwMkw/viewform?usp=dialog",
+      registerLink: "https://docs.google.com/forms/d/1C3Q3TDnWc9tShdsh0_LYH027Ju5VNmeiBiKT_PNeH9U/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Women's football tournament showcasing skill, determination, and teamwork. Teams compete in competitive matches that highlight the growing popularity of women's football.",
       format: "Knockout Tournament",
@@ -164,14 +164,14 @@ export default function SportDetail() {
       teamSize: "7v7",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Jay Unadkat : +91 79847 04174 \n Diyen Patel   : +91 95109 55278"
+      contact: "Vasu Vaghasiya: +91 73837 58690 \n Vatsal Chhatrola: +91 92653 08898 \n Ayush Balat: +91 74350 62351"
     },
     {
       name: "Table Tennis (Men)",
       slug: "table-tennis-men",
       icon: "🏓", 
       category: "Men's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVgb2FHhNcysgnv6cPQwXOQzTeF_hYHD1141Rc6Dya_qIJgw/viewform?usp=sharing&ouid=101228523565298084421",
+      registerLink: "https://docs.google.com/forms/d/1dh2IfZdvyUNeNK6UkLXCdRQfiWYHBhr-cMNHZnjSvJY/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Fast-paced table tennis action in the men's tournament. Players showcase their reflexes, spin techniques, and tactical skills in intense rallies.",
       format: "Knockout Tournament",
@@ -179,14 +179,14 @@ export default function SportDetail() {
       teamSize: "4-5",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Neeti Gunsai: +91 6355770669 \n Jay Shah: +91 7990348872"
+      contact: "Yug Patel: +91 9104632937 \n Vraj Patel: +91 9316148846"
     },
     {
       name: "Table Tennis (Women)",
       slug: "table-tennis-women",
       icon: "🏓", 
       category: "Women's",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfP5I28i7h-7LoFYl1DMAtsadaeRIQ1pBOLkN3fYWl76PP3jw/viewform?usp=sharing&ouid=101228523565298084421",
+      registerLink: "https://docs.google.com/forms/d/17pEAEdufSpR31QwwnG5oI4jNy227Xo9BWMkyh4ebE3I/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Women's table tennis tournament featuring skilled players competing in singles matches. The tournament emphasizes technique, strategy, and sportsmanship.",
       format: "Knockout Tournament",
@@ -194,14 +194,14 @@ export default function SportDetail() {
       teamSize: "4-5",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Neeti Gunsai: +91 6355770669 \n Jay Shah: +91 7990348872"
+      contact: "Yug Patel: +91 9104632937 \n Vraj Patel: +91 9316148846"
     },
     {
       name: "Tennis (Men)",
       slug: "tennis-men",
       icon: "🎾", 
       category: "Men's",
-      registerLink: "https://forms.gle/5LtqB78P7XUe1eL16",
+      registerLink: "https://docs.google.com/forms/d/1zQFenqtLVxpY2xJqgFbEMds8gYfGkdWrr0pERak_i98/edit",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Men's tennis tournament featuring powerful serves, strategic rallies, and athletic displays. The tournament consists of 3 games per matches: 2 singles  and 1 doubles , testing both individual skills and team coordination.",
       format: "Knockout Tournament",
@@ -209,14 +209,14 @@ export default function SportDetail() {
       teamSize: "3-4",
       date: "29th Oct - 1st Nov, 2026",
       duration: "2 Days",
-      contact: "Rutva Mehta: +91 9723204898 \n Rishika Shah: +91 9409433069"
+      contact: "Joy Patel: +91 9316941046 \n Neel Gami: +91 7990322293"
     },
     {
       name: "Tennis (Women)",
       slug: "tennis-women",
       icon: "🎾", 
       category: "Women's",
-      registerLink: "https://forms.gle/E914aiUbmjpxp1B49",
+      registerLink: "https://docs.google.com/forms/d/1Yx8rFE2_fAA1XPLj5tSHFzwuKn7-qxu1UN7SXcoz7l4/edit",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Women's tennis tournament showcasing skill, grace, and competitive spirit. The tournament consists of 3 games per matches: 2 singles  and 1 doubles , highlighting both individual technique and team strategy.",
       format: "Knockout Tournament",
@@ -224,14 +224,14 @@ export default function SportDetail() {
       teamSize: "3-4",
       date: "29th Oct - 1st Nov, 2026",
       duration: "2 Days",
-      contact: "Rutva Mehta: +91 9723204898 \n Rishika Shah: +91 9409433069"
+      contact: "Joy Patel: +91 9316941046 \n Neel Gami: +91 7990322293"
     },
     {
       name: "Carrom",
       slug: "carrom",
       icon: "🥏", 
       category: "Mixed",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdsI1LNxIEJKKV3wUh-KrjE7T9nQUTEIYclOiWdLQZ897bUYQ/viewform?usp=dialog",
+      registerLink: "https://docs.google.com/forms/d/1Vs0Eru3Zq-usbHVZZA0JXIoTG4X6ZBZ3dM_xsMGL4QE/edit",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Strategic carrom tournament where players compete in singles matches. The game requires precision, strategy, and skillful finger techniques to pocket coins and win matches.",
       format: "Singles Tournament",
@@ -239,14 +239,14 @@ export default function SportDetail() {
       teamSize: "2v2",
       date: "29th Oct - 1st Nov, 2026",
       duration: "2 Days",
-      contact: "Jash Shah: 9033022192"
+      contact: "Pratham Rabari: +91 9054684566"
     },
     {
       name: "Chess",
       slug: "chess",
       icon: "♟️", 
       category: "Mixed",
-      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSc2RhF0ndssy0gStfyf-a9XEAkoqs_EywDE8zQ_nA0BR4FFbQ/viewform?usp=sharing&ouid=101228523565298084421",
+      registerLink: "https://docs.google.com/forms/d/1bKWWNjh3jjDRGtcKm9bjKRAp8VlQHH1NX9YxvOpXR4A/edit?usp=drive_web&ouid=101228523565298084421",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Strategic chess tournament featuring intense mental battles. Players compete in classical time control matches that test tactical skills, positional understanding, and endgame technique.",
       format: "Classical Tournament",
@@ -254,14 +254,14 @@ export default function SportDetail() {
       teamSize: "1v1",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Aarya Shah : 9426589465 \n Priya Patel  : 9925221200"
+      contact: "Kushal Surana: 9377436524 \n Twisha Mistry: 7412957193"
     },
     {
       name: "Athletics",
       slug: "athletics",
       icon: "🏃‍♂️", 
       category: "Mixed",
-      registerLink: "",
+      registerLink: "https://docs.google.com/forms/d/1fNcn6wGCWE7BW110DDqLf9eLt_lFRniFQUMFHBcpIQE/edit",
       rulebookLink: "https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing",
       description: "Track and field athletics featuring various running, jumping, and throwing events. Athletes compete in individual events showcasing speed, strength, and endurance in the ultimate test of athletic ability.",
       format: "Individual Events",
@@ -269,7 +269,7 @@ export default function SportDetail() {
       teamSize: "Individual",
       date: "29th Oct - 1st Nov, 2026",
       duration: "4 Days",
-      contact: "Athletics Coordinator"
+      contact: "Ved Gabani: +91 93285 36537 \n Raj: +91 95125 80599"
     }
   ];
 
