@@ -13,7 +13,7 @@ const athleticsCategories = [
     icon: "🏃‍♂️",
     category: "Boys and Girls",
     registerLink: "https://docs.google.com/forms/d/1fNcn6wGCWE7BW110DDqLf9eLt_lFRniFQUMFHBcpIQE/edit",
-    rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
+    rulebookLink: "https://drive.google.com/file/d/1w492Zb9WLZPjQQm3zeq1hXnyB_BzFg4z/view?usp=drivesdk",
     description: "Boys and Girls field and track sports featuring 100m, 200m, 400m, 800m, shot put, discus throw, and long jump. Athletes showcase their strength, technique, and explosive power.",
     format: "Individual Events",
     venue: "TBD",
@@ -27,7 +27,7 @@ const athleticsCategories = [
     icon: "🏃‍♂️",
     category: "Boys and Girls",
     registerLink: "https://docs.google.com/forms/d/1ctZdCmhBvKfBk8TbF1NwS7Y-o58PXqtLoR8rIuOdPPc/edit",
-    rulebookLink: "https://drive.google.com/file/d/1RUmiobogVDFbjwz6mB8az-EZEyNKB3Uw/view?usp=sharing",
+    rulebookLink: "https://drive.google.com/file/d/1w492Zb9WLZPjQQm3zeq1hXnyB_BzFg4z/view?usp=drivesdk",
     description: "Relay races featuring 4x100m events. Teams demonstrate their speed, teamwork, and precise baton passing in exciting relay competitions.",
     format: "Team Events",
     venue: "TBD",
@@ -157,7 +157,7 @@ export default function Athletics() {
               variant="outline"
               className="border-[#840c15] text-red-200 bg-[#840c15]/10 hover:bg-[#840c15] hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-[0_0_15px_rgba(132,12,21,0.4)]"
               onClick={() => {
-                window.open('https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing', '_blank');
+                window.open('https://drive.google.com/file/d/1w492Zb9WLZPjQQm3zeq1hXnyB_BzFg4z/view?usp=drivesdk', '_blank');
                 console.log('Athletics CTA rule book download button clicked');
               }}
             >

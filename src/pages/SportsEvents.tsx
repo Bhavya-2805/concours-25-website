@@ -68,11 +68,10 @@ export default function SportsEvents() {
             <button
               key={filter}
               onClick={() => setSelectedFilter(filter)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 border ${
-                selectedFilter === filter
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 border ${selectedFilter === filter
                   ? "bg-[#840c15] text-white border-[#840c15] shadow-[0_0_15px_rgba(132,12,21,0.6)]"
                   : "bg-[#180306]/70 text-[#979694] border-[#918d8c]/30 hover:text-white hover:border-[#840c15]/60 hover:bg-[#330609]/80"
-              }`}
+                }`}
             >
               {filter}
             </button>
@@ -91,27 +90,27 @@ export default function SportsEvents() {
                   <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300 text-center">
                     {sport.icon}
                   </div>
-                  
+
                   {/* Sport Name */}
                   <h3 className="varsity-font text-2xl text-white mb-2 text-center">{sport.name}</h3>
-                  
+
                   {/* Category */}
                   <p className="text-[#979694] mb-4 text-center text-sm">{sport.category}</p>
-                  
+
                   {/* Register Badge */}
                   <div className="text-center mb-4">
                     <Badge className="bg-[#840c15]/20 text-red-300 border-[#840c15]/40 px-3 py-1 font-semibold">
                       REGISTER NOW
                     </Badge>
                   </div>
-                  
+
                   {/* Description */}
                   <p className="text-sm text-gray-400 text-center mb-6 flex-grow">
                     Join the ultimate {sport.name.toLowerCase()} competition and showcase your skills.
                   </p>
-                  
+
                   {/* Action Button - Aligned at bottom */}
-                  <Button 
+                  <Button
                     className="w-full btn-sports text-sm py-3"
                     onClick={() => {
                       if (sport.slug === 'athletics') {
@@ -127,7 +126,7 @@ export default function SportsEvents() {
                 </CardContent>
               </Card>
             ))}
-            
+
             {/* E-Sports Card */}
             {showEsports && (
               <Card key="esports" className="epic-card overflow-hidden group cursor-pointer border-[#918d8c]/25 hover:border-[#840c15]">
@@ -136,25 +135,25 @@ export default function SportsEvents() {
                   <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300 text-center">
                     🎮
                   </div>
-                  
+
                   {/* E-Sports Name */}
                   <h3 className="varsity-font text-2xl text-white mb-2 text-center">E-Sports</h3>
-                  
+
                   {/* Category */}
                   <p className="text-[#979694] mb-4 text-center text-sm">Gaming</p>
-                  
+
                   {/* Register Badge */}
                   <div className="text-center mb-4">
                     <Badge className="bg-[#840c15]/20 text-red-300 border-[#840c15]/40 px-3 py-1 font-semibold">
                       REGISTER NOW
-                    </Badge>  
+                    </Badge>
                   </div>
-                  
+
                   {/* Description */}
                   <p className="text-sm text-gray-400 text-center mb-6 flex-grow">
                     Compete in 8 exciting e-sports titles and prove your gaming skills against the best players.
                   </p>
-                  
+
                   {/* Action Button - Aligned at bottom */}
                   <Button className="w-full btn-sports text-sm py-3" asChild>
                     <Link to="/esports">
@@ -187,7 +186,7 @@ export default function SportsEvents() {
             <Button
               className="btn-silver-outline px-10 py-4 text-base"
               onClick={() => {
-                window.open('https://drive.google.com/file/d/19TtS3E1lB7B_xUExo03L4O6gkpOVJVeg/view?usp=sharing', '_blank');
+                window.open('https://drive.google.com/file/d/1w492Zb9WLZPjQQm3zeq1hXnyB_BzFg4z/view?usp=drivesdk', '_blank');
               }}
             >
               View Rulebook
