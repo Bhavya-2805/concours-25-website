@@ -25,6 +25,7 @@ const sports = [
   { name: "Carrom", slug: "carrom", icon: "🥏", category: "Mixed", registerLink: "https://docs.google.com/forms/d/1Vs0Eru3Zq-usbHVZZA0JXIoTG4X6ZBZ3dM_xsMGL4QE/edit" },
   { name: "Chess", slug: "chess", icon: "♟️", category: "Mixed", registerLink: "https://docs.google.com/forms/d/1bKWWNjh3jjDRGtcKm9bjKRAp8VlQHH1NX9YxvOpXR4A/edit?usp=drive_web&ouid=101228523565298084421" },
   { name: "Athletics", slug: "athletics", icon: "🏃", category: "Mixed", registerLink: "https://docs.google.com/forms/d/1fNcn6wGCWE7BW110DDqLf9eLt_lFRniFQUMFHBcpIQE/edit" },
+  { name: "Pickleball", slug: "pickleball", icon: "🏓", category: "Mixed", registerLink: "https://forms.gle/vQyN6C6u74Gd8wjS8" },
 ];
 
 export default function SportsEvents() {
@@ -69,8 +70,8 @@ export default function SportsEvents() {
               key={filter}
               onClick={() => setSelectedFilter(filter)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 border ${selectedFilter === filter
-                  ? "bg-[#840c15] text-white border-[#840c15] shadow-[0_0_15px_rgba(132,12,21,0.6)]"
-                  : "bg-[#180306]/70 text-[#979694] border-[#918d8c]/30 hover:text-white hover:border-[#840c15]/60 hover:bg-[#330609]/80"
+                ? "bg-[#840c15] text-white border-[#840c15] shadow-[0_0_15px_rgba(132,12,21,0.6)]"
+                : "bg-[#180306]/70 text-[#979694] border-[#918d8c]/30 hover:text-white hover:border-[#840c15]/60 hover:bg-[#330609]/80"
                 }`}
             >
               {filter}
@@ -186,7 +187,7 @@ export default function SportsEvents() {
             <Button
               className="btn-silver-outline px-10 py-4 text-base"
               onClick={() => {
-                window.open('https://drive.google.com/file/d/1w492Zb9WLZPjQQm3zeq1hXnyB_BzFg4z/view?usp=drivesdk', '_blank');
+                window.open('https://drive.google.com/file/d/1HmhNuUoUBGI7Z8Y1eSKSLbuHQpTjJScr/view?usp=drivesdk', '_blank');
               }}
             >
               View Rulebook
