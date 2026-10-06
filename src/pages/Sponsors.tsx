@@ -1,8 +1,15 @@
-﻿import { Star, Handshake, Trophy, ArrowRight } from "lucide-react";
+﻿import { Handshake, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+
+// 👇 Import your logos from src/assets (edit the paths/file names yourself)
+import titleLogo from "@/assets/sponsors/Avore.jpeg";
+import coTitleLogo from "@/assets/sponsors/Gujarat_Tourism.jpeg";
+import educationalLogo from "@/assets/sponsors/Eduget_Global.jpeg";
+import eventLogo from "@/assets/sponsors/Matrix360.png";
+import mediaLogo from "@/assets/sponsors/Hey_Gandhinagar.jpeg";
 
 export default function Sponsors() {
   return (
@@ -30,71 +37,78 @@ export default function Sponsors() {
       {/* Sponsor Tiers */}
       <section className="py-16 bg-background subtle-bg">
         <div className="max-w-7xl mx-auto px-4 space-y-16">
-          {/* Title Sponsor */}
+          {/* Title Sponsor (largest) */}
           <div>
             <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Title Sponsor</h2>
             <div className="flex justify-center">
               <Card className="epic-card w-full max-w-md">
                 <CardContent className="p-8 text-center">
-                  <div className="w-32 h-32 bg-gradient-sports rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4">
-                    <Star className="w-16 h-16 text-white" />
+                  <div className="w-32 h-32 bg-gradient-sports rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
+                    <img src={titleLogo} alt="Avore" className="w-full h-full object-contain p-2" />
                   </div>
-                  <h3 className="varsity-font text-2xl text-foreground">Your Brand Here</h3>
-                  <p className="text-muted-foreground mt-2">Premium Sponsorship Package</p>
+                  <h3 className="varsity-font text-2xl text-foreground">Avore</h3>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          {/* Co-Title Sponsors */}
+          {/* Co-Title Sponsor */}
           <div>
-            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Co-Title Sponsors</h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {[1, 2].map((i) => (
-                <Card key={i} className="epic-card">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4">
-                      <Star className="w-12 h-12 text-white" />
-                    </div>
-                    <h3 className="varsity-font text-xl text-foreground">Sponsor {i}</h3>
-                    <p className="text-muted-foreground text-sm">Co-Title Package</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Co-Title Sponsor</h2>
+            <div className="flex justify-center">
+              <Card className="epic-card w-full max-w-sm">
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
+                    <img src={coTitleLogo} alt="Gujarat Tourism" className="w-full h-full object-contain p-2" />
+                  </div>
+                  <h3 className="varsity-font text-xl text-foreground">Gujarat Tourism</h3>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
-          {/* Associate Partners */}
+          {/* Educational Sponsor (same size as Co-Title) */}
           <div>
-            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Associate Partners</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[1, 2, 3, 4].map((i) => (
-                <Card key={i} className="epic-card">
-                  <CardContent className="p-4 text-center">
-                    <div className="w-16 h-16 bg-gradient-sports rounded-lg mx-auto flex items-center justify-center mb-3">
-                      <Trophy className="w-8 h-8 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-foreground">Partner {i}</h4>
-                  </CardContent>
-                </Card>
-              ))}
+            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Educational Sponsor</h2>
+            <div className="flex justify-center">
+              <Card className="epic-card w-full max-w-sm">
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
+                    <img src={educationalLogo} alt="Eduget Global" className="w-full h-full object-contain p-2" />
+                  </div>
+                  <h3 className="varsity-font text-xl text-foreground">Eduget Global</h3>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
-          {/* Event Sponsors */}
+          {/* Event Sponsor (same size as Co-Title) */}
           <div>
-            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Event Sponsors</h2>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <Card key={i} className="epic-card">
-                  <CardContent className="p-3 text-center">
-                    <div className="w-12 h-12 bg-gradient-accent rounded mx-auto flex items-center justify-center mb-2">
-                      <Star className="w-6 h-6 text-white" />
-                    </div>
-                    <p className="text-xs text-foreground font-medium">Sponsor {i}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Event Sponsor</h2>
+            <div className="flex justify-center">
+              <Card className="epic-card w-full max-w-sm">
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
+                    <img src={eventLogo} alt="Matrix360" className="w-full h-full object-contain p-2" />
+                  </div>
+                  <h3 className="varsity-font text-xl text-foreground">Matrix360</h3>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Media Partner (same size as Co-Title) */}
+          <div>
+            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Media Partner</h2>
+            <div className="flex justify-center">
+              <Card className="epic-card w-full max-w-sm">
+                <CardContent className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
+                    <img src={mediaLogo} alt="Hey Gandhinagar" className="w-full h-full object-contain p-2" />
+                  </div>
+                  <h3 className="varsity-font text-xl text-foreground">Hey Gandhinagar</h3>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -131,22 +145,13 @@ export default function Sponsors() {
                         Interested in sponsoring CONCOURS'26? Contact our team for partnership opportunities.
                       </p>
                       <div className="space-y-2">
-                        <p><strong>Contact:</strong> Ishan Thakkar (Convener)</p>
-                      <p><strong>Phone:</strong> +91 76220 82220</p>
-                      <p><strong>Email:</strong> concours@daiict.ac.in</p>
+                        <p><strong>Contact:</strong> Neeti Gunsai (Convener)</p>
+                        <p><strong>Phone:</strong> +91 63557 70669</p>
+                        <p><strong>Email:</strong> concours@daiict.ac.in</p>
+                      </div>
                     </div>
-                  </div>
-                </DialogContent>
-              </Dialog>
-              <Button
-                className="btn-accent"
-                onClick={() => {
-                  window.open('https://PLACEHOLDER_GOOGLE_FORM_URL_SPONSOR', '_blank');
-                  console.log('Sponsors partnership button clicked');
-                }}
-              >
-                Register as Sponsor
-              </Button>
+                  </DialogContent>
+                </Dialog>
               </div>
             </CardContent>
           </Card>

@@ -10,7 +10,7 @@ const navigationItems = [
   { title: "Sports Events", url: "/sports-events" },
   /*{ title: "Fun Events", url: "/fun-events" },*/
   /*{ title: "Team DA-IICT", url:"" "/team-daiict" },*/
-  { title: "Sponsors", url: "" /*"/sponsors"*/ },
+  { title: "Sponsors", url: "/sponsors" },
   { title: "CONCOURS'25", url: "/concours-24" },
   { title: "Team Concours", url: "/register" },
 ];
