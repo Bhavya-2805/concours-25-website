@@ -1,132 +1,168 @@
-import { Trophy, Mic, ArrowRight, Star, Users, Clock, Building2, Ticket, Icon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Users, Clock, Ticket, Icon, Check } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { soccerPitch } from "@lucide/lab";
+import { PageHero } from "@/components/site/PageHero";
+import { Reveal } from "@/components/site/Reveal";
+import type { ReactNode } from "react";
+
+type PassCardProps = {
+  tone: "red" | "silver";
+  code: string;
+  icon: ReactNode;
+  title: string;
+  description: string;
+  featuresTitle: string;
+  features: string[];
+  meta: { icon: ReactNode; label: string }[];
+  action: ReactNode;
+  delay?: number;
+};
+
+function PassCard({ tone, code, icon, title, description, featuresTitle, features, meta, action, delay }: PassCardProps) {
+  const red = tone === "red";
+  return (
+    <Reveal delay={delay} className="h-full">
+      <div className="group relative h-full surface surface-hover overflow-hidden flex flex-col">
+        {/* Glow */}
+        <div
+          className={`absolute -top-32 -right-32 w-80 h-80 rounded-full blur-[100px] transition-opacity duration-500 opacity-40 group-hover:opacity-80 ${
+            red ? "bg-[#e01b2e]" : "bg-[#c9cbce]/40"
+          }`}
+          aria-hidden
+        />
+
+        {/* Ticket header */}
+        <div className="relative p-7 md:p-9">
+          <div className="flex items-start justify-between">
+            <div
+              className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110 ${
+                red
+                  ? "bg-gradient-to-br from-[#f0283b] to-[#840c15] text-white shadow-[0_10px_30px_-8px_rgba(224,27,46,0.8)]"
+                  : "bg-gradient-to-b from-white to-[#a9acaf] text-[#0a0203] shadow-[0_10px_30px_-8px_rgba(201,203,206,0.6)]"
+              }`}
+            >
+              {icon}
+            </div>
+            <span className="font-mono text-[10px] tracking-[0.3em] text-[#c9cbce]/45">{code}</span>
+          </div>
+          <h2 className={`mt-8 font-display font-black text-5xl md:text-6xl ${red ? "text-white" : "text-chrome"}`}>{title}</h2>
+          <p className="mt-4 text-[#c9cbce]/75 leading-relaxed">{description}</p>
+        </div>
+
+        {/* Perforation */}
+        <div className="relative flex items-center" aria-hidden>
+          <span className="absolute -left-4 w-8 h-8 rounded-full bg-[#0a0203] border border-white/[0.07]" />
+          <span className="flex-1 mx-6 border-t-2 border-dashed border-white/10" />
+          <span className="absolute -right-4 w-8 h-8 rounded-full bg-[#0a0203] border border-white/[0.07]" />
+        </div>
+
+        {/* Features */}
+        <div className="relative p-7 md:p-9 flex-1 flex flex-col">
+          <div className={`eyebrow ${red ? "" : "before:!bg-[#c9cbce] before:!shadow-none"}`}>{featuresTitle}</div>
+          <ul className="mt-5 space-y-3">
+            {features.map((f) => (
+              <li key={f} className="flex items-start gap-3 text-[#e4e6e8]/85">
+                <span
+                  className={`mt-0.5 w-5 h-5 rounded-full shrink-0 flex items-center justify-center ${
+                    red ? "bg-[#e01b2e]/15 text-[#ff6b78]" : "bg-white/10 text-white"
+                  }`}
+                >
+                  <Check className="w-3 h-3" strokeWidth={3} />
+                </span>
+                {f}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            {meta.map((m) => (
+              <span key={m.label} className="chip normal-case tracking-normal font-sans text-xs">
+                {m.icon}
+                {m.label}
+              </span>
+            ))}
+          </div>
+
+          <div className="pt-8 mt-auto">{action}</div>
+        </div>
+      </div>
+    </Reveal>
+  );
+}
 
 export default function Register() {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen py-24 bg-gradient-hero subtle-bg">
-      <div className="max-w-6xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <Badge className="mb-6 silver-badge px-4 py-1.5 backdrop-blur-sm font-semibold tracking-wide">
-            Join The Competition
-          </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl heading-metallic-silver mb-6 tracking-wide">
-            REGISTER NOW
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Choose your path to glory. Register for sports competitions or showcase your talent at our events.
-          </p>
-        </div>
+    <div className="min-h-screen">
+      <PageHero
+        eyebrow="Join The Competition"
+        watermark="ENTER"
+        title={<>Register <span className="text-signal">Now</span></>}
+        description="Choose your path to glory. Register for sports competitions or showcase your talent at our events."
+      />
 
-        {/* Registration Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
+      <section className="relative pb-24 -mt-6">
+        <div className="container max-w-6xl grid md:grid-cols-2 gap-6 lg:gap-8">
           {/* Sports Registration */}
-          <Card className="epic-card overflow-hidden group border-[#918d8c]/25 hover:border-[#840c15]">
-            <CardHeader className="text-center pb-6">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#840c15]/30 to-[#330609]/70 border border-[#918d8c]/30 flex items-center justify-center text-red-400 group-hover:scale-110 group-hover:border-[#840c15] group-hover:shadow-[0_0_18px_rgba(132,12,21,0.5)] transition-all duration-300">
-                <Icon iconNode={soccerPitch} className="w-8 h-8" />
-              </div>
-              <CardTitle className="arial-font text-3xl text-white">Sports Registration</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-gray-300 text-center text-base">
-                Compete in 10+ sports categories and prove your athletic prowess against the best talent from across the nation.
-              </p>
-
-              {/* Features */}
-              <div className="bg-[#840c15]/10 rounded-xl p-5 border border-[#840c15]/25">
-                <div className="flex items-center space-x-3 mb-2">
-                  <Star className="w-5 h-5 text-red-400" />
-                  <span className="font-semibold text-red-300">Premium Sports Experience</span>
-                </div>
-                <ul className="text-sm text-gray-300 space-y-1 ml-8">
-                  <li>• Access to all 10+ sports events</li>
-                  <li>• Exposure to the best talent from across different colleges</li>
-                  <li>• Chance to win exciting prizes & championship trophies</li>
-                  <li>• Official certificate of participation</li>
-                </ul>
-              </div>
-
-              <div className="flex items-center justify-between text-sm text-[#979694]">
-                <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4 text-red-400" />
-                  <span>2000+ Athletes Expected</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-red-400" />
-                  <span>Multi-day Event</span>
-                </div>
-              </div>
-
-              <Button className="w-full btn-sports group" asChild>
-                <Link
-                  to="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate('/sports-events');
-                  }}
-                >
-                  Register for Sports
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
+          <PassCard
+            tone="red"
+            code="PASS · 01 / ATHLETE"
+            icon={<Icon iconNode={soccerPitch} className="w-8 h-8" />}
+            title="Sports Registration"
+            description="Compete in 10+ sports categories and prove your athletic prowess against the best talent from across the nation."
+            featuresTitle="Premium Sports Experience"
+            features={[
+              "Access to all 10+ sports events",
+              "Exposure to the best talent from across different colleges",
+              "Chance to win exciting prizes & championship trophies",
+              "Official certificate of participation",
+            ]}
+            meta={[
+              { icon: <Users className="w-3.5 h-3.5 text-[#e01b2e]" />, label: "2000+ Athletes Expected" },
+              { icon: <Clock className="w-3.5 h-3.5 text-[#e01b2e]" />, label: "Multi-day Event" },
+            ]}
+            action={
+              <Link
+                to="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/sports-events');
+                }}
+                className="btn btn-primary w-full h-14"
+              >
+                Register for Sports
+                <ArrowRight className="arrow w-5 h-5" />
+              </Link>
+            }
+          />
 
           {/* Event Passes Registration */}
-          <Card className="epic-card overflow-hidden group border-[#918d8c]/25 hover:border-white">
-            <CardHeader className="text-center pb-6">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#918d8c]/30 to-[#330609]/70 border border-[#918d8c]/30 flex items-center justify-center text-gray-200 group-hover:scale-110 group-hover:border-white group-hover:shadow-[0_0_18px_rgba(151,150,148,0.5)] transition-all duration-300">
-                <Ticket className="w-8 h-8" />
-              </div>
-              <CardTitle className="arial-font text-3xl text-white">CONCOURS Pass</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-gray-300 text-center text-base">
-                Get the exclusive pass to Concours and experience glory, victory, and memories that will last a lifetime.
-              </p>
-
-              {/* Features */}
-              <div className="bg-[#918d8c]/10 rounded-xl p-5 border border-[#918d8c]/25">
-                <div className="flex items-center space-x-3 mb-2">
-                  <Star className="w-5 h-5 text-gray-300" />
-                  <span className="font-semibold text-gray-200">What Is Included</span>
-                </div>
-                <ul className="text-sm text-gray-300 space-y-1 ml-8">
-                  <li>• 4 day exclusive festival pass</li>
-                  <li>• Stand Up Comedy Night entry</li>
-                  <li>• Electrifying DJ Night entry</li>
-                  <li>• Access to all thrilling sports matches</li>
-                </ul>
-              </div>
-
-              <div className="flex items-center justify-between text-sm text-[#979694]">
-                <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4 text-gray-300" />
-                  <span>Limited Slots</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-gray-300" />
-                  <span>Evening Shows</span>
-                </div>
-              </div>
-
-              <Button className="w-full btn-accent group" asChild>
-                <Link to="/register">
-                  Early Bird Coming Soon
-                  {/* <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" /> */}
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
+          <PassCard
+            tone="silver"
+            code="PASS · 02 / SPECTATOR"
+            delay={120}
+            icon={<Ticket className="w-8 h-8" />}
+            title="CONCOURS Pass"
+            description="Get the exclusive pass to Concours and experience glory, victory, and memories that will last a lifetime."
+            featuresTitle="What Is Included"
+            features={[
+              "4 day exclusive festival pass",
+              "Stand Up Comedy Night entry",
+              "Electrifying DJ Night entry",
+              "Access to all thrilling sports matches",
+            ]}
+            meta={[
+              { icon: <Users className="w-3.5 h-3.5" />, label: "Limited Slots" },
+              { icon: <Clock className="w-3.5 h-3.5" />, label: "Evening Shows" },
+            ]}
+            action={
+              <Link to="/register" className="btn btn-chrome w-full h-14">
+                Early Bird Coming Soon
+              </Link>
+            }
+          />
         </div>
-
-      </div>
+      </section>
     </div>
   );
 }

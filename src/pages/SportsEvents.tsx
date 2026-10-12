@@ -1,11 +1,9 @@
-import { Trophy, Target, Users, ArrowRight, Building2, Icon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { BookOpen, Icon } from "lucide-react";
 import { soccerPitch } from "@lucide/lab";
-import { Link, useNavigate } from "react-router-dom";
-import logoImage from "@/assets/images/IMG_0054.PNG";
 import { useState } from "react";
+import { PageHero } from "@/components/site/PageHero";
+import { EventCard } from "@/components/site/EventCard";
+import { CtaBand } from "@/components/site/CtaBand";
 
 const sports = [
   { name: "Basketball (Men)", slug: "basketball-men", icon: "🏀", category: "Men's", registerLink: "https://docs.google.com/forms/d/1wpCrzwYUn5ECsycP5viUUDxbxsqgwmC7jSucfFRkjKk/edit?usp=drive_web&ouid=101228523565298084421" },
@@ -28,8 +26,9 @@ const sports = [
   { name: "Pickleball", slug: "pickleball", icon: "🏓", category: "Mixed", registerLink: "https://forms.gle/vQyN6C6u74Gd8wjS8" },
 ];
 
+const RULEBOOK = 'https://drive.google.com/file/d/1HmhNuUoUBGI7Z8Y1eSKSLbuHQpTjJScr/view?usp=drivesdk';
+
 export default function SportsEvents() {
-  const navigate = useNavigate();
   const [selectedFilter, setSelectedFilter] = useState("All");
 
   const filterOptions = ["All", "Men's", "Women's", "Mixed", "Gaming"];
@@ -42,159 +41,112 @@ export default function SportsEvents() {
 
   const showEsports = selectedFilter === "All" || selectedFilter === "Gaming";
 
-  return (
-    <div className="min-h-screen subtle-bg">
-      {/* Hero Section */}
-      <section className="py-24 bg-gradient-hero stadium-hero">
-        <div className="max-w-6xl mx-auto text-center px-4">
-          <Badge className="mb-6 silver-badge px-4 py-1.5 backdrop-blur-sm font-semibold tracking-wide">
-            Competition Categories
-          </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl heading-metallic-silver mb-6 tracking-wide">
-            SPORTS EVENTS
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Choose your battlefield. From court sports to field events, find your sport and register for glory.
-          </p>
-          <div className="flex justify-center">
-            <img src={logoImage} alt="Logo" className="w-28 h-28 trophy-glow" />
-          </div>
-        </div>
-      </section>
+  const countFor = (filter: string) =>
+    filter === "All" ? sports.length + 1 : filter === "Gaming" ? 1 : sports.filter(s => s.category === filter).length;
 
-      {/* Category Filter Pills Widget */}
-      <div className="max-w-7xl mx-auto px-4 pt-10 pb-4">
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          {filterOptions.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setSelectedFilter(filter)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 border ${selectedFilter === filter
-                ? "bg-[#840c15] text-white border-[#840c15] shadow-[0_0_15px_rgba(132,12,21,0.6)]"
-                : "bg-[#180306]/70 text-[#979694] border-[#918d8c]/30 hover:text-white hover:border-[#840c15]/60 hover:bg-[#330609]/80"
-                }`}
-            >
-              {filter}
-            </button>
+  return (
+    <div className="min-h-screen">
+      <PageHero
+        eyebrow="Competition Categories"
+        watermark="COMPETE"
+        title={<>Sports <span className="text-signal">Events</span></>}
+        description="Choose your battlefield. From court sports to field events, find your sport and register for glory."
+      >
+        <div className="flex flex-wrap gap-8">
+          {[
+            { value: String(sports.length), label: "Sporting Events" },
+            { value: "50+", label: "Colleges" },
+            { value: "4", label: "Days of Action" },
+          ].map((s) => (
+            <div key={s.label}>
+              <div className="font-display font-black text-5xl text-white">{s.value}</div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#c9cbce]/55 mt-1">{s.label}</div>
+            </div>
           ))}
+        </div>
+      </PageHero>
+
+      {/* Category Filter */}
+      <div className="sticky top-[84px] z-30">
+        <div className="container max-w-7xl">
+          <div className="mx-auto w-fit max-w-full overflow-x-auto rounded-2xl border border-white/[0.08] bg-[#0a0203]/80 backdrop-blur-xl p-1.5 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.9)]">
+            <div className="flex items-center gap-1" role="tablist" aria-label="Filter sports">
+              {filterOptions.map((filter) => {
+                const active = selectedFilter === filter;
+                return (
+                  <button
+                    key={filter}
+                    role="tab"
+                    aria-selected={active}
+                    onClick={() => setSelectedFilter(filter)}
+                    className={`relative shrink-0 flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-[0.1em] transition-all duration-300 ${
+                      active
+                        ? "bg-gradient-to-br from-[#f0283b] to-[#840c15] text-white shadow-[0_8px_24px_-8px_rgba(224,27,46,0.9)]"
+                        : "text-[#c9cbce]/65 hover:text-white hover:bg-white/[0.05]"
+                    }`}
+                  >
+                    {filter}
+                    <span className={`font-mono text-[10px] px-1.5 py-0.5 rounded-md ${active ? "bg-black/25" : "bg-white/[0.06]"}`}>
+                      {countFor(filter)}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Sports Grid */}
-      <section className="py-8 bg-transparent">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredSports.map((sport) => (
-              <Card key={sport.slug} className="epic-card overflow-hidden group cursor-pointer border-[#918d8c]/25 hover:border-[#840c15]">
-                <CardContent className="p-6 h-full flex flex-col">
-                  {/* Sport Icon */}
-                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300 text-center">
-                    {sport.icon}
-                  </div>
-
-                  {/* Sport Name */}
-                  <h3 className="varsity-font text-2xl text-white mb-2 text-center">{sport.name}</h3>
-
-                  {/* Category */}
-                  <p className="text-[#979694] mb-4 text-center text-sm">{sport.category}</p>
-
-                  {/* Register Badge */}
-                  <div className="text-center mb-4">
-                    <Badge className="bg-[#840c15]/20 text-red-300 border-[#840c15]/40 px-3 py-1 font-semibold">
-                      REGISTER NOW
-                    </Badge>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-sm text-gray-400 text-center mb-6 flex-grow">
-                    Join the ultimate {sport.name.toLowerCase()} competition and showcase your skills.
-                  </p>
-
-                  {/* Action Button - Aligned at bottom */}
-                  <Button
-                    className="w-full btn-sports text-sm py-3"
-                    onClick={() => {
-                      if (sport.slug === 'athletics') {
-                        navigate('/athletics');
-                      } else {
-                        navigate(`/sports/${sport.slug}`);
-                      }
-                    }}
-                  >
-                    View Details
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </CardContent>
-              </Card>
+      <section className="py-14">
+        <div className="container max-w-7xl">
+          <div key={selectedFilter} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {filteredSports.map((sport, i) => (
+              <EventCard
+                key={sport.slug}
+                index={i + 1}
+                delay={(i % 4) * 70}
+                to={sport.slug === 'athletics' ? '/athletics' : `/sports/${sport.slug}`}
+                icon={sport.icon}
+                title={sport.name}
+                category={sport.category}
+                description={`Join the ultimate ${sport.name.toLowerCase()} competition and showcase your skills.`}
+              />
             ))}
 
             {/* E-Sports Card */}
             {showEsports && (
-              <Card key="esports" className="epic-card overflow-hidden group cursor-pointer border-[#918d8c]/25 hover:border-[#840c15]">
-                <CardContent className="p-6 h-full flex flex-col">
-                  {/* E-Sports Icon */}
-                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300 text-center">
-                    🎮
-                  </div>
-
-                  {/* E-Sports Name */}
-                  <h3 className="varsity-font text-2xl text-white mb-2 text-center">E-Sports</h3>
-
-                  {/* Category */}
-                  <p className="text-[#979694] mb-4 text-center text-sm">Gaming</p>
-
-                  {/* Register Badge */}
-                  <div className="text-center mb-4">
-                    <Badge className="bg-[#840c15]/20 text-red-300 border-[#840c15]/40 px-3 py-1 font-semibold">
-                      REGISTER NOW
-                    </Badge>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-sm text-gray-400 text-center mb-6 flex-grow">
-                    Compete in 8 exciting e-sports titles and prove your gaming skills against the best players.
-                  </p>
-
-                  {/* Action Button - Aligned at bottom */}
-                  <Button className="w-full btn-sports text-sm py-3" asChild>
-                    <Link to="/esports">
-                      View Details
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <EventCard
+                key="esports"
+                index={filteredSports.length + 1}
+                delay={(filteredSports.length % 4) * 70}
+                to="/esports"
+                icon="🎮"
+                title="E-Sports"
+                category="Gaming"
+                description="Compete in 8 exciting e-sports titles and prove your gaming skills against the best players."
+              />
             )}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-hero border-t border-[#918d8c]/20">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#840c15]/30 to-[#330609]/70 border border-[#918d8c]/30 flex items-center justify-center text-red-400 shadow-[0_0_15px_rgba(132,12,21,0.4)]">
-              <Icon iconNode={soccerPitch} className="w-8 h-8" />
-            </div>
-          </div>
-          <h2 className="varsity-font text-4xl lg:text-5xl heading-metallic-silver mb-6 tracking-wide">
-            Ready to Compete?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-xl mx-auto">
-            Don't miss your chance to be part of the most exciting sports festival of the year.
-          </p>
-          <div className="flex flex-row gap-4 justify-center items-center">
-            <Button
-              className="btn-silver-outline px-10 py-4 text-base"
-              onClick={() => {
-                window.open('https://drive.google.com/file/d/1HmhNuUoUBGI7Z8Y1eSKSLbuHQpTjJScr/view?usp=drivesdk', '_blank');
-              }}
-            >
-              View Rulebook
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CtaBand
+        icon={<Icon iconNode={soccerPitch} className="w-6 h-6" />}
+        title="Ready to Compete?"
+        description="Don't miss your chance to be part of the most exciting sports festival of the year."
+      >
+        <button
+          type="button"
+          className="btn btn-chrome h-14 px-8"
+          onClick={() => {
+            window.open(RULEBOOK, '_blank');
+          }}
+        >
+          <BookOpen className="w-4 h-4" /> View Rulebook
+        </button>
+      </CtaBand>
     </div>
   );
 }

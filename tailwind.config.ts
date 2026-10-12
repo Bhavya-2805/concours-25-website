@@ -12,16 +12,16 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1rem',
 			screens: {
 				'2xl': '1400px'
 			}
 		},
 		extend: {
 			fontFamily: {
-				'bebas': ['Bebas Neue', 'cursive'],
-				'comic': ['Comic Neue', 'cursive'],
-				'inter': ['Inter', 'sans-serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+				inter: ['Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -72,8 +72,9 @@ export default {
 					wine: '#6d0c13',
 					crimson: '#840c15',
 					silver: '#918d8c',
-					chrome: '#979694',
 					black: '#0a0203',
+					signal: '#e01b2e',
+					chrome: '#c9cbce',
 				}
 			},
 			borderRadius: {

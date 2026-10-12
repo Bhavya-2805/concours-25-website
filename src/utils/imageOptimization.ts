@@ -1,3 +1,12 @@
+import logoImage from '@/assets/images/IMG_0054.PNG';
+import heroImage from '@/assets/hero-stadium.jpg';
+import teamNeeti from '@/assets/images/team26/Neeti Gunsai.jpeg';
+import teamKush from '@/assets/images/team26/Kush.jpg';
+import teamRutva from '@/assets/images/team26/Rutva-jpg.webp';
+import teamRishita from '@/assets/images/team26/Rishita.jpg';
+import teamIshan from '@/assets/images/team26/Ishan.jpg';
+import teamVed from '@/assets/images/team26/VedM.jpg';
+
 // Image preloading utility for critical images
 export const preloadImage = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
@@ -10,10 +19,7 @@ export const preloadImage = (src: string): Promise<void> => {
 
 // Preload critical images
 export const preloadCriticalImages = async () => {
-  const criticalImages = [
-    '/src/assets/images/IMG_0054.PNG', // Logo
-    '/src/assets/hero-stadium.jpg', // Hero image
-  ];
+  const criticalImages = [logoImage, heroImage];
 
   try {
     await Promise.all(criticalImages.map(preloadImage));
@@ -25,14 +31,7 @@ export const preloadCriticalImages = async () => {
 
 // Batch preload team images for better performance
 export const preloadTeamImages = async () => {
-  const teamImages = [
-    '/src/assets/images/team/Ishan.jpg',
-    '/src/assets/images/team/Ved.jpg',
-    '/src/assets/images/team/Bhavya.jpg',
-    '/src/assets/images/team/Siddharth Vala.jpg',
-    '/src/assets/images/team/Aarya.jpg',
-    '/src/assets/images/team/Alin.jpg',
-  ];
+  const teamImages = [teamNeeti, teamKush, teamRutva, teamRishita, teamIshan, teamVed];
 
   try {
     await Promise.all(teamImages.map(preloadImage));

@@ -1,8 +1,8 @@
-﻿import { Handshake, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Handshake, ArrowRight, Phone, Mail, User, Instagram } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { PageHero } from "@/components/site/PageHero";
+import { Reveal } from "@/components/site/Reveal";
+import { CtaBand } from "@/components/site/CtaBand";
 
 // 👇 Import your logos from src/assets (edit the paths/file names yourself)
 import titleLogo from "@/assets/sponsors/Avore.jpeg";
@@ -10,153 +10,131 @@ import coTitleLogo from "@/assets/sponsors/Gujarat_Tourism.jpeg";
 import educationalLogo from "@/assets/sponsors/Eduget_Global.jpeg";
 import eventLogo from "@/assets/sponsors/Matrix360.png";
 import mediaLogo from "@/assets/sponsors/Hey_Gandhinagar.jpeg";
+import silentlyLogo from "@/assets/sponsors/silently.jpeg";
+import studyInLogo from "@/assets/sponsors/StudyIn.jpg";
+import nempanthLogo from "@/assets/sponsors/Nempanth.png";
+
+// `dark` puts logos that ship on a black background onto a matching tile
+const partners = [
+  { tier: "Co-Title Sponsor", name: "Gujarat Tourism", logo: coTitleLogo },
+  { tier: "Educational Sponsor", name: "Eduget Global", logo: educationalLogo },
+  { tier: "Educational Sponsor", name: "StudyIn", logo: studyInLogo },
+  { tier: "Event Sponsor", name: "Matrix360", logo: eventLogo },
+  { tier: "Event Sponsor", name: "Silently", logo: silentlyLogo, dark: true },
+  { tier: "Media Partner", name: "Hey Gandhinagar", logo: mediaLogo },
+  { tier: "Creative Partner", name: "Nempanth", logo: nempanthLogo },
+];
 
 export default function Sponsors() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-24 bg-gradient-hero stadium-hero">
-        <div className="max-w-6xl mx-auto text-center px-4">
-          <Badge className="mb-6 bg-[#840c15]/25 text-red-200 border-[#840c15]/50 px-4 py-1.5 backdrop-blur-sm shadow-sm">
-            Partnership Opportunities
-          </Badge>
-          <h1 className="concours-font text-5xl lg:text-7xl text-white mb-6 tracking-wide">
-            OUR SPONSORS
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Join us as a sponsor and be part of the most exciting sports festival in the region.
-          </p>
-          <div className="flex justify-center">
-            <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center trophy-glow floating-element">
-              <Handshake className="w-8 h-8 text-white" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Partnership Opportunities"
+        watermark="PARTNERS"
+        title={<>Our <span className="text-signal">Sponsors</span></>}
+        description="Join us as a sponsor and be part of the most exciting sports festival in the region."
+      />
 
       {/* Sponsor Tiers */}
-      <section className="py-16 bg-background subtle-bg">
-        <div className="max-w-7xl mx-auto px-4 space-y-16">
+      <section className="pb-8">
+        <div className="container max-w-6xl space-y-6 lg:space-y-8">
           {/* Title Sponsor (largest) */}
-          <div>
-            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Title Sponsor</h2>
-            <div className="flex justify-center">
-              <Card className="epic-card w-full max-w-md">
-                <CardContent className="p-8 text-center">
-                  <div className="w-32 h-32 bg-gradient-sports rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
-                    <img src={titleLogo} alt="Avore" className="w-full h-full object-contain p-2" />
+          <Reveal>
+            <div className="group relative surface ring-gradient overflow-hidden">
+              <div className="absolute -left-20 -top-20 w-96 h-96 rounded-full bg-[#e01b2e]/30 blur-[110px]" aria-hidden />
+              <div className="absolute inset-0 bg-stripes opacity-40" aria-hidden />
+              <div className="relative grid md:grid-cols-[1fr_auto] items-center gap-10 p-8 md:p-14">
+                <div>
+                  <span className="chip chip-red">★ Title Sponsor</span>
+                  <h2 className="mt-6 font-display font-black text-7xl md:text-9xl text-chrome">Avore</h2>
+                  <a
+                    href="https://www.instagram.com/avore.ev?dlrf=amtidHJydnoxcGM3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-ghost mt-8 h-11 px-6 text-xs"
+                  >
+                    <Instagram className="w-4 h-4" /> @avore.ev
+                  </a>
+                </div>
+                <div className="relative mx-auto">
+                  <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full" aria-hidden />
+                  <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-3xl bg-black ring-1 ring-white/15 p-6 shadow-[0_30px_80px_-20px_rgba(224,27,46,0.6)] transition-transform duration-500 group-hover:scale-105 group-hover:-rotate-2">
+                    <img src={titleLogo} alt="Avore" className="w-full h-full object-contain" />
                   </div>
-                  <h3 className="varsity-font text-2xl text-foreground">Avore</h3>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
-          </div>
+          </Reveal>
 
-          {/* Co-Title Sponsor */}
-          <div>
-            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Co-Title Sponsor</h2>
-            <div className="flex justify-center">
-              <Card className="epic-card w-full max-w-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
-                    <img src={coTitleLogo} alt="Gujarat Tourism" className="w-full h-full object-contain p-2" />
+          {/* Other tiers */}
+          <div className="flex flex-wrap justify-center gap-5">
+            {partners.map((p, i) => (
+              <Reveal
+                key={p.name}
+                delay={(i % 4) * 80}
+                className="w-full sm:w-[calc(50%-10px)] lg:w-[calc(25%-15px)]"
+              >
+                <div className="group surface surface-hover h-full p-6 flex flex-col">
+                  <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#e01b2e]">{p.tier}</div>
+                  <div className={`mt-5 aspect-square rounded-2xl p-5 flex items-center justify-center overflow-hidden ${p.dark ? "bg-black ring-1 ring-white/10" : "bg-white"}`}>
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
                   </div>
-                  <h3 className="varsity-font text-xl text-foreground">Gujarat Tourism</h3>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Educational Sponsor (same size as Co-Title) */}
-          <div>
-            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Educational Sponsor</h2>
-            <div className="flex justify-center">
-              <Card className="epic-card w-full max-w-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
-                    <img src={educationalLogo} alt="Eduget Global" className="w-full h-full object-contain p-2" />
-                  </div>
-                  <h3 className="varsity-font text-xl text-foreground">Eduget Global</h3>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Event Sponsor (same size as Co-Title) */}
-          <div>
-            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Event Sponsor</h2>
-            <div className="flex justify-center">
-              <Card className="epic-card w-full max-w-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
-                    <img src={eventLogo} alt="Matrix360" className="w-full h-full object-contain p-2" />
-                  </div>
-                  <h3 className="varsity-font text-xl text-foreground">Matrix360</h3>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Media Partner (same size as Co-Title) */}
-          <div>
-            <h2 className="varsity-font text-3xl text-center heading-gold mb-8">Media Partner</h2>
-            <div className="flex justify-center">
-              <Card className="epic-card w-full max-w-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 bg-gradient-accent rounded-lg mx-auto flex items-center justify-center trophy-glow mb-4 overflow-hidden">
-                    <img src={mediaLogo} alt="Hey Gandhinagar" className="w-full h-full object-contain p-2" />
-                  </div>
-                  <h3 className="varsity-font text-xl text-foreground">Hey Gandhinagar</h3>
-                </CardContent>
-              </Card>
-            </div>
+                  <h3 className="mt-5 font-display font-extrabold text-2xl text-white">{p.name}</h3>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Collaboration Section */}
-      <section className="py-16 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <Card className="epic-card">
-            <CardContent className="p-8">
-              <div className="w-20 h-20 bg-gradient-accent rounded-full flex items-center justify-center mx-auto trophy-glow mb-6">
-                <Handshake className="w-10 h-10 text-white" />
-              </div>
-              <h2 className="varsity-font text-3xl heading-gold mb-4">
-                Partner With Us
-              </h2>
-              <p className="text-muted-foreground mb-8 text-lg">
-                Join hands with CONCOURS'26 and reach thousands of young, dynamic audiences while supporting sports excellence.
+      <CtaBand
+        eyebrow="Collaborate"
+        icon={<Handshake className="w-6 h-6" />}
+        title="Partner With Us"
+        description="Join hands with CONCOURS'26 and reach thousands of young, dynamic audiences while supporting sports excellence."
+      >
+        <Dialog>
+          <DialogTrigger asChild>
+            <button type="button" className="btn btn-chrome h-14 px-8">
+              Explore Partnership
+              <ArrowRight className="arrow w-5 h-5" />
+            </button>
+          </DialogTrigger>
+          <DialogContent className="border-white/10 bg-[#0e0305] rounded-2xl">
+            <DialogHeader>
+              <span className="eyebrow">Sponsorship</span>
+              <DialogTitle className="font-display font-black text-4xl text-chrome pt-2">Partnership Inquiry</DialogTitle>
+            </DialogHeader>
+            <div className="space-y-5">
+              <p className="text-[#c9cbce]/70">
+                Interested in sponsoring CONCOURS'26? Contact our team for partnership opportunities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="btn-accent">
-                      Explore Partnership
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Partnership Inquiry</DialogTitle>
-                    </DialogHeader>
-                    <div className="space-y-4">
-                      <p className="text-muted-foreground">
-                        Interested in sponsoring CONCOURS'26? Contact our team for partnership opportunities.
-                      </p>
-                      <div className="space-y-2">
-                        <p><strong>Contact:</strong> Neeti Gunsai (Convener)</p>
-                        <p><strong>Phone:</strong> +91 63557 70669</p>
-                        <p><strong>Email:</strong> concours@daiict.ac.in</p>
-                      </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
+              <div className="space-y-2">
+                {[
+                  { icon: User, label: "Contact", value: "Neeti Gunsai (Convener)" },
+                  { icon: Phone, label: "Phone", value: "+91 63557 70669", href: "tel:+916355770669" },
+                  { icon: Mail, label: "Email", value: "concours@daiict.ac.in", href: "mailto:concours@daiict.ac.in" },
+                ].map((row) => (
+                  <div key={row.label} className="flex items-center gap-4 rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3">
+                    <row.icon className="w-4 h-4 text-[#e01b2e]" />
+                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#c9cbce]/50 w-16">{row.label}</span>
+                    {row.href ? (
+                      <a href={row.href} className="text-white hover:text-[#ff6b78] transition-colors">{row.value}</a>
+                    ) : (
+                      <span className="text-white">{row.value}</span>
+                    )}
+                  </div>
+                ))}
               </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </CtaBand>
     </div>
   );
 }

@@ -71,10 +71,8 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {/* Placeholder/Skeleton */}
       {!isLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse flex items-center justify-center">
-          {placeholder || (
-            <div className="w-8 h-8 bg-gray-400 rounded-full animate-pulse"></div>
-          )}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0507] via-[#120305] to-[#0a0203] animate-pulse flex items-center justify-center">
+          {placeholder}
         </div>
       )}
       
