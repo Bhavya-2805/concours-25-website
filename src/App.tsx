@@ -14,7 +14,6 @@ import TeamDaiict from "./pages/TeamDaiict";
 import Sponsors from "./pages/Sponsors";
 import Concours24 from "./pages/Concours24";
 import TeamConcours from "./pages/TeamConcours";
-import StandupPasses from "./pages/StandupPasses";
 import ComedyDjNight from "./pages/ComedyDjNight";
 import SportDetail from "./pages/SportDetail";
 import Athletics from "./pages/Athletics";
@@ -57,7 +56,6 @@ const App = () => {
               <Route path="/sponsors" element={<Sponsors />} />
               <Route path="/concours-24" element={<Concours24 />} />
               <Route path="/team-concours" element={<TeamConcours />} />
-              <Route path="/standup-passes" element={<StandupPasses />} />
               <Route path="/comedy-dj-night" element={<ComedyDjNight />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

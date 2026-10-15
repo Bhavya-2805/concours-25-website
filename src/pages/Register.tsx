@@ -156,8 +156,9 @@ export default function Register() {
               { icon: <Clock className="w-3.5 h-3.5" />, label: "Evening Shows" },
             ]}
             action={
-              <Link to="/register" className="btn btn-chrome w-full h-14">
-                Early Bird Coming Soon
+              <Link to="/comedy-dj-night" className="btn btn-chrome w-full h-14">
+                Get Invite Pass
+                <ArrowRight className="arrow w-5 h-5" />
               </Link>
             }
           />
