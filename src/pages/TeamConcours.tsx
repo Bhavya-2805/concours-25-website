@@ -34,7 +34,6 @@ import TwishaImg from "@/assets/images/team26/Twisha.jpg";
 import KushalImg from "@/assets/images/team26/Kushal.jpeg";
 import VrajImg from "@/assets/images/team26/Vraj.jpeg";
 import BhavyaShahImg from "@/assets/images/team26/Bhavya.jpeg";
-import PrathamImg from "@/assets/images/team26/Pratham.jpeg";
 import YashImg from "@/assets/images/team26/yash.png";
 
 type Member = { name: string; role: string; phone?: string; image: string; position?: string };
@@ -69,7 +68,6 @@ const teamMembers: Member[] = [
   { name: "Kushal Surana", role: "Core Member", phone: "93774 36524", image: KushalImg },
   { name: "Vraj Patel", role: "Core Member", phone: "93161 48846", image: VrajImg },
   { name: "Bhavya Shah", role: "Core Member", phone: "63515 09727", image: BhavyaShahImg },
-  { name: "Pratham Rabari", role: "Core Member", phone: "90546 84566", image: PrathamImg },
   { name: "Yash Bachwani", role: "Core Member", phone: "96624 33151", image: YashImg },
 ];
 
@@ -83,7 +81,7 @@ function MemberCard({ member, index, featured = false }: { member: Member; index
             <LazyImage
               src={member.image}
               alt={member.name}
-              className="w-full h-full object-cover grayscale-[60%] group-hover:grayscale-0"
+              className="w-full h-full object-cover"
               style={{ objectPosition: member.position ?? "center 25%" }}
               priority={index < 6}
               placeholder={<UserCheck className="w-12 h-12 text-white/20" />}

@@ -47,9 +47,9 @@ export default function ComedyDjNight() {
 
                 <div className="mt-10">
                   <div className="font-display font-black text-[7rem] md:text-[9rem] leading-none text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
-                    ₹350
+                    ₹300
                   </div>
-                  <div className="font-mono text-xs uppercase tracking-[0.3em] text-white/70">Per Person</div>
+                  <div className="font-mono text-xs uppercase tracking-[0.3em] text-white/70">Early Bird Price · Per Person</div>
                 </div>
 
                 <div className="my-8 border-t-2 border-dashed border-white/25" aria-hidden />
