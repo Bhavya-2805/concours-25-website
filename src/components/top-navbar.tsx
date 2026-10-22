@@ -43,11 +43,10 @@ export function TopNavbar() {
     <>
       <nav className="fixed inset-x-0 top-0 z-50 px-3 sm:px-5 pt-3">
         <div
-          className={`mx-auto max-w-7xl rounded-2xl transition-all duration-500 ${
-            scrolled || isMobileMenuOpen
+          className={`mx-auto max-w-7xl rounded-2xl transition-all duration-500 ${scrolled || isMobileMenuOpen
               ? "bg-[#0a0203]/75 backdrop-blur-xl border border-white/[0.08] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)]"
               : "bg-transparent border border-transparent"
-          }`}
+            }`}
         >
           <div className="flex items-center justify-between h-16 pl-3 pr-2 sm:pl-4">
             {/* Brand */}
@@ -75,15 +74,13 @@ export function TopNavbar() {
                   <Link
                     key={item.title}
                     to={item.url}
-                    className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors duration-200 ${
-                      active ? "text-white" : "text-[#c9cbce]/65 hover:text-white"
-                    }`}
+                    className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors duration-200 ${active ? "text-white" : "text-[#c9cbce]/65 hover:text-white"
+                      }`}
                   >
                     {item.title}
                     <span
-                      className={`absolute left-4 right-4 -bottom-0.5 h-[2px] bg-[#e01b2e] shadow-[0_0_10px_#e01b2e] origin-left transition-transform duration-300 ${
-                        active ? "scale-x-100" : "scale-x-0"
-                      }`}
+                      className={`absolute left-4 right-4 -bottom-0.5 h-[2px] bg-[#e01b2e] shadow-[0_0_10px_#e01b2e] origin-left transition-transform duration-300 ${active ? "scale-x-100" : "scale-x-0"
+                        }`}
                     />
                   </Link>
                 );
@@ -110,9 +107,8 @@ export function TopNavbar() {
 
       {/* Mobile full-screen menu */}
       <div
-        className={`lg:hidden fixed inset-0 z-40 bg-[#0a0203]/97 backdrop-blur-2xl transition-all duration-500 ${
-          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`lg:hidden fixed inset-0 z-40 bg-[#0a0203]/97 backdrop-blur-2xl transition-all duration-500 ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
       >
         <div className="absolute inset-0 bg-stage opacity-80" aria-hidden />
         <div className="relative h-full flex flex-col justify-between px-6 pt-28 pb-10 overflow-y-auto">
@@ -136,9 +132,8 @@ export function TopNavbar() {
                   >
                     <span className="font-mono text-xs text-[#e01b2e]">{String(i + 1).padStart(2, "0")}</span>
                     <span
-                      className={`font-display font-black text-5xl ${
-                        active ? "text-chrome" : "text-white/70 group-hover:text-white"
-                      } transition-colors`}
+                      className={`font-display font-black text-5xl ${active ? "text-chrome" : "text-white/70 group-hover:text-white"
+                        } transition-colors`}
                     >
                       {item.title}
                     </span>
@@ -172,7 +167,7 @@ export function TopNavbar() {
                 <Youtube className="w-5 h-5" />
               </a>
               <a
-                href="mailto:concoursdaiict@gmail.com"
+                href="mailto:daiictconcours@gmail.com"
                 aria-label="Email"
                 className="w-11 h-11 rounded-xl border border-white/10 flex items-center justify-center text-white/80"
               >

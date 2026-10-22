@@ -10,7 +10,7 @@ const socials = [
     external: true,
   },
   { label: "YouTube", href: "http://www.youtube.com/@sportsda-iict1510", icon: Youtube, external: true },
-  { label: "Email", href: "mailto:concoursdaiict@gmail.com", icon: Mail, external: false },
+  { label: "Email", href: "mailto:daiictconcours@gmail.com", icon: Mail, external: false },
 ];
 
 const quickLinks = [

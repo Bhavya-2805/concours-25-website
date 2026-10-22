@@ -26,7 +26,7 @@ export type EventDetailProps = {
   registrationOpen: boolean;
 };
 
-const EMAIL = "concoursdaiict@gmail.com";
+const EMAIL = "daiictconcours@gmail.com";
 
 function parseContact(line: string) {
   const idx = line.indexOf(":");

@@ -47,9 +47,9 @@ export default function ComedyDjNight() {
 
                 <div className="mt-10">
                   <div className="font-display font-black text-[7rem] md:text-[9rem] leading-none text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
-                    ₹300
+                    ₹350
                   </div>
-                  <div className="font-mono text-xs uppercase tracking-[0.3em] text-white/70">Early Bird Price · Per Person</div>
+                  <div className="font-mono text-xs uppercase tracking-[0.3em] text-white/70"> · Per Person</div>
                 </div>
 
                 <div className="my-8 border-t-2 border-dashed border-white/25" aria-hidden />
@@ -187,7 +187,7 @@ export default function ComedyDjNight() {
             {[
               { icon: Phone, title: "Call Us", value: "+91 97232 04898", sub: "Rutva", href: "tel:+919723204898" },
               { icon: Phone, title: "Call Us", value: "+91 98283 90304", sub: "Rishita", href: "tel:+919828390304" },
-              { icon: MessageCircle, title: "Email Us", value: "concoursdaiict@gmail.com", sub: "Official CONCOURS Email", href: "mailto:concoursdaiict@gmail.com" },
+              { icon: MessageCircle, title: "Email Us", value: "daiictconcours@gmail.com", sub: "Official CONCOURS Email", href: "mailto:daiictconcours@gmail.com" },
             ].map((c, i) => (
               <Reveal key={c.sub} delay={(i % 2) * 100} className={c.title === "Email Us" ? "md:col-span-2 md:max-w-md md:mx-auto md:w-full" : ""}>
                 <a href={c.href} className="group surface surface-hover flex items-center gap-5 p-6">
